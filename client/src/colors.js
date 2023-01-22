@@ -1,3 +1,2 @@
-export const lightTheme = {}
-export const darkTheme = {}
-
+export const lightTheme = {};
+export const darkTheme = {};
