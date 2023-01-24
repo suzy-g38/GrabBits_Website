@@ -4,15 +4,15 @@ import { Schema } from "mongoose";
 const JobModel = new Schema({
   role: {
     type: String,
-    required,
+    required: true,
   },
   location: {
     type: String,
-    required,
+    required: true,
   },
   companyName: {
     type: String,
-    required,
+    required: true,
   },
   stipend: {
     type: String,
@@ -20,9 +20,13 @@ const JobModel = new Schema({
   },
   batch: {
     type: String,
-    required,
+    required: true,
   },
-});
+}, 
+{
+  timestamps: true,
+}
+);
 
 const Job = mongoose.model("Job", JobModel);
 
