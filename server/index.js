@@ -21,7 +21,7 @@ app.use(errorMiddleware);
 // app.use(notFound);
 
 // Routers
-app.use("/jobs", jobRouter);
+app.use("/job", jobRouter);
 app.use("/contact", contactRouter);
 
 app.listen(PORT, () => {

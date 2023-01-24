@@ -1,6 +1,5 @@
 import Contact from "../models/contact.model.js";
 
-
 const addContact = async (req, res) => {
   const { name, email, message } = req.body;
   if (!name || !email || message < 1) {
@@ -18,11 +17,13 @@ const addContact = async (req, res) => {
   res.status(201).json({ contact, message: "Contact created successfully" });
 };
 const getAllContacts = async (req, res) => {
-
-
-  const contacts = await user.find()
-
+  const contacts = await Contact.find();
   res.status(200).json({ contacts, message: "Fetched Successfully" });
 };
 
-export { addContact, getAllContacts };
+const deleteAllContacts = async (req, res) => {
+  await Contact.deleteMany();
+  res.status(200).json({ message: "Contacts Deleted Successfully" });
+};
+
+export { addContact, getAllContacts, deleteAllContacts };
