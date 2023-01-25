@@ -20,7 +20,7 @@ const addJob = async (req, res) => {
 };
 
 const getAllJobs = async (req, res) => {
-  const jobs = await Job.find();
+  const jobs = await Job.find().sort({ createdAt: -1 });
   res.status(200).json({ jobs, message: "Fetched Jobs Successfully" });
 };
 
