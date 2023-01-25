@@ -10,12 +10,17 @@ const Button = ({
 	filled,
 	padding = '15px 30px',
 	fontSize = '20px',
+	bgColor,
 }) => {
 	return (
 		<>
 			<div className={classes.btn_container}>
 				<button
-					style={{ padding: padding, fontSize: fontSize }}
+					style={{
+						padding: padding,
+						fontSize: fontSize,
+						backgroundColor: bgColor,
+					}}
 					className={filled ? classes.fill : classes.btn}
 					onClick={onClick}
 					disabled={disabled}
