@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.contact_form{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 32px 32px;
+    background: #ECF2F8;
+}
+
+.title{
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 8px;
+}
+
+.title_description{
+    padding: 8px;
+}
+
+.query_section{
+    padding: 8px;
+}
+
+.query_description{
+    padding: 0 42px 0 0 ;
+}
+
+.query_section{
+    margin: 56px 0 0 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.query_options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+}
+
+.query_type{
+    all: unset;
+    padding: 12px 24px;
+    background-color: #19212E;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.query_type:hover{
+    all: unset;
+    padding: 12px 24px;
+    background-color: #7541c8;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.info_description{
+    padding: 0 42px 0 0 ;
+    font-size: 18px;
+}
+
+.user_info{
+    margin: 56px 0 0 0 ;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 8px;
+} 
+
+.user_info_fields{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+.message_section{
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 56px 0 0 0;
+}
+
+.message{
+   font-size: 18px;
+}
+
+
+@media only screen and (max-width: 800px) {
+	.query_Msection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .user_Minfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .message_Msection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}

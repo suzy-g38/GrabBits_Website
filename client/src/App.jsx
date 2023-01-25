@@ -6,7 +6,7 @@ import { Button, Card, Input } from './components/common';
 const App = () => {
 	return (
 		<>
-			<div
+			{/* <div
 				style={{
 					display: 'flex',
 					justifyContent: 'center',
@@ -15,7 +15,7 @@ const App = () => {
 					gap: '50px',
 					margin: '100px 0',
 				}}
-			>
+			> */}
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<Landing />} />
@@ -26,7 +26,7 @@ const App = () => {
 				<Input />
 				<Button label="Search for Jobs" />
 				<Card />
-			</div>
+			{/* </div> */}
 		</>
 	);
 };
