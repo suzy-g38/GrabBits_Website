@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Contact, Footer, Landing, Navbar, Team } from './components';
-// import { Button , Card , Input } from './components/common'
+import { Button, Card, Input } from './components/common';
 
 const App = () => {
 	return (
@@ -13,6 +13,8 @@ const App = () => {
 				<Route path="/contact" element={<Contact />} />
 			</Routes>
 			<Footer />
+			<Input />
+			<Button label="Search for Jobs" />
 		</>
 	);
 };

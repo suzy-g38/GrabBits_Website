@@ -1,12 +1,31 @@
 import React from 'react';
 import classes from './Button.module.css';
+import grabby from '../../../assets/grabby.png';
 
-const Button = (title="Label Missing") => {
+const Button = ({
+	children,
+	onClick,
+	label,
+	disabled,
+	filled,
+	padding = '15px 30px',
+	fontSize = '20px',
+}) => {
 	return (
-	<>
-		<button></button>
-	</>
-	)
+		<>
+			<div className={classes.btn_container}>
+				<button
+					style={{ padding: padding, fontSize: fontSize }}
+					className={filled ? classes.fill : classes.btn}
+					onClick={onClick}
+					disabled={disabled}
+				>
+					{label || children}
+				</button>
+				<img className={classes.img} src={grabby} alt="grabby" />
+			</div>
+		</>
+	);
 };
 
 export default Button;
