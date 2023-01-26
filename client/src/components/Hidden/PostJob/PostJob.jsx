@@ -49,9 +49,18 @@ const PostJob = () => {
 		}
 	};
 
+	const deleteAllJobs = async () => {
+		try {
+			axios.delete('/job/deleteJobs');
+		} catch (err) {
+			console.log(err);
+		}
+	};
+
 	return (
 		<>
 			<h2 className={classes.heading}>Post a Job</h2>
+			<Button label="Delete All Jobs" onClick={deleteAllJobs} />
 
 			<form className={classes.form} onSubmit={submitHandler}>
 				<Input

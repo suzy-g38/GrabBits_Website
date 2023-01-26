@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from '../../common';
 import classes from './Contacts.module.css';
 import axios from 'axios';
 
@@ -8,6 +9,14 @@ const Contacts = () => {
 	useEffect(() => {
 		getData();
 	}, []);
+
+	const deleteAllContacts = async () => {
+		try {
+			axios.delete('/contact/deleteContacts');
+		} catch (err) {
+			console.log(err);
+		}
+	};
 
 	const getData = async () => {
 		try {
@@ -22,6 +31,8 @@ const Contacts = () => {
 	return (
 		<>
 			<h2 className={classes.heading}>Contacts</h2>
+			<Button label="Delete All Contacts" onClick={deleteAllContacts} />
+
 			<div className={classes.contacts}>
 				{contactsData.map((c, i) => {
 					return (
