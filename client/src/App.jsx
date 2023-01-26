@@ -7,8 +7,8 @@ import {
 	Navbar,
 	Team,
 	Opportunities,
+	Hidden,
 } from './components';
-import { Button, Card, Input, DotAnim } from './components/common';
 
 const App = () => {
 	return (
@@ -29,6 +29,7 @@ const App = () => {
 				<Route path="/team" element={<Team />} />
 				<Route path="/opportunities" element={<Opportunities />} />
 				<Route path="/contact" element={<Contact />} />
+				<Route path="/hidden" element={<Hidden />} />
 			</Routes>
 			<Footer />
 			{/* <Input />

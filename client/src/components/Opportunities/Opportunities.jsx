@@ -12,9 +12,9 @@ const Opportunities = () => {
 
 	const getData = async () => {
 		try {
-			const data = await axios.get('/job/getJobs').then((response) => {
+			axios.get('/job/getJobs').then((response) => {
 				const data = response.data.jobs;
-				console.log(data);
+
 				setJobData(data);
 			});
 		} catch (err) {

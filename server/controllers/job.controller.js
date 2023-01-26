@@ -4,7 +4,7 @@ const addJob = async (req, res) => {
   const { role, location, companyName, stipend, batch } = req.body;
   if (!role || !companyName || !batch || !location || stipend < 1) {
     res.status(400).json({ message: "Please Provide valid details" });
-    throw new Error("Please provide valid details");
+    // throw new Error("Please provide valid details");
   }
 
   const job = new Job({

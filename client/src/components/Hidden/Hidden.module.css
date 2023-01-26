@@ -1,0 +1,8 @@
+.hidden {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	gap: 20px;
+}
