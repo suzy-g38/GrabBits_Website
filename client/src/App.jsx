@@ -1,6 +1,13 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Contact, Footer, Landing, Navbar, Team } from './components';
+import {
+	Contact,
+	Footer,
+	Landing,
+	Navbar,
+	Team,
+	Opportunities,
+} from './components';
 import { Button, Card, Input, DotAnim } from './components/common';
 
 const App = () => {
@@ -20,12 +27,13 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<Landing />} />
 				<Route path="/team" element={<Team />} />
+				<Route path="/opportunities" element={<Opportunities />} />
 				<Route path="/contact" element={<Contact />} />
 			</Routes>
 			<Footer />
 			{/* <Input />
-			<Button label="Search for Jobs" />
-			<Card /> */}
+			<Button label="Search for Jobs" />*/}
+			{/* <Card /> */}
 			{/* </div> */}
 		</>
 	);
