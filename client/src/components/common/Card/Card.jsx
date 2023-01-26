@@ -3,19 +3,21 @@ import classes from './Card.module.css';
 import verified from '../../../assets/verified.png';
 import { Button } from '../../common/index';
 
-const Card = () => {
+const Card = ({ data }) => {
+	const { role, location, companyName, stipend, batch } = data;
 	return (
 		<>
 			<div className={classes.outer_container}>
 				<div className={classes.inner_container}>
 					<div className={classes.data}>
-						<h1 className={classes.name}>Google</h1>
+						<h1 className={classes.name}>{companyName}</h1>
 						<img className={classes.verified} src={verified} alt="verified" />
 					</div>
 					<div className={classes.tags}>
-						<span className={classes.tag}>UI/UX</span>
-						<span className={classes.tag}>Web Developer</span>
-						<span className={classes.tag}>Cloud</span>
+						<span className={classes.tag}>{role}</span>
+						<span className={classes.tag}>{stipend}</span>
+						<span className={classes.tag}>{batch}</span>
+						<span className={classes.tag}>{location}</span>
 					</div>
 					<div className={classes.description}>
 						Des cription vbdivskhj abvk,kjs hgav fkirsufb;kajgf iuy wrfgelhf

@@ -1,18 +1,21 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 .navbar {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	/* height: 5rem; */
-	padding: 0 40px 0 40px;
 	position: relative;
-	box-shadow: 5px 5px 10px 2px rgba(155, 155, 155, 0.8);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+	width: 100vw;
+	z-index: 5;
+}
+.inner_navbar {
+	padding: 0 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100vw;
 }
 
 .brand {
@@ -46,7 +49,7 @@
 	gap: 1.5rem;
 }
 
-.navbar_item a {
+.navbar_item .link_text {
 	text-decoration: none;
 	color: #000000;
 	font-size: 1rem;
@@ -61,29 +64,6 @@
 	background-clip: text;
 	-webkit-background-clip: text;
 }
-
-/* .navbar_search_tab{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar_search{ 
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: groove;
-  background-color:#000000;
-  padding: 8px;
-  border-radius: 0.4rem;
-  font-size: 1.01rem;
-  color: white;
-}
-
-.navbar_search:focus{
-    outline: none;
-} */
-
 .hamburger {
 	align-items: center;
 	display: none;
@@ -131,25 +111,29 @@
 	stroke-dashoffset: -138px;
 }
 
-@media only screen and (max-width: 800px) {
+.links {
+	display: none;
+}
+
+@media screen and (max-width: 800px) {
 	.brand_title {
 		display: none;
 	}
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
+	.inner_navbar {
+		padding: 0;
+	}
 	.brand_title {
 		display: none;
 	}
-
 	.navbar_items {
 		display: none;
 	}
-
 	.hamburger {
 		display: flex;
 	}
-
 	.navbar {
 		display: flex;
 		flex-direction: column;
@@ -157,20 +141,30 @@
 		align-items: flex-start;
 		text-align: center;
 	}
-
 	.navbar_mitems {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
-		padding: 12px 8px 12px 8px;
+		width: 100vw;
+		height: 100vh;
+		padding: 0;
 		text-align: center;
 		transition: ease-out;
 		transition-delay: 100ms;
 		transition-duration: 1000ms;
+		position: absolute;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-top: 66.664px;
+		padding-top: 80px;
+		background-color: rgb(0, 0, 0);
 	}
-
-	/* .navbar_mitems .navbar_item{
-        padding: 12px 8px 12px 8px;
-        text-align: center;
-    } */
+	.navbar_item .link_text {
+		font-size: 8vw;
+		color: #fff;
+	}
+	.links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
