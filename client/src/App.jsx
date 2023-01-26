@@ -23,9 +23,9 @@ const App = () => {
 				<Route path="/contact" element={<Contact />} />
 			</Routes>
 			<Footer />
-			<Input />
+			{/* <Input />
 			<Button label="Search for Jobs" />
-			<Card />
+			<Card /> */}
 			{/* </div> */}
 		</>
 	);

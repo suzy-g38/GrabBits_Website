@@ -28,26 +28,72 @@
 
 .team {
 	flex-grow: 1;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
 }
 .member_1 {
 	margin-bottom: 95px;
 }
+#img_1,
+#img_2,
+#img_3,
+#img_4,
+#img_5,
+#img_6 {
+	border-radius: 12px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+	transition: all 0.3s ease-in-out;
+}
+#img_1 {
+	border-radius: 12px;
+	background: linear-gradient(to right, rgb(54, 209, 220), rgb(91, 134, 229));
+	background: linear-gradient(to right, rgb(253, 252, 71), rgb(36, 254, 65));
+}
+
 .member_2 {
 	margin-top: 95px;
+}
+#img_2 {
+	border-radius: 12px;
+	background-image: linear-gradient(
+		45deg,
+		rgb(3, 0, 30),
+		rgb(115, 3, 192),
+		rgb(236, 56, 188),
+		rgb(253, 239, 249)
+	);
 }
 .member_3 {
 	margin-bottom: 95px;
 }
+#img_3 {
+	border-radius: 12px;
+	background: linear-gradient(to right, rgb(86, 204, 242), rgb(47, 128, 237));
+}
 .member_4 {
 	margin-bottom: 95px;
+}
+#img_4 {
+	border-radius: 12px;
+	background: linear-gradient(to right, rgb(255, 0, 132), rgb(51, 0, 27));
 }
 .member_5 {
 	margin-top: 95px;
 }
+#img_5 {
+	border-radius: 12px;
+	/* background: linear-gradient(to right, rgb(255, 95, 109), rgb(255, 195, 113)); */
+}
 .member_6 {
 	margin-bottom: 95px;
 }
-
+#img_6 {
+	border-radius: 12px;
+	background: linear-gradient(to right, rgb(86, 204, 242), rgb(47, 128, 237));
+}
 .main_title {
 	font-family: 'PT Serif', serif;
 	font-style: normal;
