@@ -61,3 +61,21 @@
     color:purple;
     font-size: 28px;
   }
+  .faq_heading{
+    display: flex;
+    width: 100vw;
+    height: 18vh;
+    line-height: 0.05;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .faq_heading1,.faq_heading2{
+    color: #19212E;
+  }
+  .faq_heading1{
+    font-size: 25px;
+  }
+  .faq_heading2{
+    font-size: 18px;
+  }
