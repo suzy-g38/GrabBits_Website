@@ -1,5 +1,6 @@
 import React from 'react';
 import Highlights from '../Highlights/Highlights';
+import Swiper from '../Swiper/Swiper';
 import classes from './Landing.module.css';
 import Faq from '../Faq/Faq';
 import Testimonial from '../Testimonials/Testimonial';
@@ -12,6 +13,9 @@ const Landing = () => {
 				{/* <Highlights /> */}
 				{/* <Faq /> */}
 				<Testimonial />
+				<Highlights />
+				<Faq />
+				<Swiper />
 			</div>
 		</>
 	);
