@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classes from './Swiper.module.css';
+import Testimonial from '../Testimonials/Testimonial';
 
 const Swiper = () => {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,7 +23,7 @@ const Swiper = () => {
 					transition: 'left 1s ease-in-out',
 				}}
 			>
-				Slide 1
+				<Testimonial />
 			</div>
 			<div
 				className={classes.slide}
@@ -32,7 +33,7 @@ const Swiper = () => {
 					transition: 'left 1s ease-in-out',
 				}}
 			>
-				Slide 2
+				<Testimonial />
 			</div>
 			<div
 				className={classes.slide}
@@ -42,7 +43,7 @@ const Swiper = () => {
 					transition: 'left 1s ease-in-out',
 				}}
 			>
-				Slide 3
+				<Testimonial />
 			</div>
 			<button onClick={() => updateSlide('prev')}>Previous</button>
 			<button onClick={() => updateSlide('next')}>Next</button>

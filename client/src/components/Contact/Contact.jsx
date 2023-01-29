@@ -135,13 +135,13 @@ const Contact = () => {
 							/>
 
 							<div className={classes.button}>
-                            <Button
-								padding="8px 24px"
-								fontSize="18px"
-								label="Send"
-								bgColor="#7541C8"
-                
-							/></div>
+								<Button
+									padding="8px 24px"
+									fontSize="18px"
+									label="Send"
+									bgColor="#7541C8"
+								/>
+							</div>
 						</form>
 					</div>
 				</div>
