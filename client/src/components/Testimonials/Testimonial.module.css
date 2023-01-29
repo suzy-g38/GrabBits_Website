@@ -5,11 +5,10 @@
     align-items: center;
     background-color: rgb(255, 255, 255);
     width: 70vw;
-    /* height: 50vh; */
     height: auto;
     margin: auto;
     padding: 30px;
-    row-gap: 30px;
+    row-gap: 50px;
     border-radius: 50px;
 }
 .testi_wrapper{
@@ -18,6 +17,12 @@
     justify-content: center;
     align-items: center;
     column-gap: 70px;
+}
+.testi_content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 20px;
 }
 .testi_img{
     width: 180px;

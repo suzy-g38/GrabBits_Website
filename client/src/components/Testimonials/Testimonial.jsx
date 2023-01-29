@@ -4,11 +4,10 @@ import right from '../../assets/Testimonials/right.png';
 import left from '../../assets/Testimonials/left.png';
 import classes from './Testimonial.module.css';
 import { Testimonials as testidata } from '../../assets/Data/Testimonials';
-import Slider from "./Slider"
+
 
 const Testimonial = () => {
 	return (
-            // <Slider/>
         <div className={classes.testi_bg}>
 		 	{testidata.map((item, i) => {
 				return (
