@@ -135,7 +135,7 @@ const Contact = () => {
 							/>
 
 							<div className={classes.button}>
-                <Button
+                            <Button
 								padding="8px 24px"
 								fontSize="18px"
 								label="Send"
