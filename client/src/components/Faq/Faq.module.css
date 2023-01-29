@@ -10,7 +10,6 @@
     /* margin:; */
     /* height: 50vh; */
     padding-bottom: 40px;
-  
     width: 100vw;
     color: white;
     justify-content: center;
@@ -36,7 +35,6 @@
     cursor: pointer;
   }
   .faq_question {
-    /* font-family: "Rowdies", cursive; */
     font-size: 1.3rem;
     text-align: left;
     font-family: SansationBold;
@@ -49,6 +47,7 @@
     transition: all 0.5s cubic-bezier(0, 1, 0, 1);
     text-align: left;
     margin-top: 6px;
+    font-size: 16px;
   }
   
   .content.show {
@@ -65,10 +64,10 @@
     display: flex;
     width: 100vw;
     height: 18vh;
-    line-height: 0.05;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-content: center;
   }
   .faq_heading1,.faq_heading2{
     color: #19212E;
