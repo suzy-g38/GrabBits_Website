@@ -1,40 +1,103 @@
-import React from 'react';
-import classes from './Contact.module.css';
-import { Input } from '../common';
+import React from 'react'
+import classes from './Contact.module.css'
+import { FaLocationArrow } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+import { FaMobileAlt } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+
 
 const Contact = () => {
-	return (
-		<>
-			<div className={classes.contact_form}>
-				<h1 className={classes.title}>HELLO!</h1>
-				<p className={classes.title_description}>HOW CAN WE HELP YOU ?</p>
+  const inputs = document.querySelectorAll(".input");
 
-				<div className={`${classes.query_section} ${classes.query_Msection}`}>
-					<span className={classes.query_description}>I am interested in</span>
-					<div className={classes.query_options}>
-						<button className={classes.query_type}>carrers</button>
-						<button className={classes.query_type}>sponsers</button>
-						<button className={classes.query_type}>others</button>
-					</div>
-				</div>
+  function focusFunc() {
+    let parent = this.parentNode;
+    parent.classList.add("focus", focusFunc);
+  }
 
-				<div className={`${classes.user_info} ${classes.user_Minfo}`}>
-					<span className={classes.info_description}>Contact Information</span>
-					<div className={classes.user_info_fields}>
-						<Input label="Your Name" className={classes.field_type} />
-						<Input label="email" className={classes.field_type} />
-					</div>
-				</div>
+  function blurFunc() {
+    let parent = this.parentNode;
+    if(this.value==""){
+    parent.classList.remove("focus");
+    }
+  }
 
-				<div
-					className={`${classes.message_section} ${classes.message_Msection}`}
-				>
-					<span className={classes.message}>Message</span>
-					<Input label="message" className={classes.message_description} />
-				</div>
-			</div>
-		</>
-	);
-};
+  inputs.forEach(input => {
+    input.addEventListener("focus", focusFunc);
+    input.addEventListener("blur", blurFunc);
+  })
+  return (
+    <>
+      <div className={classes.container}>
+      {/* <span className={classes.big_circle}></span> */}
+      <div className={classes.form}>
+        <div className={classes.contact_info}>
+          <h3 className={classes.title}>Lets Get in Touch</h3>
+          <p className={classes.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae enim distinctio nostrum possimus in dolor beatae, illo iusto! Incidunt cum aliquid exercitationem, maxime optio vero pariatur suscipit explicabo nesciunt. Debitis.</p>
+          <div className={classes.info}>
+            <div className={classes.information}>
+              <FaLocationArrow className={classes.icon}/>
+              <p>lorem</p>
+            </div>
+            <div className={classes.information}>
+              <FaEnvelope className={classes.icon}/>
+              <p>lorem</p>
+            </div><div className={classes.information}>
+              <FaMobileAlt className={classes.icon}/>
+              <p>lorem</p>
+            </div>
+          </div>
+         
+          <div className={classes.social_media}>
+            <p>Connect with us : </p>
+            <div className={classes.social_icons}>
+              <a href="https://www.instagram.com/grabbits_/" target="blank">
+                <FaInstagram/>
+              </a>
+              <a href="https://www.linkedin.com/company/grabbits/" target="blank">
+                <FaLinkedinIn/>
+              </a>
+              <a href="https://twitter.com/grabbits_" target="blank">
+                <FaTwitter/>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div className={classes.contact_form}>
+          <span className={`${classes.circle} ${classes.one}`}></span>
+          <span className={`${classes.circle} ${classes.two}`}></span>
 
-export default Contact;
+          <form>
+            <h3 className={classes.title}>Contact Us</h3>
+            <div className={`${classes.input_container} ${classes.focus}`}>
+              <input type="text" name='name' className={classes.input} />
+              <label htmlFor="">Name</label>
+              <span>Name</span>
+            </div>
+            <div className={`${classes.input_container}`}>
+              <input type="email" name='email' className={classes.input} />
+              <label htmlFor="">Email</label>
+              <span>Email</span>
+            </div>
+            <div className={`${classes.input_container}`}>
+              <input type="tel" name='phone' className={classes.input} />
+              <label htmlFor="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div className={`${classes.input_container} ${classes.textarea}`}>
+              <textarea name='message' className={classes.input} />
+              <label htmlFor="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" className={classes.btn}/>
+          </form>
+        </div>
+      </div>
+      </div>
+    </>
+  )
+}
+
+export default Contact
