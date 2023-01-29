@@ -8,6 +8,7 @@ const Opportunities = () => {
 
 	useEffect(() => {
 		getData();
+		console.log(jobData);
 	}, []);
 
 	const getData = async () => {
