@@ -3,3 +3,4 @@ export { default as Card } from './Card/Card';
 export { default as Input } from './Input/Input';
 export { default as DotAnim } from './DotAnim/DotAnim';
 export { default as Ticket } from './Ticket/Ticket';
+export { default as Textarea } from './Textarea/Textarea';

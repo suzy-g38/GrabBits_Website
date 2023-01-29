@@ -1,4 +1,5 @@
 import express from "express";
+import multer from "multer";
 import {
   addJob,
   getAllJobs,
@@ -7,9 +8,21 @@ import {
   deleteAllJobs,
 } from "../controllers/job.controller.js";
 
+const upload = multer({
+  fileFilter(req, file, cb) {
+    if (!file.originalname.match(/\.(jpg|png|jpeg|jfif|PNG)$/)) {
+      return cb(new Error("Please upload valid image format"));
+    }
+    return cb(undefined, true);
+  },
+  limits: {
+    fileSize: 1000000,
+  },
+});
+
 const jobRouter = express.Router();
 
-jobRouter.route("/createJob").post(addJob);
+jobRouter.route("/createJob").post(upload.any(), addJob);
 jobRouter.route("/getJobs").get(getAllJobs);
 jobRouter.route("/getJob/:id").get(getJobById);
 jobRouter.route("/deleteJob/:id").delete(deleteJobById);

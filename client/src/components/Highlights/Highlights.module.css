@@ -2,4 +2,15 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: auto;
+	animation: marquee 25s linear 0s infinite forwards ;
+}
+@keyframes marquee {
+	0%{
+		transform: translateX(140%);
+	}
+	100%{
+		transform: translateX(-140%);
+	}
+
 }

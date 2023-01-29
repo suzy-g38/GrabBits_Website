@@ -24,7 +24,12 @@ const Team = () => {
 			</div>
 
 			<div className={classes.team_members}>
-				<div className={`${classes.team}  ${classes.member_1}`}>
+				<a
+					href="https://www.linkedin.com/in/bhushan-kale/"
+					target="_blank"
+					rel="noreferrer"
+					className={`${classes.team}  ${classes.member_1}`}
+				>
 					<img
 						className={classes.img}
 						id={classes.img_1}
@@ -33,8 +38,13 @@ const Team = () => {
 					/>
 					<span className={classes.position}>Unknown</span>
 					<p className={classes.name}>Bhushan Kale</p>
-				</div>
-				<div className={`${classes.team}  ${classes.member_2}`}>
+				</a>
+				<a
+					href="https://www.linkedin.com/in/sanyog-mahajan-8288a7204/"
+					target="_blank"
+					rel="noreferrer"
+					className={`${classes.team}  ${classes.member_2}`}
+				>
 					<img
 						className={classes.img}
 						id={classes.img_2}
@@ -43,8 +53,13 @@ const Team = () => {
 					/>
 					<span className={classes.position}>Unknown</span>
 					<p className={classes.name}>Sanyog Mahajan</p>
-				</div>
-				<div className={`${classes.team}  ${classes.member_3}`}>
+				</a>
+				<a
+					href="https://www.linkedin.com/in/saurabh-barde-5b617321a/"
+					target="_blank"
+					rel="noreferrer"
+					className={`${classes.team}  ${classes.member_3}`}
+				>
 					<img
 						className={classes.img}
 						id={classes.img_3}
@@ -53,8 +68,13 @@ const Team = () => {
 					/>
 					<span className={classes.position}>Unknown</span>
 					<p className={classes.name}>Saurabh Barde</p>
-				</div>
-				<div className={`${classes.team}  ${classes.member_4}`}>
+				</a>
+				<a
+					href="https://www.linkedin.com/in/sapna-kul-84453a215/"
+					target="_blank"
+					rel="noreferrer"
+					className={`${classes.team}  ${classes.member_4}`}
+				>
 					<img
 						className={classes.img}
 						id={classes.img_4}
@@ -63,8 +83,13 @@ const Team = () => {
 					/>
 					<span className={classes.position}>Unknown</span>
 					<p className={classes.name}>Sapna Kul</p>
-				</div>
-				<div className={`${classes.team}  ${classes.member_5}`}>
+				</a>
+				<a
+					href="https://www.linkedin.com/in/om-gawande/"
+					target="_blank"
+					rel="noreferrer"
+					className={`${classes.team}  ${classes.member_5}`}
+				>
 					<img
 						className={classes.img}
 						id={classes.img_5}
@@ -73,8 +98,13 @@ const Team = () => {
 					/>
 					<span className={classes.position}>Unknown</span>
 					<p className={classes.name}>Om Gawande</p>
-				</div>
-				<div className={`${classes.team}  ${classes.member_6}`}>
+				</a>
+				<a
+					href=""
+					target="_blank"
+					rel="noreferrer"
+					className={`${classes.team}  ${classes.member_6}`}
+				>
 					<img
 						className={classes.img}
 						id={classes.img_6}
@@ -83,7 +113,7 @@ const Team = () => {
 					/>
 					<span className={classes.position}>Unknown</span>
 					<p className={classes.name}>Unknown</p>
-				</div>
+				</a>
 			</div>
 		</>
 	);
