@@ -47,12 +47,22 @@
 		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 	transition: all 0.3s ease-in-out;
 }
+#img_1:hover,
+#img_2:hover,
+#img_3:hover,
+#img_4:hover,
+#img_5:hover,
+#img_6:hover {
+	transform: translateY(-10px);
+}
 #img_1 {
 	border-radius: 12px;
 	background: linear-gradient(to right, rgb(54, 209, 220), rgb(91, 134, 229));
 	background: linear-gradient(to right, rgb(253, 252, 71), rgb(36, 254, 65));
 }
-
+#img_1:hover {
+	background: linear-gradient(to left, rgb(253, 252, 71), rgb(36, 254, 65));
+}
 .member_2 {
 	margin-top: 95px;
 }
@@ -66,12 +76,24 @@
 		rgb(253, 239, 249)
 	);
 }
+#img_2:hover {
+	background-image: linear-gradient(
+		135deg,
+		rgb(3, 0, 30),
+		rgb(115, 3, 192),
+		rgb(236, 56, 188),
+		rgb(253, 239, 249)
+	);
+}
 .member_3 {
 	margin-bottom: 95px;
 }
 #img_3 {
 	border-radius: 12px;
 	background: linear-gradient(to right, rgb(86, 204, 242), rgb(47, 128, 237));
+}
+#img_3:hover {
+	background: linear-gradient(to left, rgb(86, 204, 242), rgb(47, 128, 237));
 }
 .member_4 {
 	margin-bottom: 95px;
@@ -80,12 +102,18 @@
 	border-radius: 12px;
 	background: linear-gradient(to right, rgb(255, 0, 132), rgb(51, 0, 27));
 }
+#img_4:hover {
+	background: linear-gradient(to left, rgb(255, 0, 132), rgb(51, 0, 27));
+}
 .member_5 {
 	margin-top: 95px;
 }
 #img_5 {
 	border-radius: 12px;
-	/* background: linear-gradient(to right, rgb(255, 95, 109), rgb(255, 195, 113)); */
+	background: linear-gradient(to right, #8693ab, #bdd4e7);
+}
+#img_5:hover {
+	background: linear-gradient(to left, #8693ab, #bdd4e7);
 }
 .member_6 {
 	margin-bottom: 95px;
@@ -93,6 +121,9 @@
 #img_6 {
 	border-radius: 12px;
 	background: linear-gradient(to right, rgb(86, 204, 242), rgb(47, 128, 237));
+}
+#img_6:hover {
+	background: linear-gradient(to left, rgb(86, 204, 242), rgb(47, 128, 237));
 }
 .main_title {
 	font-family: 'PT Serif', serif;

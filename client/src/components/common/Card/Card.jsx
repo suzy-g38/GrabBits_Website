@@ -1,16 +1,27 @@
 import React from 'react';
 import classes from './Card.module.css';
 import verified from '../../../assets/verified.png';
+// import google from '../../../assets/google.png';
 import { Button } from '../../common/index';
 
-const Card = ({ data }) => {
-	const { role, location, companyName, stipend, batch } = data;
+const Card = ({ data, companyImage }) => {
+	console.log(companyImage);
+	// useEffect(() => {}, []);
+
+	const { role, location, companyName, stipend, batch, description } = data;
 	return (
 		<>
 			<div className={classes.outer_container}>
 				<div className={classes.inner_container}>
 					<div className={classes.data}>
-						<h1 className={classes.name}>{companyName}</h1>
+						<div className={classes.company_container}>
+							<img
+								className={classes.company_image}
+								src={`data:image/jpeg;base64, ${companyImage}`}
+								alt="company_image"
+							/>
+							<h1 className={classes.name}>{companyName}</h1>
+						</div>
 						<img className={classes.verified} src={verified} alt="verified" />
 					</div>
 					<div className={classes.tags}>
@@ -19,13 +30,7 @@ const Card = ({ data }) => {
 						<span className={classes.tag}>{batch}</span>
 						<span className={classes.tag}>{location}</span>
 					</div>
-					<div className={classes.description}>
-						Des cription vbdivskhj abvk,kjs hgav fkirsufb;kajgf iuy wrfgelhf
-						blfkhsbfliyg bfr ifbalwefhgfjhs Des cription vbdivskhj abvk,kjs hgav
-						fkirsufb;kajgf iuy wrfgelhf blfkhsbfliyg bfr ifbalwefhgfjhsDes
-						cription vbdivskhj abvk,kjs hgav fkirsufb;kajgf iuy wrfgelhf
-						blfkhsbfliyg bfr ifbalwefhgfjhs
-					</div>
+					<div className={classes.description}>{description}</div>
 					<div className={classes.apply}>
 						<Button bgColor="#7541C8" label="APPLY NOW" />
 					</div>
