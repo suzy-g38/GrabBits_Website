@@ -134,12 +134,14 @@ const Contact = () => {
 								required
 							/>
 
-							<Button
-								padding="14px 50px"
-								fontSize="24px"
+							<div className={classes.button}>
+                <Button
+								padding="8px 24px"
+								fontSize="18px"
 								label="Send"
 								bgColor="#7541C8"
-							/>
+                
+							/></div>
 						</form>
 					</div>
 				</div>
