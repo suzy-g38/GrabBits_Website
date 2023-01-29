@@ -18,38 +18,40 @@ const Card = ({ data, imgPreview, show }) => {
 	return (
 		<>
 			<div className={classes.outer_container}>
-				<div className={classes.inner_container}>
-					<div className={classes.data}>
-						<div className={classes.company_container}>
-							{show ? (
-								<img
-									className={classes.company_image}
-									src={imgPreview}
-									alt="company_image"
-								/>
-							) : (
-								<img
-									className={classes.company_image}
-									src={`data:image/png;base64, ${image}`}
-									alt="company_image"
-								/>
-							)}
+				<details className={classes.inner_container}>
+					<summary className={classes.data}>
+						<div className={classes.extra_container}>
+							<div className={classes.company_container}>
+								{show ? (
+									<img
+										className={classes.company_image}
+										src={imgPreview}
+										alt="company_image"
+									/>
+								) : (
+									<img
+										className={classes.company_image}
+										src={`data:image/png;base64, ${image}`}
+										alt="company_image"
+									/>
+								)}
 
-							<h1 className={classes.name}>{companyName}</h1>
+								<h1 className={classes.name}>{companyName}</h1>
+							</div>
+							<img className={classes.verified} src={verified} alt="verified" />
 						</div>
-						<img className={classes.verified} src={verified} alt="verified" />
-					</div>
-					<div className={classes.tags}>
-						<span className={classes.tag}>{role}</span>
-						<span className={classes.tag}>{stipend}</span>
-						<span className={classes.tag}>{batch}</span>
-						<span className={classes.tag}>{location}</span>
-					</div>
+						<div className={classes.tags}>
+							<span className={classes.tag}>{role}</span>
+							<span className={classes.tag}>{stipend}</span>
+							<span className={classes.tag}>{batch}</span>
+							<span className={classes.tag}>{location}</span>
+						</div>
+					</summary>
 					<div className={classes.description}>{description}</div>
 					<div className={classes.apply}>
 						<Button link={link} bgColor="#7541C8" label="APPLY NOW" />
 					</div>
-				</div>
+				</details>
 			</div>
 		</>
 	);

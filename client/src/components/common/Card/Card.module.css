@@ -10,7 +10,7 @@
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
 		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
 		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-	margin: 20px 0;
+	margin: 0;
 }
 .inner_container {
 	display: flex;
@@ -19,6 +19,7 @@
 	flex-direction: column;
 	gap: 20px;
 	padding: 20px 30px;
+	padding-top: 0;
 	margin: 20px;
 	background-color: #19212e;
 	border-radius: 12px;
@@ -26,13 +27,14 @@
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
 		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
 		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-	/* width: 98%; */
+	width: 98%;
 	/* Add this for small card  */
 }
 .data {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	flex-direction: column;
 }
 .company_container {
 	display: flex;
@@ -59,6 +61,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: 20px;
 }
 .tag {
@@ -70,9 +73,20 @@
 .description {
 	color: #fff;
 	font-size: 20px;
+	margin-top: 8px;
 }
 .apply {
-	align-self: flex-end;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
 	z-index: 0;
 	margin-top: 20px;
+}
+.extra_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+@media screen and (max-width: 750px) {
 }
