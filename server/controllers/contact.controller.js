@@ -1,8 +1,8 @@
 import Contact from "../models/contact.model.js";
 
 const addContact = async (req, res) => {
-  const { name, email, message } = req.body;
-  if (!name || !email || message < 1) {
+  const { name, email, message, phoneNo } = req.body;
+  if (!name || !email || !message || phoneNo < 1) {
     res.status(400).json({ message: "Please Provide valid details" });
     throw new Error("Please provide valid details");
   }
@@ -11,6 +11,7 @@ const addContact = async (req, res) => {
     name,
     email,
     message,
+    phoneNo,
   });
   await contact.save();
 

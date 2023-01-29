@@ -1,103 +1,151 @@
-import React from 'react'
-import classes from './Contact.module.css'
-import { FaLocationArrow } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
-import { FaMobileAlt } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import React, { useState } from 'react';
+import classes from './Contact.module.css';
+import axios from 'axios';
 
+import { Button, Input, Textarea } from '../common';
+import {
+	FaLocationArrow,
+	FaEnvelope,
+	FaMobileAlt,
+	FaInstagram,
+	FaLinkedinIn,
+	FaTwitter,
+} from 'react-icons/fa';
 
 const Contact = () => {
-  const inputs = document.querySelectorAll(".input");
+	const [contact, setContact] = useState({
+		name: '',
+		email: '',
+		phoneNo: '',
+		message: '',
+	});
 
-  function focusFunc() {
-    let parent = this.parentNode;
-    parent.classList.add("focus", focusFunc);
-  }
+	const { name, email, phoneNo, message } = contact;
 
-  function blurFunc() {
-    let parent = this.parentNode;
-    if(this.value==""){
-    parent.classList.remove("focus");
-    }
-  }
+	const onChangeHandler = (e) => {
+		setContact({
+			...contact,
+			[e.target.name]: e.target.value,
+		});
+		console.log(contact);
+	};
+	const submitHandler = async (e) => {
+		e.preventDefault();
+		if (name === '' || email === '' || phoneNo === '' || message === '') {
+			// AlertContext.setAlert("Please enter all fields", "danger"); add a state
+			alert('Please fill all  the fields');
+		}
+		try {
+			axios.post('/contact/createContact', contact).then(
+				(response) => {
+					console.log(response);
+				},
+				(error) => {
+					console.log(error);
+				}
+			);
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
-  inputs.forEach(input => {
-    input.addEventListener("focus", focusFunc);
-    input.addEventListener("blur", blurFunc);
-  })
-  return (
-    <>
-      <div className={classes.container}>
-      {/* <span className={classes.big_circle}></span> */}
-      <div className={classes.form}>
-        <div className={classes.contact_info}>
-          <h3 className={classes.title}>Lets Get in Touch</h3>
-          <p className={classes.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae enim distinctio nostrum possimus in dolor beatae, illo iusto! Incidunt cum aliquid exercitationem, maxime optio vero pariatur suscipit explicabo nesciunt. Debitis.</p>
-          <div className={classes.info}>
-            <div className={classes.information}>
-              <FaLocationArrow className={classes.icon}/>
-              <p>lorem</p>
-            </div>
-            <div className={classes.information}>
-              <FaEnvelope className={classes.icon}/>
-              <p>lorem</p>
-            </div><div className={classes.information}>
-              <FaMobileAlt className={classes.icon}/>
-              <p>lorem</p>
-            </div>
-          </div>
-         
-          <div className={classes.social_media}>
-            <p>Connect with us : </p>
-            <div className={classes.social_icons}>
-              <a href="https://www.instagram.com/grabbits_/" target="blank">
-                <FaInstagram/>
-              </a>
-              <a href="https://www.linkedin.com/company/grabbits/" target="blank">
-                <FaLinkedinIn/>
-              </a>
-              <a href="https://twitter.com/grabbits_" target="blank">
-                <FaTwitter/>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <div className={classes.contact_form}>
-          <span className={`${classes.circle} ${classes.one}`}></span>
-          <span className={`${classes.circle} ${classes.two}`}></span>
+	return (
+		<>
+			<div className={classes.container}>
+				<div className={classes.form}>
+					<div className={classes.contact_info}>
+						<h3 className={classes.title}>Lets Get in Touch</h3>
+						<p className={classes.text}>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae enim
+							distinctio nostrum possimus in dolor beatae, illo iusto! Incidunt
+							cum aliquid exercitationem, maxime optio vero pariatur suscipit
+							explicabo nesciunt. Debitis.
+						</p>
+						<div className={classes.info}>
+							<div className={classes.information}>
+								<FaLocationArrow className={classes.icon} />
+								<p>lorem</p>
+							</div>
+							<div className={classes.information}>
+								<FaEnvelope className={classes.icon} />
+								<p>lorem</p>
+							</div>
+							<div className={classes.information}>
+								<FaMobileAlt className={classes.icon} />
+								<p>lorem</p>
+							</div>
+						</div>
 
-          <form>
-            <h3 className={classes.title}>Contact Us</h3>
-            <div className={`${classes.input_container} ${classes.focus}`}>
-              <input type="text" name='name' className={classes.input} />
-              <label htmlFor="">Name</label>
-              <span>Name</span>
-            </div>
-            <div className={`${classes.input_container}`}>
-              <input type="email" name='email' className={classes.input} />
-              <label htmlFor="">Email</label>
-              <span>Email</span>
-            </div>
-            <div className={`${classes.input_container}`}>
-              <input type="tel" name='phone' className={classes.input} />
-              <label htmlFor="">Phone</label>
-              <span>Phone</span>
-            </div>
-            <div className={`${classes.input_container} ${classes.textarea}`}>
-              <textarea name='message' className={classes.input} />
-              <label htmlFor="">Message</label>
-              <span>Message</span>
-            </div>
-            <input type="submit" className={classes.btn}/>
-          </form>
-        </div>
-      </div>
-      </div>
-    </>
-  )
-}
+						<div className={classes.social_media}>
+							<p>Connect with us : </p>
+							<div className={classes.social_icons}>
+								<a href="https://www.instagram.com/grabbits_/" target="blank">
+									<FaInstagram />
+								</a>
+								<a
+									href="https://www.linkedin.com/company/grabbits/"
+									target="blank"
+								>
+									<FaLinkedinIn />
+								</a>
+								<a href="https://twitter.com/grabbits_" target="blank">
+									<FaTwitter />
+								</a>
+							</div>
+						</div>
+					</div>
 
-export default Contact
+					<div className={classes.contact_form}>
+						<span className={`${classes.circle} ${classes.one}`}></span>
+						<span className={`${classes.circle} ${classes.two}`}></span>
+
+						<form onSubmit={submitHandler}>
+							<h3 className={classes.title}>Contact Us</h3>
+							<Input
+								onChange={onChangeHandler}
+								type="text"
+								value={name}
+								label="Name"
+								name="name"
+								required
+							/>
+							<Input
+								onChange={onChangeHandler}
+								type="text"
+								value={email}
+								label="Email"
+								name="email"
+								required
+							/>
+							<Input
+								onChange={onChangeHandler}
+								type="text"
+								value={phoneNo}
+								label="Mobile Number"
+								name="phoneNo"
+								required
+							/>
+							<Textarea
+								onChange={onChangeHandler}
+								type="text"
+								value={message}
+								label="Your Message"
+								name="message"
+								required
+							/>
+
+							<Button
+								padding="14px 50px"
+								fontSize="24px"
+								label="Send"
+								bgColor="#7541C8"
+							/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</>
+	);
+};
+
+export default Contact;

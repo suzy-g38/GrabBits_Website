@@ -11,6 +11,10 @@ const ContactModel = new Schema(
       type: String,
       required: true,
     },
+    phoneNo: {
+      type: String,
+      required: true,
+    },
     message: {
       type: String,
       required: true,
