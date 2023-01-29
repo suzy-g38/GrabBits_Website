@@ -3,12 +3,6 @@ import classes from './PostJob.module.css';
 import { Button, Card, Input } from '../../common';
 import axios from 'axios';
 
-const config = {
-	headers: {
-		'Content-Type': 'application/json',
-	},
-};
-
 const PostJob = () => {
 	const [img, setImg] = useState(null);
 	const [imgPreview, setImgPreview] = useState(null);
@@ -59,18 +53,18 @@ const PostJob = () => {
 			dataArray.append('description', description);
 			dataArray.append('image', img['0'], img['0'].name);
 			console.log(dataArray);
-		}
-		try {
-			axios.post('/job/createJob', dataArray, config).then(
-				(response) => {
-					console.log(response);
-				},
-				(error) => {
-					console.log(error);
-				}
-			);
-		} catch (error) {
-			console.log(error);
+			try {
+				axios.post('/job/createJob', dataArray).then(
+					(response) => {
+						console.log(response);
+					},
+					(error) => {
+						console.log(error);
+					}
+				);
+			} catch (error) {
+				console.log(error);
+			}
 		}
 	};
 
@@ -144,7 +138,7 @@ const PostJob = () => {
 				/>
 				<Button label="Create" />
 			</form>
-			<Card data={job} companyImage={imgPreview} />
+			<Card data={job} image={imgPreview} />
 		</>
 	);
 };

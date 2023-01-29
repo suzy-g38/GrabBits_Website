@@ -25,8 +25,9 @@ const Team = () => {
 
 			<div className={classes.team_members}>
 				<a
-					href=""
+					href="https://www.linkedin.com/in/bhushan-kale/"
 					target="_blank"
+					rel="noreferrer"
 					className={`${classes.team}  ${classes.member_1}`}
 				>
 					<img
@@ -39,8 +40,9 @@ const Team = () => {
 					<p className={classes.name}>Bhushan Kale</p>
 				</a>
 				<a
-					href=""
+					href="https://www.linkedin.com/in/sanyog-mahajan-8288a7204/"
 					target="_blank"
+					rel="noreferrer"
 					className={`${classes.team}  ${classes.member_2}`}
 				>
 					<img
@@ -53,8 +55,9 @@ const Team = () => {
 					<p className={classes.name}>Sanyog Mahajan</p>
 				</a>
 				<a
-					href=""
+					href="https://www.linkedin.com/in/saurabh-barde-5b617321a/"
 					target="_blank"
+					rel="noreferrer"
 					className={`${classes.team}  ${classes.member_3}`}
 				>
 					<img
@@ -67,8 +70,9 @@ const Team = () => {
 					<p className={classes.name}>Saurabh Barde</p>
 				</a>
 				<a
-					href=""
+					href="https://www.linkedin.com/in/sapna-kul-84453a215/"
 					target="_blank"
+					rel="noreferrer"
 					className={`${classes.team}  ${classes.member_4}`}
 				>
 					<img
@@ -81,8 +85,9 @@ const Team = () => {
 					<p className={classes.name}>Sapna Kul</p>
 				</a>
 				<a
-					href=""
+					href="https://www.linkedin.com/in/om-gawande/"
 					target="_blank"
+					rel="noreferrer"
 					className={`${classes.team}  ${classes.member_5}`}
 				>
 					<img
@@ -97,6 +102,7 @@ const Team = () => {
 				<a
 					href=""
 					target="_blank"
+					rel="noreferrer"
 					className={`${classes.team}  ${classes.member_6}`}
 				>
 					<img

@@ -4,8 +4,8 @@ import verified from '../../../assets/verified.png';
 // import google from '../../../assets/google.png';
 import { Button } from '../../common/index';
 
-const Card = ({ data, companyImage }) => {
-	console.log(companyImage);
+const Card = ({ data, image }) => {
+	console.log(image);
 	// useEffect(() => {}, []);
 
 	const { role, location, companyName, stipend, batch, description } = data;
@@ -17,7 +17,8 @@ const Card = ({ data, companyImage }) => {
 						<div className={classes.company_container}>
 							<img
 								className={classes.company_image}
-								src={`data:image/jpeg;base64, ${companyImage}`}
+								src={`data:image/jpeg;base64, ${image}`}
+								// src={image}
 								alt="company_image"
 							/>
 							<h1 className={classes.name}>{companyName}</h1>

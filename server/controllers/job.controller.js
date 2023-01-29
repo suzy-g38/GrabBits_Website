@@ -14,7 +14,7 @@ const addJob = async (req, res) => {
     // throw new Error("Please provide valid details");
   }
   console.log(req.files);
-  const imageBuffer = req.files?.[0]?.buffer ? req.files?.[0]?.buffer : null;
+  const imageBuffer = req.files[0].buffer ? req.files[0].buffer : null;
 
   const job = new Job({
     role,
