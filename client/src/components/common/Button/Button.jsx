@@ -11,10 +11,11 @@ const Button = ({
 	padding = '15px 30px',
 	fontSize = '20px',
 	bgColor,
+	link,
 }) => {
 	return (
 		<>
-			<div className={classes.btn_container}>
+			<a href={link} className={classes.btn_container}>
 				<button
 					style={{
 						padding: padding,
@@ -28,7 +29,7 @@ const Button = ({
 					{label || children}
 				</button>
 				<img className={classes.img} src={grabby} alt="grabby" />
-			</div>
+			</a>
 		</>
 	);
 };

@@ -3,14 +3,17 @@
 	justify-content: center;
 	align-items: center;
 	width: auto;
-	animation: marquee 25s linear 0s infinite forwards ;
+	/* Change width to auto if necessary */
+	animation: marquee 25s linear 0s infinite;
+}
+.highlights:hover {
+	animation-play-state: paused;
 }
 @keyframes marquee {
-	0%{
+	0% {
 		transform: translateX(140%);
 	}
-	100%{
+	100% {
 		transform: translateX(-140%);
 	}
-
 }

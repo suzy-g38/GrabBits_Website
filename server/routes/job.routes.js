@@ -22,7 +22,7 @@ const upload = multer({
 
 const jobRouter = express.Router();
 
-jobRouter.route("/createJob").post(upload.single("image"), addJob);
+jobRouter.route("/createJob").post(upload.any(), addJob);
 jobRouter.route("/getJobs").get(getAllJobs);
 jobRouter.route("/getJob/:id").get(getJobById);
 jobRouter.route("/deleteJob/:id").delete(deleteJobById);

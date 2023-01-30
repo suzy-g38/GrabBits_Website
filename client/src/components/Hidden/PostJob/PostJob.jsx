@@ -3,12 +3,6 @@ import classes from './PostJob.module.css';
 import { Button, Card, Input } from '../../common';
 import axios from 'axios';
 
-const config = {
-	headers: {
-		'Content-Type': 'application/json',
-	},
-};
-
 const PostJob = () => {
 	const [img, setImg] = useState(null);
 	const [imgPreview, setImgPreview] = useState(null);
@@ -19,9 +13,11 @@ const PostJob = () => {
 		companyName: '',
 		batch: '',
 		description: '',
+		link: '',
 	});
 
-	const { role, location, stipend, companyName, batch, description } = job;
+	const { role, location, stipend, companyName, batch, description, link } =
+		job;
 
 	const onChangeHandler = (e) => {
 		setJob({
@@ -45,7 +41,8 @@ const PostJob = () => {
 			stipend === '' ||
 			companyName === '' ||
 			batch === '' ||
-			description === ''
+			description === '' ||
+			link === ''
 		) {
 			// AlertContext.setAlert("Please enter all fields", "danger"); add a state
 			alert('Please fill all  the fields');
@@ -57,20 +54,21 @@ const PostJob = () => {
 			dataArray.append('companyName', companyName);
 			dataArray.append('batch', batch);
 			dataArray.append('description', description);
+			dataArray.append('link', link);
 			dataArray.append('image', img['0'], img['0'].name);
 			console.log(dataArray);
-		}
-		try {
-			axios.post('/job/createJob', dataArray, config).then(
-				(response) => {
-					console.log(response);
-				},
-				(error) => {
-					console.log(error);
-				}
-			);
-		} catch (error) {
-			console.log(error);
+			try {
+				axios.post('/job/createJob', dataArray).then(
+					(response) => {
+						console.log(response);
+					},
+					(error) => {
+						console.log(error);
+					}
+				);
+			} catch (error) {
+				console.log(error);
+			}
 		}
 	};
 
@@ -136,15 +134,23 @@ const PostJob = () => {
 					name="description"
 					required
 				/>
+				<Input
+					onChange={onChangeHandler}
+					type="text"
+					value={link}
+					label="Link"
+					name="link"
+					required
+				/>
 				<input
 					className={classes.custom_file_input}
 					type="file"
 					onChange={onImageChange}
-					name="image"
+					// name="image"
 				/>
 				<Button label="Create" />
 			</form>
-			<Card data={job} companyImage={imgPreview} />
+			<Card data={job} show="true" imgPreview={imgPreview} />
 		</>
 	);
 };
