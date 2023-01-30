@@ -9,6 +9,8 @@
 		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 	width: 100vw;
 	z-index: 5;
+	/* position: fixed; */
+	/* background-color: #fff; */
 }
 .inner_navbar {
 	padding: 0 20px;

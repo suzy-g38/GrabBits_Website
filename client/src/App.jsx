@@ -3,12 +3,13 @@ import { Route, Routes } from 'react-router-dom';
 import {
 	Contact,
 	Footer,
-	Landing,
 	Navbar,
 	Team,
 	Opportunities,
 	Hidden,
 } from './components';
+import Grabby from './components/common/Grabby/Grabby';
+import Homepage from './pages/Homepage';
 
 const App = () => {
 	return (
@@ -25,11 +26,12 @@ const App = () => {
 			> */}
 			<Navbar />
 			<Routes>
-				<Route path="/" element={<Landing />} />
+				<Route path="/" element={<Homepage />} />
 				<Route path="/team" element={<Team />} />
 				<Route path="/opportunities" element={<Opportunities />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/hidden" element={<Hidden />} />
+				<Route path="/grabby" element={<Grabby />} />
 			</Routes>
 			<Footer />
 			{/* <Input />

@@ -28,7 +28,7 @@ const Team = () => {
 					href="https://www.linkedin.com/in/bhushan-kale/"
 					target="_blank"
 					rel="noreferrer"
-					className={`${classes.team}  ${classes.member_1}`}
+					className={`${classes.team} ${classes.member_1}`}
 				>
 					<img
 						className={classes.img}
@@ -43,7 +43,7 @@ const Team = () => {
 					href="https://www.linkedin.com/in/sanyog-mahajan-8288a7204/"
 					target="_blank"
 					rel="noreferrer"
-					className={`${classes.team}  ${classes.member_2}`}
+					className={`${classes.team} ${classes.member_2}`}
 				>
 					<img
 						className={classes.img}
@@ -58,7 +58,7 @@ const Team = () => {
 					href="https://www.linkedin.com/in/saurabh-barde-5b617321a/"
 					target="_blank"
 					rel="noreferrer"
-					className={`${classes.team}  ${classes.member_3}`}
+					className={`${classes.team} ${classes.member_3}`}
 				>
 					<img
 						className={classes.img}
@@ -73,7 +73,7 @@ const Team = () => {
 					href="https://www.linkedin.com/in/sapna-kul-84453a215/"
 					target="_blank"
 					rel="noreferrer"
-					className={`${classes.team}  ${classes.member_4}`}
+					className={`${classes.team} ${classes.member_4}`}
 				>
 					<img
 						className={classes.img}
@@ -88,7 +88,7 @@ const Team = () => {
 					href="https://www.linkedin.com/in/om-gawande/"
 					target="_blank"
 					rel="noreferrer"
-					className={`${classes.team}  ${classes.member_5}`}
+					className={`${classes.team} ${classes.member_5}`}
 				>
 					<img
 						className={classes.img}
@@ -103,7 +103,7 @@ const Team = () => {
 					href=""
 					target="_blank"
 					rel="noreferrer"
-					className={`${classes.team}  ${classes.member_6}`}
+					className={`${classes.team} ${classes.member_6}`}
 				>
 					<img
 						className={classes.img}

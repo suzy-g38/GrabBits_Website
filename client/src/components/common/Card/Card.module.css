@@ -60,9 +60,9 @@
 .tags {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	flex-wrap: wrap;
 	gap: 20px;
+	align-self: flex-start;
 }
 .tag {
 	background-color: #48556a;
@@ -88,5 +88,48 @@
 	align-items: center;
 	width: 100%;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
+	.outer_container {
+		width: 95vw;
+	}
+	.inner_container {
+		margin: 10px;
+		padding: 0px 15px 10px 15px;
+	}
+	.company_image {
+		margin: 5px;
+		padding: 5px;
+		width: 30px;
+		height: 30px;
+		margin-left: 0px;
+		padding-left: 0px;
+	}
+	.name {
+		font-size: 16px;
+	}
+	.tags {
+		gap: 10px;
+	}
+	.tag {
+		font-size: 8px;
+	}
+	.description {
+		font-size: 12px;
+	}
+	.verified {
+		width: 20px;
+		height: 20px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.outer_container {
+		width: 95vw;
+	}
+	.tags {
+		gap: 2px;
+	}
+	.verified {
+		width: 15px;
+		height: 15px;
+	}
 }
