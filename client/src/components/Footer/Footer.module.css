@@ -1,0 +1,79 @@
+.outer_box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 0 100px 20px 100px;
+	padding: 80px 100px;
+	gap: 40px;
+	background-color: #19212e;
+	color: #fff;
+	border-radius: 60px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.row1 {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.brand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 8px;
+}
+
+.brand_logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo {
+	width: 60px;
+}
+
+.brand_title {
+	font-size: 1.5rem;
+	font-weight: 750;
+}
+.social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.social_text {
+	font-size: 16px;
+}
+.social_links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+}
+.link {
+	list-style-type: none;
+}
+.text_mail {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.text,
+.mail {
+	font-size: 16px;
+}
+.separator {
+	width: 80%;
+	height: 2px;
+	background-color: #fff;
+}
+.row2 {
+	font-size: 18px;
+}
