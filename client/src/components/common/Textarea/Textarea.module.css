@@ -35,3 +35,15 @@ teaxtarea:valid ~ label {
 	padding: 0 0.2em;
 	color: #2196f3;
 }
+
+@media (max-width:860px){
+	.textarea {
+		width: 70vw;
+	}
+}
+
+@media (max-width:570px){
+	.textarea {
+		width: 60vw;
+	}
+}
