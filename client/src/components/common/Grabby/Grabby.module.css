@@ -2,10 +2,19 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100vw;
-	height: 100vh;
+	position: relative;
+	/* width: 100vw;
+	height: 100vh; */
 }
-
+svg{
+	display: flex;
+	align-self: flex-end;
+	position: absolute; 
+	top: 70px;
+	right: 170px;
+	
+}
+/* 
 #rectangle rect {
 	animation: anim1 1s ease-in infinite forwards;
 }
@@ -26,8 +35,8 @@
 }
 #righteye g ellipse {
 	animation: anim1 1s ease-in infinite forwards;
-}
-@keyframes anim1 {
+} */
+/* @keyframes anim1 {
 	0% {
 		fill: antiquewhite;
 	}
@@ -46,4 +55,4 @@
 	100% {
 		fill: antiquewhite;
 	}
-}
+} */

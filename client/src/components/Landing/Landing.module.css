@@ -1,3 +1,22 @@
+.landingPage{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.element{
+    position: absolute;
+    width: 1000px;
+    height: 450px;
+    border-radius: 1000px 0 0 1000px;
+    background: linear-gradient(to right,#C29DFF,#FFC09D);
+    right: -300px;
+    top: -50px;
+    rotate: -45deg;
+    z-index: -11;
+}
+
 .landing_bg {
 	width: 100vw;
 	height: 100vh;
