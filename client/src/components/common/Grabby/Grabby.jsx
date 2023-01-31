@@ -6,6 +6,7 @@ const Grabby = () => {
 		<>
 			<div className={classes.grabby}>
 				<svg
+					className={classes.svg}
 					width="449"
 					height="544"
 					viewBox="0 0 449 544"

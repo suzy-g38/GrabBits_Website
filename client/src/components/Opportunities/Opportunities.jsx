@@ -23,12 +23,35 @@ const Opportunities = () => {
 		}
 	};
 
+	const search = async (e) => {
+		let key = e.target.value;
+		if (key) {
+			let result = await axios.get(`job/getJobs/{key}`);
+
+			if (result) {
+				setJobData(result);
+			}
+		} else {
+			getData();
+		}
+	};
+
 	return (
 		<>
+			<input
+				type="text"
+				placeholder="Search"
+				className={classes.search_bar}
+				onChange={search}
+			/>
 			<div className={classes.cards}>
-				{jobData.map((opp, i) => {
-					return <Card data={opp} key={i} />;
-				})}
+				{jobData.length > 0 ? (
+					jobData.map((opp, i) => {
+						return <Card data={opp} key={i} />;
+					})
+				) : (
+					<h1>No Data Found</h1>
+				)}
 			</div>
 		</>
 	);

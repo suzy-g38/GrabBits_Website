@@ -88,5 +88,27 @@ const deleteAllJobs = async (req, res) => {
   await Job.deleteMany();
   res.status(200).json({ message: "Jobs Deleted Successfully" });
 };
+const searchJobs = async (req, res) => {
+  let searchedJobs = await Job.find({
+    $or: [
+      {
+        role: { $regex: req.params.key },
+        companyName: { $regex: req.params.key },
+        batch: { $regex: req.params.key },
+        location: { $regex: req.params.key },
+      },
+    ],
+  });
+  res
+    .status(200)
+    .json({ job: searchedJobs, message: "Jobs Searched Successfully" });
+};
 
-export { addJob, getAllJobs, getJobById, deleteJobById, deleteAllJobs };
+export {
+  addJob,
+  getAllJobs,
+  getJobById,
+  deleteJobById,
+  deleteAllJobs,
+  searchJobs,
+};

@@ -5,3 +5,9 @@
 	flex-direction: column;
 	margin-top: 20px;
 }
+.search_bar {
+	all: unset;
+	border: 2px solid black;
+	color: black;
+	padding: 20px 40px;
+}

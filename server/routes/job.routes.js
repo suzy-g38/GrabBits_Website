@@ -6,6 +6,7 @@ import {
   getJobById,
   deleteJobById,
   deleteAllJobs,
+  searchJobs,
 } from "../controllers/job.controller.js";
 
 const upload = multer({
@@ -24,6 +25,7 @@ const jobRouter = express.Router();
 
 jobRouter.route("/createJob").post(upload.any(), addJob);
 jobRouter.route("/getJobs").get(getAllJobs);
+jobRouter.route("/getJobs/:key").get(searchJobs);
 jobRouter.route("/getJob/:id").get(getJobById);
 jobRouter.route("/deleteJob/:id").delete(deleteJobById);
 jobRouter.route("/deleteJobs").delete(deleteAllJobs);
