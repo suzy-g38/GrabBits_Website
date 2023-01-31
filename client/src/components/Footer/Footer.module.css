@@ -7,7 +7,7 @@
 	padding: 80px 100px;
 	gap: 40px;
 	background-color: #19212e;
-	color: #fff;
+	color: rgb(171, 169, 169);
 	border-radius: 60px;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
 		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
@@ -55,10 +55,35 @@
 	justify-content: center;
 	align-items: center;
 	list-style-type: none;
+	gap: 20px;
+	margin-top: 20px;
 }
-.link {
-	list-style-type: none;
+.socia_link {
+	border: 1px solid #ffffff;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	padding: 5px;
+	/* margin-top: 15px; */
+	transition: all 0.8s;
+	align-items: center;
 }
+
+.socia_link:hover {
+	background: #1877f2;
+	box-shadow: 0 0 25px #1877f2;
+}
+
+.socia_link:hover:nth-child(2) {
+	background: #e60073;
+	box-shadow: 0 0 25px #e60073;
+}
+
+.socia_link:hover:nth-child(3) {
+	background: #25d366;
+	box-shadow: 0 0 25px #25d366;
+}
+
 .text_mail {
 	display: flex;
 	justify-content: center;
