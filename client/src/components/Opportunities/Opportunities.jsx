@@ -4,7 +4,7 @@ import classes from './Opportunities.module.css';
 import { Card } from '../common';
 
 const Opportunities = () => {
-	const [jobData, setJobData] = useState([]);
+	const [jobData, setJobData] = useState([]);  
 
 	useEffect(() => {
 		getData();
