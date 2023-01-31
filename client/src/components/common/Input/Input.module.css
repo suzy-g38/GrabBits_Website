@@ -36,13 +36,13 @@ input:valid ~ label {
 	color: #2196f3;
 }
 
-@media (max-width:850px){
+@media (max-width: 850px) {
 	.input {
 		width: 70vw;
 	}
 }
 
-@media (max-width:570px){
+@media (max-width: 570px) {
 	.input {
 		width: 60vw;
 	}
