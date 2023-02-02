@@ -26,10 +26,10 @@ const Opportunities = () => {
 	const search = async (e) => {
 		let key = e.target.value;
 		if (key) {
-			let result = await axios.get(`job/getJobs/{key}`);
-
+			let result = await axios.get(`job/getJobs/${key}`);
+			console.log(result);
 			if (result) {
-				setJobData(result);
+				setJobData(result.data.job);
 			}
 		} else {
 			getData();

@@ -93,12 +93,13 @@ const searchJobs = async (req, res) => {
     $or: [
       {
         role: { $regex: req.params.key },
-        companyName: { $regex: req.params.key },
-        batch: { $regex: req.params.key },
-        location: { $regex: req.params.key },
       },
+      { companyName: { $regex: req.params.key } },
+      { batch: { $regex: req.params.key } },
+      { location: { $regex: req.params.key } },
     ],
   });
+
   res
     .status(200)
     .json({ job: searchedJobs, message: "Jobs Searched Successfully" });
