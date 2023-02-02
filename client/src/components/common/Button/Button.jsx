@@ -3,6 +3,7 @@ import classes from './Button.module.css';
 import grabby from '../../../assets/grabby.png';
 
 const Button = ({
+	margin,
 	children,
 	onClick,
 	label,
@@ -18,6 +19,7 @@ const Button = ({
 			<a href={link} className={classes.btn_container}>
 				<button
 					style={{
+						margin: margin,
 						padding: padding,
 						fontSize: fontSize,
 						backgroundColor: bgColor,
