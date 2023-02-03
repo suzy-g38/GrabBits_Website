@@ -12,7 +12,7 @@ const Contacts = () => {
 
 	const deleteAllContacts = async () => {
 		try {
-			http.delete('/contact/deleteContacts');
+			await http.delete('/contact/deleteContacts');
 		} catch (err) {
 			console.log(err);
 		}
@@ -20,7 +20,7 @@ const Contacts = () => {
 
 	const getData = async () => {
 		try {
-			axios.get('/contact/getContacts').then((response) => {
+			await http.get('/contact/getContacts').then((response) => {
 				const data = response.data.contacts;
 				setContactsData(data);
 			});
@@ -34,18 +34,24 @@ const Contacts = () => {
 			<Button label="Delete All Contacts" onClick={deleteAllContacts} />
 
 			<div className={classes.contacts}>
-				{contactsData?.map((c, i) => {
-					return (
-						<>
-							<div className={classes.contact} key={i}>
-								<p>Name:{c.name}</p>
-								<p>Email:{c.email}</p>
-								<p>Message:{c.message}</p>
-								<p>Phone Number:{c.phoneNo}</p>
-							</div>
-						</>
-					);
-				})}
+				{
+					// contactsData?.length > 0 ? (
+					contactsData?.map((c, i) => {
+						return (
+							<>
+								<div className={classes.contact} key={i}>
+									<p>Name:{c.name}</p>
+									<p>Email:{c.email}</p>
+									<p>Message:{c.message}</p>
+									<p>Phone Number:{c.phoneNo}</p>
+								</div>
+							</>
+						);
+					})
+					// ) : (
+					// 	<h1>No Data Found</h1>
+					// )
+				}
 			</div>
 		</>
 	);
