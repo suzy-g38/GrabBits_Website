@@ -4,7 +4,7 @@ import classes from './Opportunities.module.css';
 import { Card } from '../common';
 
 const Opportunities = () => {
-	const [jobData, setJobData] = useState([]);  
+	const [jobData, setJobData] = useState([]);
 
 	useEffect(() => {
 		getData();
@@ -45,8 +45,8 @@ const Opportunities = () => {
 				onChange={search}
 			/>
 			<div className={classes.cards}>
-				{jobData.length > 0 ? (
-					jobData.map((opp, i) => {
+				{jobData?.length > 0 ? (
+					jobData?.map((opp, i) => {
 						return <Card data={opp} key={i} />;
 					})
 				) : (

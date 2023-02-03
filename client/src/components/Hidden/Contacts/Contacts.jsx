@@ -34,7 +34,7 @@ const Contacts = () => {
 			<Button label="Delete All Contacts" onClick={deleteAllContacts} />
 
 			<div className={classes.contacts}>
-				{contactsData.map((c, i) => {
+				{contactsData?.map((c, i) => {
 					return (
 						<>
 							<div className={classes.contact} key={i}>
