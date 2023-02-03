@@ -58,7 +58,7 @@ const PostJob = () => {
 			dataArray.append('image', img['0'], img['0'].name);
 			console.log(dataArray);
 			try {
-				await http.post('/job/createJob', dataArray).then(
+				http.post('/job/createJob', dataArray).then(
 					(response) => {
 						console.log(response);
 					},
@@ -82,19 +82,10 @@ const PostJob = () => {
 
 	return (
 		<>
-			<Button
-				label="Delete All Jobs"
-				onClick={deleteAllJobs}
-				bgColor="lightblue"
-			/>
 			<h2 className={classes.heading}>Post a Job</h2>
+			<Button label="Delete All Jobs" onClick={deleteAllJobs} />
 
-			<form
-				className={classes.form}
-				onSubmit={submitHandler}
-				method="post"
-				encType="multipart/form-data"
-			>
+			<form className={classes.form} onSubmit={submitHandler}>
 				<Input
 					onChange={onChangeHandler}
 					type="text"
