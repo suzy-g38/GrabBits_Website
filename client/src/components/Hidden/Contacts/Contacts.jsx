@@ -8,7 +8,7 @@ const Contacts = () => {
 
 	useEffect(() => {
 		getData();
-	}, [contactsData]);
+	}, []);
 
 	const deleteAllContacts = async () => {
 		try {

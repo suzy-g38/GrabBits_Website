@@ -68,18 +68,20 @@
 	display: flex;
 	width: 100vw;
 	height: 18vh;
+	line-height: 2;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+	margin-bottom: 10px;
 }
 .faq_heading1,
 .faq_heading2 {
 	color: #19212e;
 }
 .faq_heading1 {
-	font-size: 25px;
+	font-size: 38px;
 }
 .faq_heading2 {
-	font-size: 18px;
+	font-size: 26px;
 }
