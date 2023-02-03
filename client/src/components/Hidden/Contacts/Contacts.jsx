@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '../../common';
 import classes from './Contacts.module.css';
-import axios from 'axios';
+import http from '../../../api';
 
 const Contacts = () => {
 	const [contactsData, setContactsData] = useState([]);
@@ -12,7 +12,7 @@ const Contacts = () => {
 
 	const deleteAllContacts = async () => {
 		try {
-			axios.delete('/contact/deleteContacts');
+			http.delete('/contact/deleteContacts');
 		} catch (err) {
 			console.log(err);
 		}

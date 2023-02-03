@@ -1,66 +1,66 @@
-.extra_bg{
-    display: flex;
-    justify-content: space-evenly ;
-    width: 80vw;
-    height: auto;
-    background-color: #19212E;
-    border-radius: 50px;
-    margin: auto;
+.extra_bg {
+	display: flex;
+	justify-content: space-evenly;
+	width: 80vw;
+	height: auto;
+	background-color: #19212e;
+	border-radius: 50px;
+	margin: auto;
 }
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    padding: 20px;
-    row-gap: 18px;  
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 25%;
+	padding: 20px;
+	row-gap: 18px;
 }
-.content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    width: 35%;
-    row-gap: 15px;
-    color: white  ;
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+	width: 35%;
+	row-gap: 15px;
+	color: white;
 }
-.box1{
-    width: 72%;
-    background-color: white;
-    border-radius: 25px;
-    padding: 20px;
-    position: relative;
-    left:-86px;
+.box1 {
+	width: 72%;
+	background-color: white;
+	border-radius: 25px;
+	padding: 20px;
+	position: relative;
+	left: -86px;
 }
-.box2{
-    width: 72%;
-    background-color: #7541C8;
-    border-radius: 25px;
-    padding: 20px;
-    position: relative;
-    left:180px;
-    bottom: 150px;
+.box2 {
+	width: 72%;
+	background-color: #7541c8;
+	border-radius: 25px;
+	padding: 20px;
+	position: relative;
+	left: 180px;
+	bottom: 150px;
 }
-.box3{
-    width: 12.5%;
-    background-color: #7541C8;
-    border-radius: 25px;
-    padding: 20px;
-    position: absolute;
-    left: 234px;
-    bottom: -558px;
+.box3 {
+	width: 12.5%;
+	background-color: #7541c8;
+	border-radius: 25px;
+	padding: 20px;
+	position: absolute;
+	left: 234px;
+	bottom: -558px;
 }
-.box4{
-    width: 12.5%;
-    background-color: white;
-    border-radius: 25px;
-    padding: 20px;
-    position: absolute;
-    left: 510px;
-    top: 1180px;
+.box4 {
+	width: 12.5%;
+	background-color: white;
+	border-radius: 25px;
+	padding: 20px;
+	position: absolute;
+	left: 510px;
+	top: 1180px;
 }
-.head1{
-    font-size: 16px;
+.head1 {
+	font-size: 16px;
 }
-.head2{
-    font-size: 28px;
+.head2 {
+	font-size: 28px;
 }

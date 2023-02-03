@@ -7,11 +7,11 @@ import Testimonial from '../components/Testimonials/Testimonial';
 import { About } from '../components/About/About';
 import Extra from '../components/Extra/Extra';
 
-const Homepage = () => {	
+const Homepage = () => {
 	return (
 		<>
 			<Landing />
-			<Extra/>
+			<Extra />
 			<Highlights />
 			<Faq />
 			{/* <About/> */}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classes from './Contact.module.css';
-import axios from 'axios';
+import http from '../../api';
 
 import { Button, Input, Textarea } from '../common';
 import {
@@ -36,7 +36,7 @@ const Contact = () => {
 			alert('Please fill all  the fields');
 		}
 		try {
-			axios.post('/contact/createContact', contact).then(
+			http.post('/contact/createContact', contact).then(
 				(response) => {
 					console.log(response);
 				},
