@@ -33,7 +33,7 @@ const App = () => {
 				<Route path="/hidden" element={<Hidden />} />
 				<Route path="/grabby" element={<Grabby />} />
 			</Routes>
-			{/* <Footer /> */}
+			<Footer />
 			{/* <Input />
 			<Button label="Search for Jobs" />*/}
 			{/* <Card /> */}

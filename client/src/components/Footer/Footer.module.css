@@ -102,3 +102,32 @@
 .row2 {
 	font-size: 18px;
 }
+
+.wp_link{
+	padding:2px;
+}
+.ig_link{
+	width: 30px;
+	height: 30px;
+	padding:2px;
+}
+.twi_link{
+	width: 30px;
+	height: 30px;
+	padding:2px;
+}
+
+.li_link{
+	width: 30px;
+	height: 30px;
+	padding: 3px;
+}
+
+
+
+@media screen and (max-width:768px){
+	.row1{
+		flex-direction: column;
+	}
+	
+}
