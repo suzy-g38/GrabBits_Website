@@ -82,8 +82,8 @@ const PostJob = () => {
 
 	return (
 		<>
+			<Button label="Delete All Jobs" onClick={deleteAllJobs} bgColor='lightblue' />
 			<h2 className={classes.heading}>Post a Job</h2>
-			<Button label="Delete All Jobs" onClick={deleteAllJobs} />
 
 			<form className={classes.form} onSubmit={submitHandler}>
 				<Input

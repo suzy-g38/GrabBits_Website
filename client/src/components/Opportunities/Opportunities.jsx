@@ -4,7 +4,7 @@ import classes from './Opportunities.module.css';
 import { Card } from '../common';
 
 const Opportunities = () => {
-	const [jobData, setJobData] = useState([]);  
+	const [jobData, setJobData] = useState([]);
 
 	useEffect(() => {
 		getData();
@@ -38,20 +38,25 @@ const Opportunities = () => {
 
 	return (
 		<>
-			<input
-				type="text"
-				placeholder="Search"
-				className={classes.search_bar}
-				onChange={search}
-			/>
-			<div className={classes.cards}>
-				{jobData.length > 0 ? (
-					jobData.map((opp, i) => {
-						return <Card data={opp} key={i} />;
-					})
-				) : (
-					<h1>No Data Found</h1>
-				)}
+			<div className={classes.wrapper}>
+				<div className={classes.searchbar_bg}>
+					<input
+						type="search"
+						placeholder="Search here....."
+						className={classes.search_bar}
+						onChange={search}
+					/>
+					<i className="fa fa-search"></i>
+				</div>
+				<div className={classes.cards}>
+					{jobData.length > 0 ? (
+						jobData.map((opp, i) => {
+							return <Card data={opp} key={i} />;
+						})
+					) : (
+						<h1>No Data Found</h1>
+					)}
+				</div>
 			</div>
 		</>
 	);
