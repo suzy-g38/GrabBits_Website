@@ -24,6 +24,9 @@ app.use(errorMiddleware);
 // Routers
 app.use("/job", jobRouter);
 app.use("/contact", contactRouter);
+app.use("/", (req, res) => {
+  res.send("Welcome to the server of GrabBit, Don't go ahead.");
+});
 
 app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV} mode on ${PORT}`);
