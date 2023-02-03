@@ -5,6 +5,8 @@
 	width: 100vw;
 	/* Change width to auto if necessary */
 	animation: marquee 25s linear 0s infinite;
+	margin-top: 140px;
+	margin-bottom: 30px;
 }
 .highlights:hover {
 	animation-play-state: paused;
