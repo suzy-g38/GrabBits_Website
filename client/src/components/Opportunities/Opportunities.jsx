@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import http from '../../api';
 import classes from './Opportunities.module.css';
 import { Card } from '../common';
 
@@ -13,7 +13,7 @@ const Opportunities = () => {
 
 	const getData = async () => {
 		try {
-			axios.get('/job/getJobs').then((response) => {
+			http.get('/job/getJobs').then((response) => {
 				const data = response.data.jobs;
 
 				setJobData(data);
@@ -26,7 +26,7 @@ const Opportunities = () => {
 	const search = async (e) => {
 		let key = e.target.value;
 		if (key) {
-			let result = await axios.get(`job/getJobs/${key}`);
+			let result = await http.get(`job/getJobs/${key}`);
 			console.log(result);
 			if (result) {
 				setJobData(result.data.job);

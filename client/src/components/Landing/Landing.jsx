@@ -1,23 +1,31 @@
 import React from 'react';
 import classes from './Landing.module.css';
 import Grabby from '../common/Grabby/Grabby';
-import Vector from "../../assets/Vector.png"
+import Vector from '../../assets/Vector.png';
 import { Button } from '../common';
 
 const Landing = () => {
 	return (
-		<>   
+		<>
 			<div className={classes.landingPage}>
-				<span className={classes.mainTitle}><span style={{color:"#7541C8"}}>Opportunities</span> come and go <span style={{color:"#7541C8"}}> grab yours</span></span>
-				<span className={classes.info}>Get the latest updates about internships, hackathons, job openings and much more..</span>
+				<span className={classes.mainTitle}>
+					<span style={{ color: '#7541C8' }}>Opportunities</span> come and go{' '}
+					<span style={{ color: '#7541C8' }}> grab yours</span>
+				</span>
+				<span className={classes.info}>
+					Get the latest updates about internships, hackathons, job openings and
+					much more..
+				</span>
 				<Button
-				    margin="0 0 0 55px"
+					margin="0 0 0 55px"
 					padding="8px 24px"
 					fontSize="18px"
 					label="Explore"
 					bgColor="#7541C8"
 				/>
-				<span className={classes.grabby}><Grabby className={classes.Grabby} /></span>
+				<span className={classes.grabby}>
+					<Grabby className={classes.Grabby} />
+				</span>
 				<div className={classes.element}></div>
 				<div className={classes.opp_container}>
 					<div className={classes.circle1}></div>
@@ -40,7 +48,6 @@ const Landing = () => {
 			</div>
 
 			<div className={classes.ge}></div>
-
 		</>
 	);
 };

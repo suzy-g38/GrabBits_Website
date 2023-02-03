@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import linkedin from '../../assets/Socials/linkedin-2.svg';
 import twitter from '../../assets/Socials/twitter.svg';
 import instagram from '../../assets/Socials/instagram.svg';
-import whatsapp from '../../assets/Socials/whatsapp.svg'
+import whatsapp from '../../assets/Socials/whatsapp.svg';
 
 const Footer = () => {
 	return (

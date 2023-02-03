@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classes from './PostJob.module.css';
 import { Button, Card, Input } from '../../common';
-import axios from 'axios';
+import http from '../../../api';
 
 const PostJob = () => {
 	const [img, setImg] = useState(null);
@@ -58,7 +58,7 @@ const PostJob = () => {
 			dataArray.append('image', img['0'], img['0'].name);
 			console.log(dataArray);
 			try {
-				axios.post('/job/createJob', dataArray).then(
+				http.post('/job/createJob', dataArray).then(
 					(response) => {
 						console.log(response);
 					},
@@ -74,7 +74,7 @@ const PostJob = () => {
 
 	const deleteAllJobs = async () => {
 		try {
-			axios.delete('/job/deleteJobs');
+			http.delete('/job/deleteJobs');
 		} catch (err) {
 			console.log(err);
 		}
