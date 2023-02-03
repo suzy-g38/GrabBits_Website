@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import classes from './PostJob.module.css';
 import { Button, Card, Input } from '../../common';
 import http from '../../../api';
+import Swal from 'sweetalert2';
 
 const PostJob = () => {
 	const [img, setImg] = useState(null);
@@ -24,7 +25,6 @@ const PostJob = () => {
 			...job,
 			[e.target.name]: e.target.value,
 		});
-		// console.log(job);
 	};
 
 	const onImageChange = (e) => {
@@ -56,27 +56,62 @@ const PostJob = () => {
 			dataArray.append('description', description);
 			dataArray.append('link', link);
 			dataArray.append('image', img['0'], img['0'].name);
-			console.log(dataArray);
 			try {
 				http.post('/job/createJob', dataArray).then(
-					(response) => {
-						console.log(response);
+					() => {
+						Swal.fire({
+							position: 'top-end',
+							icon: 'success',
+							title: 'Job Created Succesfully',
+							showConfirmButton: false,
+							timer: 1500,
+						});
 					},
 					(error) => {
-						console.log(error);
+						Swal.fire({
+							icon: 'error',
+							title: 'Oops...',
+							text: error,
+						});
 					}
 				);
 			} catch (error) {
-				console.log(error);
+				Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: error,
+				});
 			}
 		}
+		setJob({
+			role: '',
+			location: '',
+			stipend: '',
+			companyName: '',
+			batch: '',
+			description: '',
+			link: '',
+		});
+		setImg(null);
+		setImgPreview(null);
 	};
 
 	const deleteAllJobs = async () => {
 		try {
 			http.delete('/job/deleteJobs');
-		} catch (err) {
-			console.log(err);
+			Swal.fire({
+				position: 'top-end',
+				icon: 'success',
+				title: 'All jobs are deleted',
+				showConfirmButton: false,
+				timer: 1500,
+			});
+		} catch (error) {
+			Swal.fire({
+				icon: 'error',
+				title: 'Unable to delete the contacts',
+				text: error,
+			});
 		}
 	};
 

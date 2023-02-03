@@ -15,7 +15,6 @@ const addJob = async (req, res) => {
     res.status(400).json({ message: "Please Provide valid details" });
     // throw new Error("Please provide valid details");
   }
-  // console.log(req.files);
   const imageBuffer = req.files?.[0]?.buffer ? req.files?.[0]?.buffer : null;
 
   const job = new Job({
@@ -28,7 +27,6 @@ const addJob = async (req, res) => {
     link,
     image: imageBuffer,
   });
-  // console.log(job);
   await job.save();
 
   res.status(201).json({ job, message: "Job created successfully" });

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '../../common';
 import classes from './Contacts.module.css';
 import http from '../../../api';
+import Swal from 'sweetalert2';
 
 const Contacts = () => {
 	const [contactsData, setContactsData] = useState([]);
@@ -13,8 +14,19 @@ const Contacts = () => {
 	const deleteAllContacts = async () => {
 		try {
 			await http.delete('/contact/deleteContacts');
-		} catch (err) {
-			console.log(err);
+			Swal.fire({
+				position: 'top-end',
+				icon: 'success',
+				title: 'All contacts are deleted',
+				showConfirmButton: false,
+				timer: 1500,
+			});
+		} catch (error) {
+			Swal.fire({
+				icon: 'error',
+				title: 'Unable to delete the contacts',
+				text: error,
+			});
 		}
 	};
 
@@ -24,8 +36,12 @@ const Contacts = () => {
 				const data = response.data.contacts;
 				setContactsData(data);
 			});
-		} catch (err) {
-			console.log(err);
+		} catch (error) {
+			Swal.fire({
+				icon: 'error',
+				title: 'Unable to fetch the contacts',
+				text: error,
+			});
 		}
 	};
 	return (

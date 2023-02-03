@@ -1,38 +1,48 @@
 import React, { useState, useEffect } from 'react';
 import http from '../../api';
 import classes from './Opportunities.module.css';
-import { Card } from '../common';
+import { Card, Loader } from '../common';
+import Swal from 'sweetalert2';
 
 const Opportunities = () => {
 	const [jobData, setJobData] = useState([]);
 
 	useEffect(() => {
 		getData();
-		console.log(jobData);
 	}, []);
 
 	const getData = async () => {
 		try {
 			http.get('/job/getJobs').then((response) => {
 				const data = response.data.jobs;
-
 				setJobData(data);
 			});
-		} catch (err) {
-			console.log(err);
+		} catch (error) {
+			Swal.fire({
+				icon: 'error',
+				title: 'Unable to fetch the jobs',
+				text: error,
+			});
 		}
 	};
 
 	const search = async (e) => {
 		let key = e.target.value;
-		if (key) {
-			let result = await http.get(`job/getJobs/${key}`);
-			console.log(result);
-			if (result) {
-				setJobData(result.data.job);
+		try {
+			if (key) {
+				let result = await http.get(`job/getJobs/${key}`);
+				if (result) {
+					setJobData(result.data.job);
+				}
+			} else {
+				getData();
 			}
-		} else {
-			getData();
+		} catch (error) {
+			Swal.fire({
+				icon: 'error',
+				title: 'Unable to search the jobs',
+				text: error,
+			});
 		}
 	};
 
@@ -54,7 +64,7 @@ const Opportunities = () => {
 							return <Card data={opp} key={i} />;
 						})
 					) : (
-						<h1>No Data Found</h1>
+						<Loader />
 					)}
 				</div>
 			</div>
