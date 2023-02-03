@@ -58,18 +58,14 @@ const PostJob = () => {
 			dataArray.append('image', img['0'], img['0'].name);
 			console.log(dataArray);
 			try {
-				await http
-					.post('/job/createJob', dataArray, {
-						'Content-Type': 'application/json',
-					})
-					.then(
-						(response) => {
-							console.log(response);
-						},
-						(error) => {
-							console.log(error);
-						}
-					);
+				await http.post('/job/createJob', dataArray).then(
+					(response) => {
+						console.log(response);
+					},
+					(error) => {
+						console.log(error);
+					}
+				);
 			} catch (error) {
 				console.log(error);
 			}
@@ -86,7 +82,11 @@ const PostJob = () => {
 
 	return (
 		<>
-			<Button label="Delete All Jobs" onClick={deleteAllJobs} bgColor='lightblue' />
+			<Button
+				label="Delete All Jobs"
+				onClick={deleteAllJobs}
+				bgColor="lightblue"
+			/>
 			<h2 className={classes.heading}>Post a Job</h2>
 
 			<form
@@ -155,7 +155,7 @@ const PostJob = () => {
 					className={classes.custom_file_input}
 					type="file"
 					onChange={onImageChange}
-					name="image"
+					// name="image"
 				/>
 				<Button label="Create" />
 			</form>
