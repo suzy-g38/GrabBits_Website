@@ -99,10 +99,41 @@ const searchJobs = async (req, res) => {
       { location: { $regex: req.params.key } },
     ],
   });
+  const finalJobs = searchedJobs.map((job) => {
+    if (job.image) {
+      let buffer = Buffer.from(job.image);
+      let base64Image = buffer.toString("base64");
+
+      const {
+        _id,
+        role,
+        location,
+        companyName,
+        stipend,
+        batch,
+        description,
+        link,
+      } = job;
+
+      return {
+        image: base64Image,
+        _id,
+        role,
+        location,
+        companyName,
+        stipend,
+        batch,
+        description,
+        link,
+      };
+    } else {
+      return job;
+    }
+  });
 
   res
     .status(200)
-    .json({ job: searchedJobs, message: "Jobs Searched Successfully" });
+    .json({ job: finalJobs, message: "Jobs Searched Successfully" });
 };
 
 export {
