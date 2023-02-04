@@ -6,3 +6,4 @@ export { default as Ticket } from './Ticket/Ticket';
 export { default as Textarea } from './Textarea/Textarea';
 export { default as Grabby } from './Grabby/Grabby';
 export { default as Loader } from './Loader/Loader';
+export { default as Popup } from './Popup/Popup';

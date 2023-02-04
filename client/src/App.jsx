@@ -8,6 +8,7 @@ import {
 	Opportunities,
 	Hidden,
 } from './components';
+import { Popup } from './components/common';
 import Grabby from './components/common/Grabby/Grabby';
 import Homepage from './pages/Homepage';
 
@@ -24,6 +25,7 @@ const App = () => {
 					margin: '100px 0',
 				}}
 			> */}
+			<Popup />
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Homepage />} />
