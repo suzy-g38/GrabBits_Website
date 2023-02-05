@@ -9,10 +9,10 @@ const Homepage = () => {
 	return (
 		<>
 			<Landing />
-
 			<Highlights />
+			<About/>
 			<Faq />
-			{/* <About/> */}
+			
 			{/* <Swiper /> */}
 			{/* <Testimonial /> */}
 		</>

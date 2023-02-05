@@ -11,7 +11,6 @@ const Landing = () => {
 				<span className={classes.mainTitle}><span style={{color:"#7541C8"}}>Opportunities</span> come and go <span style={{color:"#7541C8"}}> grab yours</span></span>
 				<span className={classes.info}>Get the latest updates about internships, hackathons, job openings and much more..</span>
 				<Button
-				    margin="0 0 0 55px"
 					padding="8px 24px"
 					fontSize="18px"
 					label="Explore"

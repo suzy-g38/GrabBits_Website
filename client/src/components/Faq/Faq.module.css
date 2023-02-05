@@ -3,6 +3,8 @@
 	/* background-color: #0a1931; */
 	background-color: #ecf2f8;
 	z-index: 100;
+	width: 100vw;
+	height: 70vh;
 }
 
 .wrapper {
