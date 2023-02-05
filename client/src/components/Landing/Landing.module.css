@@ -61,7 +61,7 @@
     align-items: flex-end;
     flex-direction: column;
     animation: floating 5s ease-in-out infinite;
-	animation-delay: 1s;
+	/* animation-delay: 1s; */
 }
 
 @keyframes floating {
@@ -141,7 +141,7 @@
     align-items: flex-end;
     flex-direction: column;
     animation: floating 2s ease-in-out infinite;
-	animation-delay: 1s;
+	/* animation-delay: 1s; */
 }
 
 .circle12{
