@@ -14,11 +14,10 @@ const Homepage = () => {
 
 			<Extra />
 
-
 			<Highlights />
-			<About/>
+			{/* <About/> */}
 			<Faq />
-			
+
 			{/* <Swiper /> */}
 			{/* <Testimonial /> */}
 		</>
