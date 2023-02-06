@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import linkedin from '../../assets/Socials/linkedin-2.svg';
 import twitter from '../../assets/Socials/twitter.svg';
 import instagram from '../../assets/Socials/instagram.svg';
-import whatsapp from '../../assets/Socials/whatsapp.svg'
+import whatsapp from '../../assets/Socials/whatsapp.svg';
 
 const Footer = () => {
 	return (
@@ -24,16 +24,16 @@ const Footer = () => {
 						<h3 className={classes.social_text}>Find Us On Social Media:</h3>
 						<ul className={classes.social_links}>
 							<li className={classes.socia_link}>
-								<img className={classes.link} src={linkedin}></img>
+								<img className={classes.li_link} src={linkedin}></img>
 							</li>
 							<li className={classes.socia_link}>
-								<img className={classes.link} src={instagram}></img>
+								<img className={classes.ig_link} src={instagram}></img>
 							</li>
 							<li className={classes.socia_link}>
-								<img className={classes.link} src={whatsapp}></img>
+								<img className={classes.wp_link} src={whatsapp}></img>
 							</li>
 							<li className={classes.socia_link}>
-								<img className={classes.link} src={twitter}></img>
+								<img className={classes.twi_link} src={twitter}></img>
 							</li>
 						</ul>
 					</div>

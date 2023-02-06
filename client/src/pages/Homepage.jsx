@@ -5,10 +5,16 @@ import Faq from '../components/Faq/Faq';
 import { Landing } from '../components';
 import Testimonial from '../components/Testimonials/Testimonial';
 import { About } from '../components/About/About';
+import Extra from '../components/Extra/Extra';
+
 const Homepage = () => {
 	return (
 		<>
 			<Landing />
+
+			<Extra />
+
+
 			<Highlights />
 			<About/>
 			<Faq />

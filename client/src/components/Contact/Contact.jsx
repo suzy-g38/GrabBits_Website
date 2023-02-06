@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classes from './Contact.module.css';
-import axios from 'axios';
+import http from '../../api';
+import Swal from 'sweetalert2';
 
 import { Button, Input, Textarea } from '../common';
 import {
@@ -27,7 +28,6 @@ const Contact = () => {
 			...contact,
 			[e.target.name]: e.target.value,
 		});
-		console.log(contact);
 	};
 	const submitHandler = async (e) => {
 		e.preventDefault();
@@ -36,17 +36,37 @@ const Contact = () => {
 			alert('Please fill all  the fields');
 		}
 		try {
-			axios.post('/contact/createContact', contact).then(
-				(response) => {
-					console.log(response);
+			http.post('/contact/createContact', contact).then(
+				() => {
+					Swal.fire({
+						position: 'top-end',
+						icon: 'success',
+						title: 'Your query is sent to us.',
+						showConfirmButton: false,
+						timer: 1500,
+					});
 				},
 				(error) => {
-					console.log(error);
+					Swal.fire({
+						icon: 'error',
+						title: 'Oops...',
+						text: error,
+					});
 				}
 			);
 		} catch (error) {
-			console.log(error);
+			Swal.fire({
+				icon: 'error',
+				title: 'Oops...',
+				text: error,
+			});
 		}
+		setContact({
+			name: '',
+			email: '',
+			phoneNo: '',
+			message: '',
+		});
 	};
 
 	return (

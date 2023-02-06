@@ -1,10 +1,15 @@
 .outerfaq {
 	position: relative;
 	/* background-color: #0a1931; */
+
+	background-color: #686868;
+	z-index: 4;
+
 	background-color: #ecf2f8;
 	z-index: 100;
 	width: 100vw;
 	height: 70vh;
+
 }
 
 .wrapper {
@@ -70,18 +75,20 @@
 	display: flex;
 	width: 100vw;
 	height: 18vh;
+	line-height: 2;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+	margin-bottom: 10px;
 }
 .faq_heading1,
 .faq_heading2 {
 	color: #19212e;
 }
 .faq_heading1 {
-	font-size: 25px;
+	font-size: 38px;
 }
 .faq_heading2 {
-	font-size: 18px;
+	font-size: 26px;
 }

@@ -12,6 +12,7 @@
 		"react-icons": "^4.7.1",
 		"react-router-dom": "^6.7.0",
 		"react-scripts": "5.0.1",
+		"sweetalert2": "^11.7.1",
 		"swiper": "^8.4.6",
 		"web-vitals": "^2.1.4"
 	},
@@ -47,5 +48,5 @@
 		"eslint-plugin-react": "^7.32.1",
 		"prettier": "2.8.3"
 	},
-	"proxy": "http://localhost:8000"
+	"proxy": "https://grabbit.up.railway.app"
 }

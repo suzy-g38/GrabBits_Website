@@ -15,7 +15,6 @@ const addJob = async (req, res) => {
     res.status(400).json({ message: "Please Provide valid details" });
     // throw new Error("Please provide valid details");
   }
-  // console.log(req.files);
   const imageBuffer = req.files?.[0]?.buffer ? req.files?.[0]?.buffer : null;
 
   const job = new Job({
@@ -28,7 +27,6 @@ const addJob = async (req, res) => {
     link,
     image: imageBuffer,
   });
-  // console.log(job);
   await job.save();
 
   res.status(201).json({ job, message: "Job created successfully" });
@@ -93,15 +91,47 @@ const searchJobs = async (req, res) => {
     $or: [
       {
         role: { $regex: req.params.key },
-        companyName: { $regex: req.params.key },
-        batch: { $regex: req.params.key },
-        location: { $regex: req.params.key },
       },
+      { companyName: { $regex: req.params.key } },
+      { batch: { $regex: req.params.key } },
+      { location: { $regex: req.params.key } },
     ],
   });
+  const finalJobs = searchedJobs.map((job) => {
+    if (job.image) {
+      let buffer = Buffer.from(job.image);
+      let base64Image = buffer.toString("base64");
+
+      const {
+        _id,
+        role,
+        location,
+        companyName,
+        stipend,
+        batch,
+        description,
+        link,
+      } = job;
+
+      return {
+        image: base64Image,
+        _id,
+        role,
+        location,
+        companyName,
+        stipend,
+        batch,
+        description,
+        link,
+      };
+    } else {
+      return job;
+    }
+  });
+
   res
     .status(200)
-    .json({ job: searchedJobs, message: "Jobs Searched Successfully" });
+    .json({ job: finalJobs, message: "Jobs Searched Successfully" });
 };
 
 export {
