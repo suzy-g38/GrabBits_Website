@@ -1,3 +1,4 @@
+
 .landingPage {
 	width: 100vw;
 	height: 100vh;
@@ -63,6 +64,72 @@
 	animation: floating 5s ease-in-out infinite;
 	animation-delay: 1s;
 }
+.landingPage{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 38px 38px 38px 90px ;
+}
+
+.mainTitle{
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 85px;
+    margin-top: 70px;
+    /* margin-left: 50px; */
+    padding-bottom: 35px;
+    width: 500px;
+}
+
+.info{
+    font-size: 1.8rem;
+    font-weight: 400;
+    width: 500px;
+    /* margin-left: 55px; */
+    padding-bottom: 35px;
+}
+
+.grabby{
+    position: absolute;
+    top: 50px;
+	right: 170px; 
+}
+
+.element{
+    position: absolute;
+    width: 1000px;
+    height: 450px;
+    border-radius: 1000px 0 0 1000px;
+    background: linear-gradient(to right,#C29DFF,#FFC09D);
+    right: -300px;
+    top: -50px;
+    rotate: -45deg;
+    z-index: -1;
+}
+
+.opp_container{
+    position: absolute;
+    width: 19rem;
+    height: 6rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(0,0,0,0.3);
+    background:white;
+    top: 230px;
+    right: 540px;
+    padding: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    animation: floating 5s ease-in-out infinite;
+	/* animation-delay: 1s; */
+
+}
 
 @keyframes floating {
 	0% {
@@ -77,6 +144,7 @@
 		transform: translate(0, -0px);
 	}
 }
+
 
 .circle1 {
 	position: absolute;
@@ -249,3 +317,183 @@
 		width: 270px;
 	}
 }
+
+.circle1{
+    position: absolute;
+    width: 2.3rem;
+    height: 2.3rem;
+    background: #7541C8;
+    border-radius: 50%;
+    top: 15px;
+    left: 27px;
+    z-index: 1;
+}
+
+.circle2{
+    position: absolute;
+    width: 3.2rem;
+    height: 3.2rem;
+    background: #D6BCFF;
+    border-radius: 50%;
+    top: 25px;
+    left: 33px;
+    z-index: 1;
+}
+
+.title{
+    padding: 0 6px 6px 6px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-right: 25px;
+}
+
+.button{
+    position: relative;
+    padding: 6px 16px 6px 16px;
+    margin-right: 40px;
+    background:#19212E;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clicked{
+    width: 20px;
+    height: 21px;
+    margin-left: 10px;
+}
+
+
+.opp_container2{
+    position: absolute;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(0,0,0,0.3);
+    background:white;
+    top: 370px;
+    right: 30px;
+    padding: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    animation: floating 2s ease-in-out infinite;
+	/* animation-delay: 1s; */
+}
+
+.circle12{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background: #7541C8;
+    border-radius: 50%;
+    top: 15px;
+    left: 27px;
+    z-index: 1;
+}
+
+.circle22{
+    position: absolute;
+    width: 2.7rem;
+    height: 2.7rem;
+    background: #D6BCFF;
+    border-radius: 50%;
+    top: 25px;
+    left: 33px;
+    z-index: 1;
+}
+
+.title2{
+    padding: 0 4px 4px 4px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.button2{
+    position: relative;
+    padding: 4px 12px 4px 12px;
+    margin-right: 25px;
+    background:#19212E;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.clicked2{
+    width: 20px;
+    height: 21px;
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: 800px){
+    .landingPage{
+        padding: 38px;
+    }
+    .opp_container,.opp_container2{
+        display: none;
+    }
+    .element{
+        right: -600px;
+        top: -50px;
+    }
+    .mainTitle,.info{
+        margin-left: 0px;
+    }
+    .mainTitle{
+        font-size:4rem;
+        margin-top: 100px;
+    }
+    .info{
+        font-size: 1.5rem;
+    }
+    
+    .grabby{
+        rotate: -10deg;
+        top: 20px;
+        right: -120px; 
+        width: 500px;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    .landingPage{
+        padding: 44px;
+    }
+    .element{
+        right: -600px;
+        top: -50px;
+    }
+    .grabby{
+        rotate: -10deg;
+        top: -30px;
+        right: -120px; 
+        width: 350px;
+    }
+    .landingPage{
+        padding: 24px;
+    }
+    .mainTitle,.info{
+        margin-left: 0px;
+    }
+    .mainTitle{
+        font-size: 2.2rem;
+        width: 200px;
+        line-height: 60px;
+    }
+    .info{
+        font-weight: 450;
+        font-size: 1.2rem;
+        width:270px;
+    }
+
+}
+

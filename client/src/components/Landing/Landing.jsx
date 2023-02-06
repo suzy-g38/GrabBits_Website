@@ -17,7 +17,10 @@ const Landing = () => {
 					much more..
 				</span>
 				<Button
+
 					margin="0 0 0 55px"
+
+
 					padding="8px 24px"
 					fontSize="18px"
 					label="Explore"
