@@ -11,11 +11,9 @@ const Homepage = () => {
 	return (
 		<>
 			<Landing />
-
-			{/* <Extra /> */}
-
-			{/* <Highlights /> */}
-			{/* <About/> */}
+			<Highlights />
+			<Extra />
+			<About />
 			<Faq />
 
 			{/* <Swiper /> */}

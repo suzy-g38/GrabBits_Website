@@ -1,24 +1,6 @@
-
-.info {
-	/* position: relative; */
-	height: auto;
-	width: 90vw;
-	background: #7541c8;
-	border-radius: 20px;
-	display: flex;
-	color: #fff;
-	padding: 60px;
-	margin: 40px;
-	/* margin-left: 20px;
-    margin-right: 20px;
-    margin-top: auto;
-    margin-bottom: auto; */
-}
-
 .colOne {
 	display: flex;
 	flex-direction: column;
-	/* width: 50%; */
 	padding: 60px;
 	justify-content: space-between;
 	gap: 30px;
@@ -62,118 +44,126 @@
 	letter-spacing: 0.02em;
 }
 
-.info{
-    height: auto;
-    width: auto;
-    background: #7541C8;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    color: #fff;
-    margin: 7rem 3.5rem 5rem 3.5rem;
-    align-items: center;  
+.info {
+	height: auto;
+	width: auto;
+	background: #7541c8;
+	border-radius: 20px;
+	display: flex;
+	padding: 0 60px;
+	flex-direction: row;
+	color: #fff;
+	margin: 1rem 2.5rem 4rem 2.5rem;
+	align-items: center;
 }
 
-.colOne{
-    display: flex;
-    flex-direction: column;
-    padding: 60px 30px 60px 60px;
-    justify-content: space-between;
-    gap: 5px;
-    width: auto;
+.colOne {
+	display: flex;
+	flex-direction: column;
+	padding: 60px 10px 60px 10px;
+	justify-content: space-between;
+	gap: 20px;
+	width: auto;
 }
 
-.head{
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 50px;
+.head {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	white-space: nowrap;
 }
 
-.subHead{
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 27px;
-letter-spacing: 0.02em;
+.subHead {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 27px;
+	letter-spacing: 0.02em;
 }
 
-.subHead p{
-    padding: 16px;
+/* .subHead p {
+	padding: 16px;
+} */
+
+.illustration {
+	width: auto;
+	height: auto;
+	margin-right: 40px;
 }
 
-.illustration{
-    width: auto;
-    height: auto;
-    margin-right: 40px;
+.illustration svg {
+	width: 40vw;
+	height: auto;
 }
 
-.illustration svg{
-    width: 40vw;
-    height: auto;
+@media screen and (max-width: 800px) {
+	.info {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-self: center;
+	}
+	.subHead {
+		text-align: center;
+	}
+	.colOne {
+		padding: 30px;
+	}
+
+	.illustration {
+		width: auto;
+		height: auto;
+		margin: 60px 60px 0 60px;
+	}
+
+	.illustration svg {
+		width: 60vw;
+		height: auto;
+	}
+	.btn_container {
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
-@media screen and (max-width:800px){
-    .info{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-self: center;
-    }
+@media screen and (max-width: 400px) {
+	.info {
+		margin: 3rem 1.5rem 3rem 1.5rem;
+	}
 
-    .colOne{
-        padding: 30px 60px 60px 60px;
-    }
+	.colOne {
+		padding: 15px 30px 30px 30px;
+		gap: 8px;
+	}
 
-    .illustration{
-        width: auto;
-        height: auto;
-        margin: 60px 60px 0 60px ; 
-    }
+	.head {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 25px;
+		line-height: 50px;
+	}
 
-    .illustration svg{
-        width: 60vw;
-        height: auto;
-    }
+	.subHead {
+		font-style: normal;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 27px;
+		letter-spacing: 0.02em;
+	}
+
+	.subHead p {
+		padding: 8px;
+	}
+
+	.illustration {
+		width: auto;
+		height: auto;
+		margin: 30px 20px 0 20px;
+	}
+
+	.illustration svg {
+		width: 70vw;
+		height: auto;
+	}
 }
-
-@media screen and (max-width:400px){
-    .info{
-        margin: 3rem 1.5rem 3rem 1.5rem;
-    }
-
-    .colOne{
-        padding: 15px 30px 30px 30px;
-        gap: 8px;
-    }
-
-    .head{
-        font-style: normal;
-        font-weight: 600;
-        font-size: 25px;
-        line-height: 50px; 
-    }
-    
-    .subHead{
-        font-style: normal;
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 27px;
-        letter-spacing: 0.02em;
-    }
-
-    .subHead p{
-        padding: 8px;
-    }
-
-    .illustration{
-        width: auto;
-        height: auto;
-        margin: 30px 20px 0 20px ; 
-    }
-
-    .illustration svg{
-        width: 70vw;
-        height: auto;
-    }
-}
-

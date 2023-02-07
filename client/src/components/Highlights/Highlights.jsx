@@ -6,10 +6,12 @@ import { Ticket } from '../common';
 const Highlights = () => {
 	return (
 		<>
-			<div className={classes.highlights}>
-				{HighlightsData.map((highlights, i) => {
-					return <Ticket data={highlights} key={i} />;
-				})}
+			<div className={classes.border}>
+				<div className={classes.highlights}>
+					{HighlightsData.map((highlights, i) => {
+						return <Ticket data={highlights} key={i} />;
+					})}
+				</div>
 			</div>
 		</>
 	);

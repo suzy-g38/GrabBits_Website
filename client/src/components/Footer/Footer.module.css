@@ -124,7 +124,7 @@
 }
 
 @media screen and (max-width: 550px) {
-	.outer_box{
+	.outer_box {
 		margin: 0 20px 20px 20px;
 		padding: 40px;
 		width: auto;
@@ -134,16 +134,23 @@
 		row-gap: 40px;
 	}
 }
-@media screen and (min-width:550px) and (max-width: 768px) {
-	.outer_box{
-		margin: 0 60px 20px 60px;
-		padding: 10px;
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+	.row1 {
+		flex-direction: row;
+
+		gap: 20px;
+	}
+}
+@media screen and (min-width: 550px) and (max-width: 768px) {
+	.outer_box {
+		margin: 0 20px 20px 20px;
+		padding: 20px;
 	}
 	.row1 {
 		flex-direction: column;
 		row-gap: 20px;
 	}
-	.row2{
+	.row2 {
 		font-size: 16px;
 	}
 }

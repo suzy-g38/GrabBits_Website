@@ -24,12 +24,9 @@ export const About = () => {
 						We&apos;ve started broadcasting a podcasts as well in which .....
 					</p>
 				</div>
-				<Button
-					margin="0px 0px 0px 16px"
-					padding="12px 28px"
-					fontSize="22px"
-					label="Explore"
-				/>
+				<div className={classes.btn_container}>
+					<Button padding="12px 28px" fontSize="22px" label="Explore" />
+				</div>
 			</div>
 			<div className={classes.illustration}>
 				<svg

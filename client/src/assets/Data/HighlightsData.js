@@ -1,43 +1,43 @@
 import github from '../Highlights/github.png';
 export const HighlightsData = [
 	{
-		name: 'GitHub Students Expert',
+		name: '1GitHub Students Expert',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#00bbff',
 	},
 	{
-		name: 'GitHub Students Expert',
+		name: '2GitHub Students Expert',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#00bbff',
 	},
 	{
-		name: 'GitHub Students Expert',
+		name: '3GitHub Students Expert',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#00bbff',
 	},
 	{
-		name: 'GitHub Students Expert',
+		name: '4GitHub Students Expert',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#00bbff',
 	},
 	{
-		name: 'GitHub Students Expert',
+		name: '5GitHub Students Expert',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#6aff00',
 	},
 	{
-		name: 'GitHub Students Expert',
+		name: '6GitHub Students Expert',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#6aff00',
 	},
 	{
-		name: 'GitHub Students Expert',
+		name: '7GitHub Students Expert',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#ABC333',
