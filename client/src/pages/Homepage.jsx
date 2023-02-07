@@ -12,11 +12,11 @@ const Homepage = () => {
 		<>
 			<Landing />
 
-			<Extra />
+			{/* <Extra /> */}
 
-			<Highlights />
+			{/* <Highlights /> */}
 			{/* <About/> */}
-			<Faq />
+			{/* <Faq /> */}
 
 			{/* <Swiper /> */}
 			{/* <Testimonial /> */}

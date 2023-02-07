@@ -1,7 +1,7 @@
 .blur {
 	width: 100vw;
 	height: 100vh;
-	background-color: #2e2e2e44;
+	background-color: #80ceff44;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -12,7 +12,7 @@
 .card {
 	width: 50vw;
 	height: 50vh;
-	background: #07182e;
+	background: #19212e;
 	display: flex;
 	place-content: center;
 	place-items: center;
@@ -40,11 +40,13 @@
 	z-index: 1;
 	color: #fff;
 	font-size: 2em;
+	text-align: center;
 }
 .card .subtext {
 	z-index: 1;
 	color: #fff;
 	font-size: 1em;
+	text-align: center;
 }
 
 .card::before {
@@ -74,7 +76,7 @@
 .card::after {
 	content: '';
 	position: absolute;
-	background: #959595;
+	background: #19212e;
 	inset: 5px;
 	border-radius: 15px;
 }
@@ -86,11 +88,11 @@
 	z-index: 1;
 }
 .btn_svg {
-	width: 20px;
+	width: 24px;
 	margin-top: 4px;
 }
 .btn_text {
-	font-size: 20px;
+	font-size: 24px;
 	margin-left: 12px;
 	margin-bottom: 4px;
 }

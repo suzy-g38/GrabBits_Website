@@ -1,56 +1,39 @@
 import React from 'react';
+import { Button, Grabby } from '../common/index';
+import cursor from '../../assets/cursor.png';
+import twocircles from '../../assets/twocircles.svg';
+import card from '../../assets/card.svg';
 import classes from './Landing.module.css';
-import Grabby from '../common/Grabby/Grabby';
-import Vector from '../../assets/Vector.png';
-import { Button } from '../common';
 
 const Landing = () => {
 	return (
 		<>
-			<div className={classes.landingPage}>
-				<span className={classes.mainTitle}>
-					<span style={{ color: '#7541C8' }}>Opportunities</span> come and go{' '}
-					<span style={{ color: '#7541C8' }}> grab yours</span>
-				</span>
-				<span className={classes.info}>
-					Get the latest updates about internships, hackathons, job openings and
-					much more..
-				</span>
-				<Button
-
-					margin="0 0 0 55px"
-
-
-					padding="8px 24px"
-					fontSize="18px"
-					label="Explore"
-					bgColor="#7541C8"
-				/>
-				<span className={classes.grabby}>
-					<Grabby className={classes.Grabby} />
-				</span>
-				<div className={classes.element}></div>
-				<div className={classes.opp_container}>
-					<div className={classes.circle1}></div>
-					<div className={classes.circle2}></div>
-					<span className={classes.title}>Opportunities</span>
-					<div className={classes.button}>
-						<span className={classes.b_title}>Just Grab It</span>
-						<img src={Vector} className={classes.clicked} />
-					</div>
+			<div className={classes.landing}>
+				<div className={classes.column1}>
+					<h1 className={classes.heading}>
+						<span className={classes.heading_highlight}>Opportunities</span>{' '}
+						come and go,{' '}
+						<span className={classes.heading_highlight}>Grab yours.</span>
+					</h1>
+					<h2 className={classes.subheading}>
+						Get the latest updates about internships, hackathons, job openings
+						and much more..
+					</h2>
+					<Button label="Explore" padding="16px 32px" fontSize="24px" />
 				</div>
-				<div className={classes.opp_container2}>
-					<div className={classes.circle12}></div>
-					<div className={classes.circle22}></div>
-					<span className={classes.title2}>Opportunities</span>
-					<div className={classes.button2}>
-						<span className={classes.b_title2}>Just Grab It</span>
-						<img src={Vector} className={classes.clicked2} />
+				<div className={classes.column2}>
+					<div className={classes.box1}>
+						<img className={classes.card1} src={card} alt="card" />
 					</div>
+					<div className={classes.grabby_container}>
+						<Grabby />
+					</div>
+					<div className={classes.box2}>
+						<img className={classes.card2} src={card} alt="card" />
+					</div>
+					<div className={classes.element}></div>
 				</div>
 			</div>
-
-			<div className={classes.ge}></div>
 		</>
 	);
 };
