@@ -103,7 +103,8 @@
 		justify-self: center;
 	}
 	.subHead {
-		text-align: center;
+		/* text-align: center; */
+		width: 300px;
 	}
 	.colOne {
 		padding: 30px;
@@ -153,7 +154,7 @@
 	}
 
 	.subHead p {
-		padding: 8px;
+		padding: 8px 0;
 	}
 
 	.illustration {
