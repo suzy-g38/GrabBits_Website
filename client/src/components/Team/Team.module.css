@@ -23,7 +23,9 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 	gap: 50px;
+	margin-bottom: 100px;
 }
 
 .team {
@@ -176,7 +178,7 @@
 	writing-mode: vertical-rl;
 }
 
-@media screen and (min-width: 300px) and (max-width: 600px) {
+/* @media screen and (min-width: 300px) and (max-width: 600px) {
 	.main {
 		margin-top: 80px;
 		margin-bottom: 50px;
@@ -236,7 +238,8 @@
 		margin-top: 55px;
 		padding-left: 3%;
 	}
-}
+} */
+
 /* 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
 	.main {
@@ -296,7 +299,38 @@
 		margin-top: 75px;
 		padding-left: 4%;
 	}
-} */
+}
+*/
+
+@media screen and (max-width: 832px) {
+	.member_1,
+	.member_2,
+	.member_3,
+	.member_4,
+	.member_5,
+	.member_6 {
+		margin: 0px;
+	}
+	.team_members {
+		gap: 0;
+		max-width: 90%;
+		width: 100vw;
+		/* margin: auto; */
+	}
+	.right_section {
+		padding: 0;
+	}
+}
+@media screen and (max-width: 600px) {
+	.img {
+		width: 200px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.img {
+		width: 150px;
+	}
+}
 
 @media screen and (min-width: 1026px) and (max-width: 1350px) {
 	.main {

@@ -81,7 +81,7 @@ const PostPodcast = () => {
 			Swal.fire({
 				position: 'top-end',
 				icon: 'success',
-				title: 'All jobs are deleted',
+				title: 'All podcasts are deleted',
 				showConfirmButton: false,
 				timer: 1500,
 			});
@@ -96,7 +96,7 @@ const PostPodcast = () => {
 
 	return (
 		<>
-			<h2 className={classes.heading}>Post a Job</h2>
+			<h2 className={classes.heading}>Post a Podcast</h2>
 			<Button label="Delete All Podcasts" onClick={deleteAllPodcasts} />
 
 			<form className={classes.form} onSubmit={submitHandler}>
