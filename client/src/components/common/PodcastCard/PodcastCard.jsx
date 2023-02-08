@@ -10,13 +10,13 @@ const PodcastCard = ({ podcast = {}, show, imgPreview }) => {
 			<div className={classes.podcast_card}>
 				{show ? (
 					<img
-						className={classes.company_image}
+						className={classes.podcast_image}
 						src={imgPreview}
 						alt="youtube_header"
 					/>
 				) : (
 					<img
-						className={classes.company_image}
+						className={classes.podcast_image}
 						src={`data:image/png;base64, ${image}`}
 						alt="youtube_header"
 					/>

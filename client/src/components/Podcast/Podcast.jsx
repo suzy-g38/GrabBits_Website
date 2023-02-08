@@ -16,7 +16,7 @@ const Podcast = () => {
 	const getData = async () => {
 		try {
 			http.get('/podcast/getPodcasts').then((response) => {
-				const data = response.data.jobs;
+				const data = response.data.podcasts;
 				setPodcastData(data);
 			});
 		} catch (error) {
@@ -43,7 +43,7 @@ const Podcast = () => {
 					Current and Upcoming Podcasts
 				</h2>
 				<div className={classes.podcast_card_container}>
-					{podcastData.length ? (
+					{podcastData.length > 0 ? (
 						podcastData.map((podcast, i) => {
 							return <PodcastCard key={i} podcast={podcast} />;
 						})
