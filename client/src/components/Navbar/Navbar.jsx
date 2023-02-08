@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
-import Button from '../common/Button/Button';
 import img from '../../assets/Logo.png';
 import { useState } from 'react';
 
@@ -52,7 +51,7 @@ const Navbar = () => {
 								setActive((prevValue) => !prevValue);
 							}}
 						>
-							<NavLink to="/podcast" className={classes.link_text}>
+							<NavLink to="/podcasts" className={classes.link_text}>
 								Podcasts
 							</NavLink>
 						</li>

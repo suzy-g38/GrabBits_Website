@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import http from '../../api';
 import classes from './Opportunities.module.css';
 import { Card, Loader } from '../common';
+import http from '../../api';
 import Swal from 'sweetalert2';
 
 const Opportunities = () => {

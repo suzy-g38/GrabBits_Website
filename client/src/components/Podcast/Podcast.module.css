@@ -1,0 +1,30 @@
+.podcast_section {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	gap: 30px;
+	margin-top: 100px;
+	width: 40%;
+	margin-left: 100px;
+}
+.podcast_card_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.heading {
+	font-size: 64px;
+	font-weight: 600;
+}
+.subheading {
+	font-size: 16px;
+	font-weight: 400;
+}
+.podcast_heading {
+	font-size: 32px;
+	text-align: center;
+}
