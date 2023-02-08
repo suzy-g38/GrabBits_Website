@@ -52,6 +52,16 @@ const Navbar = () => {
 								setActive((prevValue) => !prevValue);
 							}}
 						>
+							<NavLink to="/podcast" className={classes.link_text}>
+								Podcasts
+							</NavLink>
+						</li>
+						<li
+							className={`${classes.navbar_item} `}
+							onClick={() => {
+								setActive((prevValue) => !prevValue);
+							}}
+						>
 							<NavLink to="/team" className={classes.link_text}>
 								About Us
 							</NavLink>

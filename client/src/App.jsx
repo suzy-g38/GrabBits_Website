@@ -7,6 +7,7 @@ import {
 	Team,
 	Opportunities,
 	Hidden,
+	Podcast,
 } from './components';
 import { Popup } from './components/common';
 import Grabby from './components/common/Grabby/Grabby';
@@ -32,6 +33,7 @@ const App = () => {
 				<Route path="/team" element={<Team />} />
 				<Route path="/opportunities" element={<Opportunities />} />
 				<Route path="/contact" element={<Contact />} />
+				<Route path="/podcasts" element={<Podcast />} />
 				<Route path="/hidden" element={<Hidden />} />
 				<Route path="/grabby" element={<Grabby />} />
 			</Routes>
