@@ -3,23 +3,23 @@ import classes from './Faq.module.css';
 
 const data = [
 	{
-		question: 'Who can join DRAIC?',
+		question: 'Is this for engineering students only?',
 		answer:
-			'Any student of DYPCOE college with an aptitude for learning and applying those skills in the field of robotics and AI can join us, irrespective of the branch or year they are studying in! ',
+			'Nope. If you are eligible for the role according to  the provided criteria you can also apply for the same.'
 	},
 	{
-		question: 'How to join DRAIC?',
+		question: 'What kind of resources do you provide?',
 		answer:
-			'We as a club conduct recruitment for all the departments annually. By having basic knowledge and skills about the department you want to get in, you can clear the recruitment rounds and join us! Again, it’s not a compulsion to be in a particular branch to get into a department!!',
+			'The resources related to coding can help you to learn it in a better way. Till now we have covered up - Remote job websites, best coding  websites, and best gaming websites for  programmers, etc.',
 	},
 	{
-		question: 'What can you expect from DRAIC?',
+		question: 'I ain’t active on Instagram, how can I access the resources & updates that you’re providing?',
 		answer:
-			'You’ll learn technical and personal skills, get the experience of working as a team, get freedom and support to explore new projects, and much more!',
+			'Not to worry. We are active on Twitter, LinkedIn & WhatsApp also , so you can connect with us from any compatible platform.',
 	},
 	{
-		question: 'What are our working hours?',
-		answer: 'DRAIC has flexible working hours usually after college',
+		question: 'What kind of podcasts do you make?',
+		answer: 'The podcast basically includes experience of individuals from industry folks, guiding students with their experience and sharing tips and tricks for a college student to grab a job offer.',
 	},
 ];
 
