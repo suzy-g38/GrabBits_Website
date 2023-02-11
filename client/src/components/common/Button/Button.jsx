@@ -16,7 +16,12 @@ const Button = ({
 }) => {
 	return (
 		<>
-			<a href={link} className={classes.btn_container}>
+			<a
+				href={link}
+				target="_blank"
+				rel="noopener noreferrer"
+				className={classes.btn_container}
+			>
 				<button
 					style={{
 						margin: margin,

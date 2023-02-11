@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
-import Button from '../common/Button/Button';
 import img from '../../assets/Logo.png';
 import { useState } from 'react';
 
@@ -44,6 +43,16 @@ const Navbar = () => {
 						>
 							<NavLink to="/opportunities" className={classes.link_text}>
 								Opportunities
+							</NavLink>
+						</li>
+						<li
+							className={`${classes.navbar_item} `}
+							onClick={() => {
+								setActive((prevValue) => !prevValue);
+							}}
+						>
+							<NavLink to="/podcasts" className={classes.link_text}>
+								Podcasts
 							</NavLink>
 						</li>
 						<li
