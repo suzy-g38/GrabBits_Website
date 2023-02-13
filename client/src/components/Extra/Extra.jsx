@@ -47,9 +47,11 @@ const Extra = () => {
 						<br /> Just a click away from you
 					</div>
 					<div className={classes.head2}>Let’s make it happen</div>
-					<div className={classes.butt}>
-						<Button label="Find Yours" />
-					</div>
+					<a href="/opportunities">
+						<div className={classes.butt}>
+							<Button label="Find Yours" />
+						</div>
+					</a>
 				</div>
 			</div>
 		</>

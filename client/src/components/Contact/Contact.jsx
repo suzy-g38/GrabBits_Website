@@ -142,7 +142,6 @@ const Contact = () => {
 								name="phoneNo"
 								required
 							/>
-							
 							<Textarea
 								onChange={onChangeHandler}
 								type="text"
