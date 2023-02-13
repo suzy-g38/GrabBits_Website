@@ -1,5 +1,10 @@
 import github from '../Highlights/github.png';
-// import {postman} from '../Highlights/getpostman-icon.svg';
+import postman from '../Highlights/postman.png';
+import google from '../Highlights/google.png';
+import amazon from '../Highlights/amazon.png';
+import microsoft from '../Highlights/microsoft.png';
+import gfg from '../Highlights/gfg.png';
+import jpmchase from '../Highlights/jpmchase.png';
 
 export const HighlightsData = [
 	{
@@ -10,38 +15,38 @@ export const HighlightsData = [
 	},
 	{
 		name: 'Postman Students Expert',
-		image: github,
+		image: postman,
 		link: 'https://www.postman.com/student-program/student-expert/',
 		bgColor: '#00bbff',
 	},
 	{
 		name: 'Google Kickstart',
-		image: github,
-		link: 'https://education.github.com/experts',
+		image: google,
+		link: 'https://codingcompetitions.withgoogle.com/',
 		bgColor: '#00bbff',
 	},
 	{
 		name: 'Amazon WoW',
-		image: github,
-		link: 'https://education.github.com/experts',
+		image: amazon,
+		link: 'https://amazonwowindia.splashthat.com/',
 		bgColor: '#00bbff',
 	},
 	{
 		name: 'JP Morgan - Code for Good',
-		image: github,
-		link: 'https://education.github.com/experts',
+		image: jpmchase,
+		link: 'https://careers.jpmorgan.com/in/en/students',
 		bgColor: '#6aff00',
 	},
 	{
 		name: 'Microsoft Engage',
-		image: github,
-		link: 'https://education.github.com/experts',
+		image: microsoft,
+		link: 'https://acehacker.com/microsoft/engage2022/',
 		bgColor: '#6aff00',
 	},
 	{
 		name: 'GFG Jobathons',
-		image: github,
-		link: 'https://education.github.com/experts',
+		image: gfg,
+		link: 'https://practice.geeksforgeeks.org/contest/job-a-thon-17-hiring-challenge',
 		bgColor: '#ABC333',
 	},
 ];

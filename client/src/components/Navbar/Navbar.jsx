@@ -45,7 +45,7 @@ const Navbar = () => {
 								Opportunities
 							</NavLink>
 						</li>
-						<li
+						{/* <li
 							className={`${classes.navbar_item} `}
 							onClick={() => {
 								setActive((prevValue) => !prevValue);
@@ -54,7 +54,7 @@ const Navbar = () => {
 							<NavLink to="/podcasts" className={classes.link_text}>
 								Podcasts
 							</NavLink>
-						</li>
+						</li> */}
 						<li
 							className={`${classes.navbar_item} `}
 							onClick={() => {
