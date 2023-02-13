@@ -20,14 +20,12 @@ export const About = () => {
 						info is spread via their Instagram, Whatsapp, LinkedIn and Twitter
 						handles. You can follow us from anywhere..
 					</p>
-					<p>
-						We&apos;ve started broadcasting a podcasts as well in which .....
-					</p>
+					<p>We&apos;ve started broadcasting a podcasts as well...</p>
 				</div>
 				<a href="/team">
-				<div className={classes.btn_container}>
-					<Button padding="12px 28px" fontSize="22px" label="Learn More" />
-				</div>
+					<div className={classes.btn_container}>
+						<Button padding="12px 28px" fontSize="22px" label="Learn More" />
+					</div>
 				</a>
 			</div>
 			<div className={classes.illustration}>

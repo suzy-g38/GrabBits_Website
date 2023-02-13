@@ -42,7 +42,6 @@
 	text-align: left;
 	font-family: SansationBold;
 	width: 90%;
-
 }
 
 .content {
@@ -54,7 +53,6 @@
 	margin-top: 6px;
 	font-size: 16px;
 	width: 90%;
-
 }
 
 .content.show {
@@ -80,10 +78,18 @@
 	color: #19212e;
 }
 .faq_heading1 {
-	font-size: 38px;
+	font-size: 28px;
 	margin-top: 30px;
 }
 .faq_heading2 {
-	font-size: 20px;
+	font-size: 16px;
 	margin: 20px 0;
+}
+@media screen and (max-width: 768px) {
+	.faq_question {
+		font-size: 16px;
+	}
+	.content {
+		font-size: 12px;
+	}
 }

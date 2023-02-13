@@ -36,7 +36,7 @@ const Team = () => {
 						src={Bhushan}
 						alt="Bhushan Kale"
 					/>
-					<span className={classes.position}>Unknown</span>
+					<span className={classes.position}>BK Bhushan</span>
 					<p className={classes.name}>Bhushan Kale</p>
 				</a>
 				<a
@@ -66,7 +66,7 @@ const Team = () => {
 						src={Saurabh}
 						alt="Saurabh Barde"
 					/>
-					<span className={classes.position}>Unknown</span>
+					<span className={classes.position}>ThunderBolt</span>
 					<p className={classes.name}>Saurabh Barde</p>
 				</a>
 				<a
@@ -81,7 +81,7 @@ const Team = () => {
 						src={Sapna}
 						alt="Sapna Kul"
 					/>
-					<span className={classes.position}>Unknown</span>
+					<span className={classes.position}>Dream</span>
 					<p className={classes.name}>Sapna Kul</p>
 				</a>
 				<a
@@ -96,7 +96,7 @@ const Team = () => {
 						src={Om}
 						alt="Om Gawande"
 					/>
-					<span className={classes.position}>Unknown</span>
+					<span className={classes.position}>Spider</span>
 					<p className={classes.name}>Om Gawande</p>
 				</a>
 				<a
@@ -111,8 +111,8 @@ const Team = () => {
 						src={Unknown}
 						alt="Unknown"
 					/>
-					<span className={classes.position}>Unknown</span>
-					<p className={classes.name}>Unknown</p>
+					<span className={classes.position}>Hiring Soon..!</span>
+					<p className={classes.name}>May be You</p>
 				</a>
 			</div>
 		</>

@@ -5,7 +5,7 @@ const data = [
 	{
 		question: 'Is this for engineering students only?',
 		answer:
-			'Nope. If you are eligible for the role according to  the provided criteria you can also apply for the same.'
+			'Nope. If you are eligible for the role according to  the provided criteria you can also apply for the same.',
 	},
 	{
 		question: 'What kind of resources do you provide?',
@@ -13,13 +13,15 @@ const data = [
 			'The resources related to coding can help you to learn it in a better way. Till now we have covered up - Remote job websites, best coding  websites, and best gaming websites for programmers, etc.',
 	},
 	{
-		question: 'I ain’t active on Instagram, how can I access the resources & updates that you’re providing?',
+		question:
+			'I ain’t active on Instagram, how can I access the resources & updates that you’re providing?',
 		answer:
 			'Not to worry. We are active on Twitter, LinkedIn & WhatsApp also , so you can connect with us from any compatible platform.',
 	},
 	{
 		question: 'What kind of podcasts do you make?',
-		answer: 'The podcast basically includes experience of individuals from industry folks, guiding students with their experience and sharing tips and tricks for a college student to grab a job offer.',
+		answer:
+			'The podcast basically includes experience of individuals from industry folks, guiding students with their experience and sharing tips and tricks for a college student to grab a job offer.',
 	},
 ];
 
@@ -39,7 +41,9 @@ const Faq = () => {
 			<div className={classes.firstrow}>
 				<div className={classes.faq_heading}>
 					<h3 className={classes.faq_heading1}>Frequently Asked Questions </h3>
-					<p className={classes.faq_heading2}>contact us if you’re in any kind of trouble</p>
+					<p className={classes.faq_heading2}>
+						Contact us if you&apos;re in any kind of trouble
+					</p>
 				</div>
 				<div className={classes.wrapper}>
 					<div className={classes.accordion}>

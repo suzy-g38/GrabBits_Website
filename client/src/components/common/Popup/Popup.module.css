@@ -106,9 +106,9 @@
 		right: 4vw;
 	}
 	.card .text {
-		font-size: 1em;
+		font-size: 1.3em;
 	}
 	.card .subtext {
-		font-size: 0.7em;
+		font-size: 1em;
 	}
 }
