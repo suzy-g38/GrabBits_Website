@@ -38,8 +38,8 @@ const Faq = () => {
 		<div className={classes.outerfaq}>
 			<div className={classes.firstrow}>
 				<div className={classes.faq_heading}>
-					<h3 className={classes.faq_heading1}>Do You Have Any Questions?</h3>
-					<p className={classes.faq_heading2}>Lorem ipsum dolor sit amet.</p>
+					<h3 className={classes.faq_heading1}>Frequently Asked Questions </h3>
+					<p className={classes.faq_heading2}>contact us if you’re in any kind of trouble</p>
 				</div>
 				<div className={classes.wrapper}>
 					<div className={classes.accordion}>
