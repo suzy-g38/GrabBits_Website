@@ -17,8 +17,9 @@ const Team = () => {
 				<div className={`${classes.item}  ${classes.right_section}`}>
 					<h2 className={classes.secondary_title}>Who we are</h2>
 					<p className={classes.description}>
-						We are a team of creatively diverse. driven. innovative individuals
-						working in various locations from the world.
+						We are a team of creatively diverse, driven, innovative individuals
+						working in creating a community of GrabBit that can help you grab
+						your dream job.
 					</p>
 				</div>
 			</div>
