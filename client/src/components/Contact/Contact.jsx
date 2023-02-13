@@ -74,25 +74,22 @@ const Contact = () => {
 			<div className={classes.container}>
 				<div className={classes.form}>
 					<div className={classes.contact_info}>
-						<h3 className={classes.title}>Lets Get in Touch</h3>
+						<h3 className={classes.title}>We would love to hear from you ! 	</h3>
 						<p className={classes.text}>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae enim
-							distinctio nostrum possimus in dolor beatae, illo iusto! Incidunt
-							cum aliquid exercitationem, maxime optio vero pariatur suscipit
-							explicabo nesciunt. Debitis.
+						Whether you’re curious about GrabBit, have any doubts, want to do any kind of sponsorships - we’re ready to answer all of your queries. 
 						</p>
 						<div className={classes.info}>
 							<div className={classes.information}>
-								<FaLocationArrow className={classes.icon} />
-								<p>lorem</p>
+								<FaMobileAlt className={classes.icon} />
+								<p>8177854760</p>
 							</div>
 							<div className={classes.information}>
 								<FaEnvelope className={classes.icon} />
-								<p>lorem</p>
+								<p>grabbitofficial1@gmail.com</p>
 							</div>
 							<div className={classes.information}>
-								<FaMobileAlt className={classes.icon} />
-								<p>lorem</p>
+								<FaLocationArrow className={classes.icon} />
+								<p>Pune, Maharashtra</p>
 							</div>
 						</div>
 
@@ -145,6 +142,7 @@ const Contact = () => {
 								name="phoneNo"
 								required
 							/>
+							
 							<Textarea
 								onChange={onChangeHandler}
 								type="text"
@@ -153,7 +151,6 @@ const Contact = () => {
 								name="message"
 								required
 							/>
-
 							<div className={classes.button}>
 								<Button
 									padding="8px 24px"

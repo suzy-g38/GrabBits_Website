@@ -44,11 +44,11 @@ const Extra = () => {
 				<div className={classes.content}>
 					<div className={classes.head1}>
 						Your dream job.
-						<br /> Let’s make it happen
+						<br /> Just a click away from you
 					</div>
-					<div className={classes.head2}>Lorem ipsum dolor sit amet.</div>
+					<div className={classes.head2}>Let’s make it happen</div>
 					<div className={classes.butt}>
-						<Button label="Learn More" />
+						<Button label="Find Yours" />
 					</div>
 				</div>
 			</div>

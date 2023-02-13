@@ -10,7 +10,7 @@ const data = [
 	{
 		question: 'What kind of resources do you provide?',
 		answer:
-			'The resources related to coding can help you to learn it in a better way. Till now we have covered up - Remote job websites, best coding  websites, and best gaming websites for  programmers, etc.',
+			'The resources related to coding can help you to learn it in a better way. Till now we have covered up - Remote job websites, best coding  websites, and best gaming websites for programmers, etc.',
 	},
 	{
 		question: 'I ain’t active on Instagram, how can I access the resources & updates that you’re providing?',
@@ -38,7 +38,7 @@ const Faq = () => {
 		<div className={classes.outerfaq}>
 			<div className={classes.firstrow}>
 				<div className={classes.faq_heading}>
-					<h3 className={classes.faq_heading1}>DO YOU HAVE SOME QUESTIONS?</h3>
+					<h3 className={classes.faq_heading1}>Do You Have Any Questions?</h3>
 					<p className={classes.faq_heading2}>Lorem ipsum dolor sit amet.</p>
 				</div>
 				<div className={classes.wrapper}>

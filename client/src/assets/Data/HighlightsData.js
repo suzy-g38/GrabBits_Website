@@ -1,43 +1,45 @@
 import github from '../Highlights/github.png';
+// import {postman} from '../Highlights/getpostman-icon.svg';
+
 export const HighlightsData = [
 	{
-		name: '1GitHub Students Expert',
+		name: 'GitHub Campus Expert',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#00bbff',
 	},
 	{
-		name: '2GitHub Students Expert',
+		name: 'Postman Students Expert',
+		image: github,
+		link: 'https://www.postman.com/student-program/student-expert/',
+		bgColor: '#00bbff',
+	},
+	{
+		name: 'Google Kickstart',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#00bbff',
 	},
 	{
-		name: '3GitHub Students Expert',
+		name: 'Amazon WoW',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#00bbff',
 	},
 	{
-		name: '4GitHub Students Expert',
-		image: github,
-		link: 'https://education.github.com/experts',
-		bgColor: '#00bbff',
-	},
-	{
-		name: '5GitHub Students Expert',
+		name: 'JP Morgan - Code for Good',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#6aff00',
 	},
 	{
-		name: '6GitHub Students Expert',
+		name: 'Microsoft Engage',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#6aff00',
 	},
 	{
-		name: '7GitHub Students Expert',
+		name: 'GFG Jobathons',
 		image: github,
 		link: 'https://education.github.com/experts',
 		bgColor: '#ABC333',

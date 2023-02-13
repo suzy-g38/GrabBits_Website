@@ -24,22 +24,31 @@ const Footer = () => {
 						<h3 className={classes.social_text}>Find Us On Social Media:</h3>
 						<ul className={classes.social_links}>
 							<li className={classes.socia_link}>
+							<a href="https://www.linkedin.com/company/grabbits/" target="blank">
 								<img className={classes.li_link} src={linkedin}></img>
+							</a>
 							</li>
 							<li className={classes.socia_link}>
+							<a href="https://www.instagram.com/grabbits_/" target="blank">
 								<img className={classes.ig_link} src={instagram}></img>
+							</a>
 							</li>
 							<li className={classes.socia_link}>
+							
+							<a href="https://chat.whatsapp.com/KBxP1M7GT7mCh4PORsfN0H" target="blank">
 								<img className={classes.wp_link} src={whatsapp}></img>
+							</a>
 							</li>
 							<li className={classes.socia_link}>
+							<a href="https://twitter.com/grabbits_" target="blank">
 								<img className={classes.twi_link} src={twitter}></img>
+							</a>
 							</li>
 						</ul>
 					</div>
 					<div className={classes.text_mail}>
 						<h2 className={classes.text}>We&apos;re Always Happy To Help</h2>
-						<h2 className={classes.mail}>grabbitofficial@gmail.com</h2>
+						<h2 className={classes.mail}>grabbitofficial1@gmail.com</h2>
 					</div>
 				</div>
 				<div className={classes.separator}></div>
