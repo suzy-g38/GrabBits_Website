@@ -11,7 +11,9 @@
 	flex-direction: column;
 	overflow-x: hidden;
 }
-
+.no_job{
+	text-align: center;
+}
 .searchbar_bg {
 	display: flex;
 	justify-content: center;

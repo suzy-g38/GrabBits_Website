@@ -60,3 +60,17 @@
 		fill: antiquewhite;
 	}
 } */
+#lefteye g ellipse {
+	animation: anim1 1s linear infinite;
+}
+#righteye g ellipse {
+	animation: anim1 1s linear infinite;
+}
+@keyframes anim1 {
+	to {
+		fill: #000;
+	}
+	from {
+		fill: #fff;
+	}
+}

@@ -58,15 +58,19 @@ const Opportunities = () => {
 					/>
 					<i className="fa fa-search"></i>
 				</div>
-				<div className={classes.cards}>
-					{jobData.length > 0 ? (
-						jobData.map((opp, i) => {
-							return <Card data={opp} key={i} />;
-						})
-					) : (
-						<Loader />
-					)}
-				</div>
+				{jobData.length === 0 ? (
+					<p className={classes.no_job}>Currently no jobs found!</p>
+				) : (
+					<div className={classes.cards}>
+						{jobData.length > 0 ? (
+							jobData.map((opp, i) => {
+								return <Card data={opp} key={i} />;
+							})
+						) : (
+							<Loader />
+						)}
+					</div>
+				)}
 			</div>
 		</>
 	);
