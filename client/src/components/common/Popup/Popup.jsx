@@ -5,7 +5,7 @@ import whatsapp from '../../../assets/Socials/whatsapp.svg';
 import cross from '../../../assets/cross.svg';
 
 const Popup = () => {
-	const [isVisible, setIsVisible] = useState(false);
+	const [isVisible, setIsVisible] = useState(true);
 
 	useEffect(() => {
 		setTimeout(() => {

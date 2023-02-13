@@ -8,6 +8,9 @@
 	backdrop-filter: blur(10px);
 	z-index: 10;
 	position: fixed;
+	display: flex;
+	place-content: center;
+	place-items: center;
 }
 .card {
 	width: 50vw;
@@ -95,4 +98,17 @@
 	font-size: 24px;
 	margin-left: 12px;
 	margin-bottom: 4px;
+}
+@media screen and (max-width: 768px) {
+	.card {
+		width: 90vw;
+		height: 40vh;
+		right: 4vw;
+	}
+	.card .text {
+		font-size: 1em;
+	}
+	.card .subtext {
+		font-size: 0.7em;
+	}
 }
