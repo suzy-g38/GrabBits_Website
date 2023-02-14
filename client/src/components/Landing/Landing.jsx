@@ -19,7 +19,7 @@ const Landing = () => {
 						Get the latest updates about internships, hackathons, job openings
 						and much more..
 					</h2>
-					<a href="/podcasts">
+					<a href="/team">
 						<Button label="Explore" padding="16px 32px" fontSize="24px" />
 					</a>
 				</div>
