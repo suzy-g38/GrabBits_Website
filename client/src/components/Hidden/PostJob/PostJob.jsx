@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classes from './PostJob.module.css';
-import { Button, Card, Input } from '../../common';
+import { Button, Card, Input, Textarea } from '../../common';
 import http from '../../../api';
 import Swal from 'sweetalert2';
 
@@ -161,7 +161,7 @@ const PostJob = () => {
 					name="batch"
 					required
 				/>
-				<Input
+				<Textarea
 					onChange={onChangeHandler}
 					type="text"
 					value={description}
