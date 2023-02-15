@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Highlights from '../components/Highlights/Highlights';
 import Swiper from '../components/Swiper/Swiper';
 import Faq from '../components/Faq/Faq';
@@ -7,7 +7,12 @@ import Testimonial from '../components/Testimonials/Testimonial';
 import { About } from '../components/About/About';
 import Extra from '../components/Extra/Extra';
 
+import ReactGA from 'react-ga';
+
 const Homepage = () => {
+	useEffect(() => {
+		ReactGA.pageview(window.location.pathname);
+	}, []);
 	return (
 		<>
 			<Landing />

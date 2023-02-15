@@ -1,4 +1,4 @@
-import {React, useEffect} from 'react';
+import { React, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import {
 	Contact,
@@ -12,6 +12,9 @@ import {
 import { Popup } from './components/common';
 import Grabby from './components/common/Grabby/Grabby';
 import Homepage from './pages/Homepage';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-257250330-2');
 
 const App = () => {
 	return (
