@@ -10,7 +10,7 @@ import whatsapp from '../../assets/Socials/whatsapp.svg';
 const Footer = () => {
 	return (
 		<>
-			<div className={classes.outer_box}>
+			<footer className={classes.outer_box}>
 				<div className={classes.row1}>
 					<NavLink to="/">
 						<div className={classes.brand}>
@@ -24,25 +24,30 @@ const Footer = () => {
 						<h3 className={classes.social_text}>Find Us On Social Media:</h3>
 						<ul className={classes.social_links}>
 							<li className={classes.socia_link}>
-							<a href="https://www.linkedin.com/company/grabbits/" target="blank">
-								<img className={classes.li_link} src={linkedin}></img>
-							</a>
+								<a
+									href="https://www.linkedin.com/company/grabbits/"
+									target="blank"
+								>
+									<img className={classes.li_link} src={linkedin}></img>
+								</a>
 							</li>
 							<li className={classes.socia_link}>
-							<a href="https://www.instagram.com/grabbits_/" target="blank">
-								<img className={classes.ig_link} src={instagram}></img>
-							</a>
+								<a href="https://www.instagram.com/grabbits_/" target="blank">
+									<img className={classes.ig_link} src={instagram}></img>
+								</a>
 							</li>
 							<li className={classes.socia_link}>
-							
-							<a href="https://chat.whatsapp.com/KBxP1M7GT7mCh4PORsfN0H" target="blank">
-								<img className={classes.wp_link} src={whatsapp}></img>
-							</a>
+								<a
+									href="https://chat.whatsapp.com/KBxP1M7GT7mCh4PORsfN0H"
+									target="blank"
+								>
+									<img className={classes.wp_link} src={whatsapp}></img>
+								</a>
 							</li>
 							<li className={classes.socia_link}>
-							<a href="https://twitter.com/grabbits_" target="blank">
-								<img className={classes.twi_link} src={twitter}></img>
-							</a>
+								<a href="https://twitter.com/grabbits_" target="blank">
+									<img className={classes.twi_link} src={twitter}></img>
+								</a>
 							</li>
 						</ul>
 					</div>
@@ -53,7 +58,7 @@ const Footer = () => {
 				</div>
 				<div className={classes.separator}></div>
 				<div className={classes.row2}>Copyright © 2023 GrabBits</div>
-			</div>
+			</footer>
 		</>
 	);
 };

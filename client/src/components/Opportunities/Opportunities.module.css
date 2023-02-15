@@ -6,12 +6,17 @@
 	margin-top: 20px;
 	margin-bottom: 100px;
 }
+.loader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .wrapper {
 	display: flex;
 	flex-direction: column;
 	overflow-x: hidden;
 }
-.no_job{
+.no_job {
 	text-align: center;
 }
 .searchbar_bg {
