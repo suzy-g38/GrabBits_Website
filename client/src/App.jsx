@@ -1,5 +1,6 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import { Route, Routes } from 'react-router-dom';
+import ReactGA from 'react-ga';
 import {
 	Contact,
 	Footer,
@@ -12,6 +13,13 @@ import {
 import { Popup } from './components/common';
 import Grabby from './components/common/Grabby/Grabby';
 import Homepage from './pages/Homepage';
+
+const TRACKING_ID = 'UA-257250330-1';
+ReactGA.initialize(TRACKING_ID);
+
+useEffect(()=> {
+	ReactGA.pageview(window.location.pathname)
+}, [])
 
 const App = () => {
 	return (
