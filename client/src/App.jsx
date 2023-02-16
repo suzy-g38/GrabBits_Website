@@ -14,7 +14,7 @@ import Grabby from './components/common/Grabby/Grabby';
 import Homepage from './pages/Homepage';
 import ReactGA from 'react-ga4';
 
-ReactGA.initialize('UA-257250330-2');
+ReactGA.initialize('G-PG8HC34H6V');
 
 const App = () => {
 	return (
