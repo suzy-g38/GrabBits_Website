@@ -11,7 +11,7 @@ import {
 
 const upload = multer({
   fileFilter(req, file, cb) {
-    if (!file.originalname.match(/\.(jpg|png|jpeg|jfif|PNG)$/)) {
+    if (!file.originalname.match(/\.(jpg|png|jpeg|jfif|PNG|svg|webp|gif)$/)) {
       return cb(new Error("Please upload valid image format"));
     }
     return cb(undefined, true);
