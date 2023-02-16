@@ -7,7 +7,7 @@ import Testimonial from '../components/Testimonials/Testimonial';
 import { About } from '../components/About/About';
 import Extra from '../components/Extra/Extra';
 
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const Homepage = () => {
 	useEffect(() => {

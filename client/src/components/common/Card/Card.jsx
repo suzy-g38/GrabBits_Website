@@ -23,17 +23,21 @@ const Card = ({ data, imgPreview, show }) => {
 						<div className={classes.extra_container}>
 							<div className={classes.company_container}>
 								{show ? (
-									<img
-										className={classes.company_image}
-										src={imgPreview}
-										alt="company_image"
-									/>
+									<div className={classes.company_img_container}>
+										<img
+											className={classes.company_image}
+											src={imgPreview}
+											alt="company_image"
+										/>
+									</div>
 								) : (
-									<img
-										className={classes.company_image}
-										src={`data:image/png;base64, ${image}`}
-										alt="company_image"
-									/>
+									<div className={classes.company_img_container}>
+										<img
+											className={classes.company_image}
+											src={`data:image/png;base64, ${image}`}
+											alt="company_image"
+										/>
+									</div>
 								)}
 
 								<h1 className={classes.name}>{companyName}</h1>

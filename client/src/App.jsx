@@ -12,7 +12,7 @@ import {
 import { Popup } from './components/common';
 import Grabby from './components/common/Grabby/Grabby';
 import Homepage from './pages/Homepage';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 ReactGA.initialize('UA-257250330-2');
 

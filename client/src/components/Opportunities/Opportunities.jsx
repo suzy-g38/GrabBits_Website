@@ -4,7 +4,7 @@ import { Card, Loader } from '../common';
 import http from '../../api';
 import Swal from 'sweetalert2';
 
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const Opportunities = () => {
 	const [jobData, setJobData] = useState([]);
