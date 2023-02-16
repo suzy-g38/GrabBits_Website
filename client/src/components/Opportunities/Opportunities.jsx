@@ -10,7 +10,7 @@ const Opportunities = () => {
 	const [jobData, setJobData] = useState([]);
 
 	useEffect(() => {
-		ReactGA.pageview(window.location.pathname);
+		ReactGA.send('pageview');
 		getData();
 	}, []);
 
