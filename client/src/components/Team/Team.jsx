@@ -52,7 +52,7 @@ const Team = () => {
 						src={Sanyog}
 						alt="Sanyog Mahajan"
 					/>
-					<span className={classes.position}>Unknown</span>
+					<span className={classes.position}>Grabby</span>
 					<p className={classes.name}>Sanyog Mahajan</p>
 				</a>
 				<a
