@@ -9,6 +9,7 @@ import ThemeButton from '../common/ThemeButton/ThemeButton';
 
 const Opportunities = () => {
 	const [jobData, setJobData] = useState(null);
+	const [test, setTest] = useState(null);
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
@@ -22,6 +23,7 @@ const Opportunities = () => {
 				const data = response.data.jobs;
 				setLoading(false);
 				setJobData(data);
+				setTest(data);
 			});
 		} catch (error) {
 			Swal.fire({
@@ -51,8 +53,9 @@ const Opportunities = () => {
 			});
 		}
 	};
-	const filterData = (filterBy) => {
-		const filteredData = jobData.filter((job) => {
+	const filterData = async (filterBy) => {
+		setJobData(test);
+		const filteredData = test.filter((job) => {
 			return job.category === filterBy;
 		});
 		setJobData(() => filteredData);
@@ -64,13 +67,13 @@ const Opportunities = () => {
 			<div className={classes.wrapper}>
 				<div className={classes.search_filter}>
 					<div>
-						<ThemeButton onClick={() => filterData('Jobs')} label="Jobs" />
+						<ThemeButton onClick={() => filterData('jobs')} label="Jobs" />
 						<ThemeButton
-							onClick={() => filterData('Hackathons')}
+							onClick={() => filterData('hackathons')}
 							label="Hackathons"
 						/>
 						<ThemeButton
-							onClick={() => filterData('Interns')}
+							onClick={() => filterData('interns')}
 							label="Interns"
 						/>
 						{/* <ThemeButton onClick={()=>filterData('Others')} label="Others" /> */}
@@ -91,12 +94,14 @@ const Opportunities = () => {
 						<Loader />
 					</div>
 				)}
-				{!loading && jobData.length && (
+				{!loading && jobData.length ? (
 					<div className={classes.cards}>
 						{jobData.map((opp, i) => {
 							return <Card data={opp} key={i} />;
 						})}
 					</div>
+				) : (
+					<></>
 				)}
 				{!loading && !jobData.length && (
 					<div className={classes.cards}>
