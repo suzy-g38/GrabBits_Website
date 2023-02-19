@@ -13,10 +13,12 @@ const Card = ({ data, imgPreview, show }) => {
 		description,
 		link,
 		image,
+		category,
 	} = data;
 
 	return (
 		<>
+			{/* {category} */}
 			<div className={classes.outer_container}>
 				<details className={classes.inner_container}>
 					<summary className={classes.data}>

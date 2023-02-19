@@ -31,6 +31,10 @@ const JobModel = new Schema(
       type: String,
       required: true,
     },
+    category: {
+      type: String,
+      required: true,
+    },
     image: {
       type: Buffer,
       required: true,

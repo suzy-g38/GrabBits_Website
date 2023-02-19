@@ -15,10 +15,19 @@ const PostJob = () => {
 		batch: '',
 		description: '',
 		link: '',
+		category: '',
 	});
 
-	const { role, location, stipend, companyName, batch, description, link } =
-		job;
+	const {
+		role,
+		location,
+		stipend,
+		companyName,
+		batch,
+		description,
+		link,
+		category,
+	} = job;
 
 	const onChangeHandler = (e) => {
 		setJob({
@@ -42,6 +51,7 @@ const PostJob = () => {
 			companyName === '' ||
 			batch === '' ||
 			description === '' ||
+			category === '' ||
 			link === ''
 		) {
 			// AlertContext.setAlert("Please enter all fields", "danger"); add a state
@@ -55,6 +65,7 @@ const PostJob = () => {
 			dataArray.append('batch', batch);
 			dataArray.append('description', description);
 			dataArray.append('link', link);
+			dataArray.append('category', category);
 			dataArray.append('image', img['0'], img['0'].name);
 			try {
 				http.post('/job/createJob', dataArray).then(
@@ -90,6 +101,7 @@ const PostJob = () => {
 			companyName: '',
 			batch: '',
 			description: '',
+			category: '',
 			link: '',
 		});
 		setImg(null);
@@ -177,6 +189,21 @@ const PostJob = () => {
 					name="link"
 					required
 				/>
+				<div>
+					<label htmlFor="dropdown">Select an option:</label>
+					<select
+						id="dropdown"
+						name="category"
+						value={category}
+						onChange={onChangeHandler}
+					>
+						<option value="">Select an option</option>
+						<option value="jobs">Job</option>
+						<option value="interns">Internship</option>
+						<option value="hackathons">Hackathon</option>
+					</select>
+					<p>You selected {job.category}</p>
+				</div>
 				<input
 					className={classes.custom_file_input}
 					type="file"

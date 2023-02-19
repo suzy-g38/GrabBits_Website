@@ -1,14 +1,23 @@
 import Job from "../models/job.model.js";
 
 const addJob = async (req, res) => {
-  const { role, location, companyName, stipend, batch, description, link } =
-    req.body;
+  const {
+    role,
+    location,
+    companyName,
+    stipend,
+    category,
+    batch,
+    description,
+    link,
+  } = req.body;
   if (
     !role ||
     !companyName ||
     !batch ||
     !location ||
     !description ||
+    !category ||
     !link ||
     stipend < 1
   ) {
@@ -24,6 +33,7 @@ const addJob = async (req, res) => {
     stipend,
     batch,
     description,
+    category,
     link,
     image: imageBuffer,
   });
@@ -47,6 +57,7 @@ const getAllJobs = async (req, res) => {
         stipend,
         batch,
         description,
+        category,
         link,
       } = job;
 
@@ -58,6 +69,7 @@ const getAllJobs = async (req, res) => {
         companyName,
         stipend,
         batch,
+        category,
         description,
         link,
       };
@@ -109,6 +121,7 @@ const searchJobs = async (req, res) => {
         companyName,
         stipend,
         batch,
+        category,
         description,
         link,
       } = job;
@@ -120,6 +133,7 @@ const searchJobs = async (req, res) => {
         location,
         companyName,
         stipend,
+        category,
         batch,
         description,
         link,

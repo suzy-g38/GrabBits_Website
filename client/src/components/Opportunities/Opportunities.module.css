@@ -36,7 +36,11 @@
 	margin-right: 8%;
 	margin-top: 20px;
 }
-
+.search_filter {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
 .search_bar {
 	position: absolute;
 	top: 0;
@@ -51,7 +55,9 @@
 	border-radius: 20px;
 	padding: 0 20px;
 }
-
+.text {
+	text-align: center;
+}
 .fa {
 	box-sizing: border-box;
 	padding: 10px;
@@ -81,4 +87,11 @@
 .searchbar_bg:hover .fa {
 	background: #07051a;
 	color: white;
+}
+@media screen and (max-width: 768px) {
+	.search_filter {
+		gap: 20px;
+		justify-content: center;
+		flex-direction: column-reverse;
+	}
 }

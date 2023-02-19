@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Highlights from '../components/Highlights/Highlights';
-import Swiper from '../components/Swiper/Swiper';
 import Faq from '../components/Faq/Faq';
 import { Landing } from '../components';
 import Testimonial from '../components/Testimonials/Testimonial';
@@ -11,8 +10,7 @@ import ReactGA from 'react-ga4';
 
 const Homepage = () => {
 	useEffect(() => {
-		
-		ReactGA.send("pageview");
+		ReactGA.send('pageview');
 	}, []);
 	return (
 		<>
