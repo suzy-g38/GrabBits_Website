@@ -27,7 +27,7 @@ app.use("/job", jobRouter);
 app.use("/contact", contactRouter);
 app.use("/podcast", podcastRouter);
 app.use("/", (req, res) => {
-  res.send("Welcome to the server of GrabBit, Don't go ahead.");
+  res.send("Welcome to the server of GrabBit, Don't go ahead!");
 });
 
 app.listen(PORT, () => {
