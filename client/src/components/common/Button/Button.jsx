@@ -9,6 +9,7 @@ const Button = ({
 	label,
 	disabled,
 	filled,
+	color = '#fff',
 	padding = '15px 30px',
 	fontSize = '20px',
 	bgColor,
@@ -28,6 +29,7 @@ const Button = ({
 						padding: padding,
 						fontSize: fontSize,
 						backgroundColor: bgColor,
+						color: color,
 					}}
 					className={filled ? classes.fill : classes.btn}
 					onClick={onClick}

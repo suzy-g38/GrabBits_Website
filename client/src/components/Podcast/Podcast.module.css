@@ -9,6 +9,18 @@
 	margin-top: 100px;
 	width: 40%;
 	margin-left: 100px;
+	position: relative;
+	color: #fff;
+}
+#background_video {
+	position: absolute;
+	/* right: 0;
+	bottom: 0; */
+	width: 100vw;
+	height: 90vh;
+	min-width: 100%;
+	min-height: 110%;
+	z-index: -1;
 }
 .podcast_card_container {
 	display: flex;

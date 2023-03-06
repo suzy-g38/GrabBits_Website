@@ -5,6 +5,7 @@ import { PodcastCard } from '../common/index';
 import { Loader } from '../common/index';
 import http from '../../api';
 import Swal from 'sweetalert2';
+import videoFile from '../../assets/logo.mp4';
 
 const Podcast = () => {
 	const [podcastData, setPodcastData] = useState([]);
@@ -29,6 +30,10 @@ const Podcast = () => {
 	};
 	return (
 		<>
+			<video autoPlay muted loop id={classes.background_video}>
+				<source src={videoFile} type="video/mp4" />
+				Your browser does not support the video tag.
+			</video>
 			<div className={classes.podcast_section}>
 				<h1 className={classes.heading}>PODCASTS DESIGNED TO HELP YOU GROW</h1>
 				<h3 className={classes.subheading}>
@@ -36,7 +41,7 @@ const Podcast = () => {
 					designed to help you take life decisions from a point of awareness.
 					And not ignorance.
 				</h3>
-				<Button label="Explore" />
+				<Button bgColor="#fff" color="#000" label="Explore" />
 			</div>
 			<div>
 				<h2 className={classes.podcast_heading}>
