@@ -30,7 +30,7 @@ const Podcast = () => {
 	};
 	return (
 		<>
-			<video autoPlay muted loop id={classes.background_video}>
+			{/* <video autoPlay muted loop id={classes.background_video}>
 				<source src={videoFile} type="video/mp4" />
 				Your browser does not support the video tag.
 			</video>
@@ -42,15 +42,45 @@ const Podcast = () => {
 					And not ignorance.
 				</h3>
 				<Button bgColor="#fff" color="#000" label="Explore" />
+			</div> */}
+
+			<div className={classes.podcastLandingSection}>
+				<div className={classes.overlay}></div>
+				<video src={videoFile} autoPlay loop muted id={classes.backgroundVideo}></video>
+				<div className={classes.sectionContent}>
+					<div>
+						<h1 className={classes.heading}>PODCASTS DESIGNED TO HELP YOU GROW</h1>
+						<h3 className={classes.subheading}>
+							Super practical courses, with a no-nonsense approach, that are
+							designed to help you take life decisions from a point of awareness.
+							And not ignorance.
+						</h3>
+					</div>
+					<Button bgColor="#fff" color="#000" label="Explore" />
+				</div>
 			</div>
 			<div>
 				<h2 className={classes.podcast_heading}>
-					Current and Upcoming Podcasts
+					Current Podcasts
 				</h2>
 				<div className={classes.podcast_card_container}>
 					{podcastData.length > 0 ? (
 						podcastData.map((podcast, i) => {
 							return <PodcastCard key={i} podcast={podcast} />;
+						})
+					) : (
+						<Loader />
+					)}
+				</div>
+			</div>
+			<div>
+				<h2 className={classes.podcast_heading}>
+					Upcoming Podcasts
+				</h2>
+				<div className={classes.podcast_card_container}>
+					{podcastData.length > 0 ? (
+						podcastData.map((podcast, i) => {
+							return "No videos found";
 						})
 					) : (
 						<Loader />
