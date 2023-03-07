@@ -101,9 +101,6 @@
 
 @media screen and (max-width:768px){
 	.podcastLandingSection{
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
 		height: 98vw;
 	}
 
@@ -117,8 +114,10 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		width: 100vw;
 		gap: 30px;
 		margin-left: 5vw;
+		margin-right: 10vw;
 	}
 
 	.heading{
@@ -136,3 +135,4 @@
 	}
 
 }
+
