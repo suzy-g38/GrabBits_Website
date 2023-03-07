@@ -46,7 +46,10 @@ const Podcast = () => {
 
 			<div className={classes.podcastLandingSection}>
 				<div className={classes.overlay}></div>
-				<video src={videoFile} autoPlay loop muted id={classes.backgroundVideo}></video>
+				<video autoPlay loop muted id={classes.backgroundVideo}>
+					<source src={videoFile} type="video/mp4"/>
+					Your browser does not support the video tag.
+				</video>
 				<div className={classes.sectionContent}>
 					<div>
 						<h1 className={classes.heading}>PODCASTS DESIGNED TO HELP YOU GROW</h1>
