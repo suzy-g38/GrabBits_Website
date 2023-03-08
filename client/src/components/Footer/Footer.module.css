@@ -86,6 +86,11 @@
 	box-shadow: 0 0 25px #25d366;
 }
 
+.socia_link:hover:nth-child(5) {
+	background: #c4302b;
+	box-shadow: 0 0 25px #c4302b;
+}
+
 .text_mail {
 	display: flex;
 	justify-content: center;
