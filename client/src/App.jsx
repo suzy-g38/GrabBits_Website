@@ -39,6 +39,8 @@ const App = () => {
 				<Route path="/podcasts" element={<Podcast />} />
 				<Route path="/hidden" element={<Hidden />} />
 				<Route path="/grabby" element={<Grabby />} />
+				<Route path="/prepaprtion" element={<Grabby />} />
+				<Route path="/resources" element={<Grabby />} />
 			</Routes>
 			<Footer />
 			{/* <Input />
