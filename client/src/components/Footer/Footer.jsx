@@ -6,6 +6,7 @@ import linkedin from '../../assets/Socials/linkedin-2.svg';
 import twitter from '../../assets/Socials/twitter.svg';
 import instagram from '../../assets/Socials/instagram.svg';
 import whatsapp from '../../assets/Socials/whatsapp.svg';
+import youtube from '../../assets/Socials/youtube.svg';
 
 const Footer = () => {
 	return (
@@ -47,6 +48,11 @@ const Footer = () => {
 							<li className={classes.socia_link}>
 								<a href="https://twitter.com/grabbits_" target="blank">
 									<img className={classes.twi_link} src={twitter}></img>
+								</a>
+							</li>
+							<li className={classes.socia_link}>
+								<a href="https://www.youtube.com/channel/UCFnVnet_WPnN7VzkGORvzhg?sub_confirmation=1" target="blank">
+									<img className={classes.yt_link} src={youtube}></img>
 								</a>
 							</li>
 						</ul>
