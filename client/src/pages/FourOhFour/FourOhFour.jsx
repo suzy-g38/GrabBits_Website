@@ -1,7 +1,16 @@
 import React from 'react'
 import classes from './FourOhFour.module.css'
 import Homepage from '../Homepage'
+import {useHistory} from 'react-router-dom'
+
 export const FourOhFour = () => {
+
+  const history = useHistory();
+
+  function handleGoBack() {
+    history.goBack();
+  }
+
   return (
     <div className={classes.oopss}>
     <div className={classes.errorText}>
@@ -12,7 +21,7 @@ export const FourOhFour = () => {
         {/* <p className={classes.pb}>
             ... Back to previous page
         </p> */}
-        <a href='../Homepage.jsx' className={classes.back}>... Back to previous page</a>
+        <button onClick={handleGoBack} className={classes.back}>... Back to previous page</button>
     </div>
 </div>
   )
