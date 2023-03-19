@@ -8,6 +8,7 @@ import {
 	Opportunities,
 	Hidden,
 	Podcast,
+	Login,
 } from './components';
 import { Popup } from './components/common';
 import Grabby from './components/common/Grabby/Grabby';
@@ -40,6 +41,7 @@ const App = () => {
 				<Route path="/podcasts" element={<Podcast />} />
 				<Route path="/hidden" element={<Hidden />} />
 				<Route path="/grabby" element={<Grabby />} />
+				<Route path="/login" element={<Login />} />
 				<Route path="*" element={<FourOhFour/>}/>
 			</Routes>
 			<Footer />
