@@ -5,21 +5,27 @@ import { Button} from '../common/index';
 
 
 const Login = () => {
-    // const signUp = document.querySelector(".signupButton");
-    // console.log(signUp);
+    const signUpButton = document.getElementsByTagName("button");
+    const logInButton = document.querySelector(".signupButton");
+    console.log(signUpButton);
     // signUp.addEventListener('click',()=>{
     //     const signForm = document.querySelector('form')
     //     signForm.classList.add("signupForm")
     // })
+    function removeclassName(){
+        
+    }
+
+
   return (
     <>
         <div className={classes.mainSection}>
             <div className={classes.innerSection}>
                 <div className={classes.buttonSwitch}>
-                    <div className={`${classes.signupButton} ${classes.active}`}>Sign Up</div>
+                    <button className={`${classes.signupButton} ${classes.active}`}>Sign Up</button>
                     {/* <div className={classes.signupButton}>Sign Up</div> */}
                     
-                    <div className={classes.loginButton}>Log In</div>
+                    <button className={classes.loginButton}>Log In</button>
                     {/* <div className={`${classes.loginButton} ${classes.active}`}>Log In</div> */}
                 </div>
                 <form className={classes.signupForm}>
