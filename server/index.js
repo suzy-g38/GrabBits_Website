@@ -7,6 +7,7 @@ import { errorMiddleware, notFound } from "./middleware/errorMiddleware.js";
 import jobRouter from "./routes/job.routes.js";
 import contactRouter from "./routes/contact.routes.js";
 import podcastRouter from "./routes/podcast.routes.js";
+import userRouter from "./routes/user.routes.js";
 
 const PORT = process.env.PORT || 8000;
 
@@ -26,6 +27,7 @@ app.use(errorMiddleware);
 app.use("/job", jobRouter);
 app.use("/contact", contactRouter);
 app.use("/podcast", podcastRouter);
+app.use("/User", userRouter);
 app.use("/", (req, res) => {
   res.send("Welcome to the server of GrabBit, Don't go ahead!");
 });
