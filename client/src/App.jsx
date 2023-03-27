@@ -8,13 +8,12 @@ import {
 	Opportunities,
 	Hidden,
 	Podcast,
-	Login,
 } from './components';
 import { Popup } from './components/common';
 import Grabby from './components/common/Grabby/Grabby';
-import Homepage from './pages/Homepage';
 import { FourOhFour } from './pages/FourOhFour/FourOhFour';
 import ReactGA from 'react-ga4';
+import { Homepage,Login,Signup } from './pages';
 
 ReactGA.initialize('G-PG8HC34H6V');
 
@@ -41,7 +40,8 @@ const App = () => {
 				<Route path="/podcasts" element={<Podcast />} />
 				<Route path="/hidden" element={<Hidden />} />
 				<Route path="/grabby" element={<Grabby />} />
-				<Route path="/login" element={<Login />} />
+				<Route path="/login" element={<Login/>} />
+				<Route path="/signup" element={<Signup/>} />
 				<Route path="*" element={<FourOhFour/>}/>
 			</Routes>
 			<Footer />

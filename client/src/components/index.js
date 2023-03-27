@@ -8,4 +8,3 @@ export { default as Podcast } from './Podcast/Podcast';
 export { default as Highlights } from './Highlights/Highlights';
 export { default as Hidden } from './Hidden/Hidden';
 export { default as Faq } from './Faq/Faq';
-export { default as Login } from './Login/Login';
