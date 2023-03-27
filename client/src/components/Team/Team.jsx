@@ -29,7 +29,7 @@ const Team = () => {
 					href="https://www.linkedin.com/in/bhushan-kale/"
 					target="_blank"
 					rel="noreferrer"
-					className={`${classes.team} ${classes.member_1}`}
+					className={`${classes.team} ${classes.member_5}`}
 				>
 					<img
 						className={classes.img}
@@ -37,9 +37,10 @@ const Team = () => {
 						src={Bhushan}
 						alt="Bhushan Kale"
 					/>
-					<span className={classes.position}>BK Bhushan</span>
+					<span className={classes.position}>Bk Bhushan</span>
 					<p className={classes.name}>Bhushan Kale</p>
 				</a>
+
 				<a
 					href="https://www.linkedin.com/in/sanyog-mahajan-8288a7204/"
 					target="_blank"
@@ -89,7 +90,7 @@ const Team = () => {
 					href="https://www.linkedin.com/in/om-gawande/"
 					target="_blank"
 					rel="noreferrer"
-					className={`${classes.team} ${classes.member_5}`}
+					className={`${classes.team} ${classes.member_1}`}
 				>
 					<img
 						className={classes.img}

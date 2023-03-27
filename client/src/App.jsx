@@ -12,6 +12,7 @@ import {
 import { Popup } from './components/common';
 import Grabby from './components/common/Grabby/Grabby';
 import Homepage from './pages/Homepage';
+import { FourOhFour } from './pages/FourOhFour/FourOhFour';
 import ReactGA from 'react-ga4';
 
 ReactGA.initialize('G-PG8HC34H6V');
@@ -38,7 +39,10 @@ const App = () => {
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/podcasts" element={<Podcast />} />
 				<Route path="/hidden" element={<Hidden />} />
+				<Route path="/resources" element={<Hidden />} />
+
 				<Route path="/grabby" element={<Grabby />} />
+				<Route path="*" element={<FourOhFour />} />
 			</Routes>
 			<Footer />
 			{/* <Input />
