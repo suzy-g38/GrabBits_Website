@@ -35,7 +35,7 @@ const Login = () => {
                     </div>
                     <div className={classes.forgotPassword}><a href="">Forgot Password ?</a></div>
                     <div className={classes.buttonContainer}>
-                        <Button label="Submit" padding="10px 32px" fontSize="24px" bgColor="#9f62ff" className={classes.submitButton}/>
+                        <Button label="Log In" padding="8px 24px" fontSize="20px" bgColor="#9f62ff" className={classes.submitButton}/>
                     </div>
                 </form>
                 
