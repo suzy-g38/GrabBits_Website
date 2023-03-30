@@ -13,7 +13,19 @@ import { Popup } from './components/common';
 import Grabby from './components/common/Grabby/Grabby';
 import { FourOhFour } from './pages/FourOhFour/FourOhFour';
 import ReactGA from 'react-ga4';
-import { Homepage,Login,Signup } from './pages';
+import { Homepage, Login, Signup } from './pages';
+
+/** import all components */
+import Username from './components/Username';
+import Password from './components/Password';
+import Register from './components/Register';
+import Profile from './components/Profile';
+import Recovery from './components/Recovery';
+import Reset from './components/Reset';
+import PageNotFound from './components/PageNotFound';
+
+/** auth middleware */
+import { AuthorizeUser, ProtectRoute } from './middleware/auth';
 
 ReactGA.initialize('G-PG8HC34H6V');
 
@@ -40,11 +52,32 @@ const App = () => {
 				<Route path="/podcasts" element={<Podcast />} />
 				<Route path="/hidden" element={<Hidden />} />
 				<Route path="/resources" element={<Hidden />} />
-
 				<Route path="/grabby" element={<Grabby />} />
-				<Route path="/login" element={<Login/>} />
-				<Route path="/signup" element={<Signup/>} />
-				<Route path="*" element={<FourOhFour/>}/>
+				{/* <Route path="/login" element={<Login />} />
+				<Route path="/signup" element={<Signup />} /> */}
+				{/* <Route path="*" element={<FourOhFour />} /> */}
+				{/* login trial */}
+				<Route path="/register" element={<Register />} />
+				<Route path="/getstarted" element={<Username />} />
+				<Route
+					path="/password"
+					element={
+						<ProtectRoute>
+							<Password />
+						</ProtectRoute>
+					}
+				/>
+				<Route
+					path="/profile"
+					element={
+						<AuthorizeUser>
+							<Profile />
+						</AuthorizeUser>
+					}
+				/>
+				<Route path="/recovery" element={<Recovery />} />
+				<Route path="/reset" element={<Reset />} />
+				<Route path="*" element={<PageNotFound />} />
 			</Routes>
 			<Footer />
 			{/* <Input />
