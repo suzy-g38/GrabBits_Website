@@ -16,13 +16,13 @@ import ReactGA from 'react-ga4';
 import { Homepage, Login, Signup } from './pages';
 
 /** import all components */
-import Username from './components/Username';
-import Password from './components/Password';
-import Register from './components/Register';
-import Profile from './components/Profile';
-import Recovery from './components/Recovery';
-import Reset from './components/Reset';
-import PageNotFound from './components/PageNotFound';
+import Username from './components/Username/Username';
+import Password from './components/Password/Password';
+import Register from './components/Register/Register';
+import Profile from './components/Profile/Profile';
+import Recovery from './components/Recovery/Recovery';
+import Reset from './components/Reset/Reset';
+import PageNotFound from './components/PageNotFound/PageNotFound';
 
 /** auth middleware */
 import { AuthorizeUser, ProtectRoute } from './middleware/auth';

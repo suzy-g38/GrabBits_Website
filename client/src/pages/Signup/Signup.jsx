@@ -43,7 +43,7 @@ const Signup = () => {
                         I agree to Grabbits&apos;s Terms of Service and Privacy Policy.
                     </label>
                     <div className={classes.buttonContainer}>
-                        <Button label="Submit" padding="10px 32px" fontSize="24px" bgColor="#9f62ff" className={classes.submitButton}/>
+                        <Button label="Sign In" padding="8px 24px" fontSize="20px" bgColor="#9f62ff" className={classes.submitButton}/>
                     </div>  
                 </form>
 
