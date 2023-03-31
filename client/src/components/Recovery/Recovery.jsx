@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { useAuthStore } from '../store/store';
-import styles from '../styles/Username.module.css';
-import { generateOTP, verifyOTP } from '../helper/helper';
+import { useAuthStore } from '../../store/store';
+// import styles from '../styles/Username.module.css';
+import classes from './Recovery.module.css'
+import { generateOTP, verifyOTP } from '../../helper/helper';
 import { useNavigate } from 'react-router-dom';
 
 export default function Recovery() {
@@ -51,7 +52,7 @@ export default function Recovery() {
 			<Toaster position="top-center" reverseOrder={false}></Toaster>
 
 			<div className="flex justify-center items-center h-screen">
-				<div className={styles.glass}>
+				<div className={classes.glass}>
 					<div className="title flex flex-col items-center">
 						<h4 className="text-5xl font-bold">Recovery</h4>
 						<span className="py-4 text-xl w-2/3 text-center text-gray-500">
@@ -67,13 +68,13 @@ export default function Recovery() {
 								</span>
 								<input
 									onChange={(e) => setOTP(e.target.value)}
-									className={styles.textbox}
+									className={classes.textbox}
 									type="text"
 									placeholder="OTP"
 								/>
 							</div>
 
-							<button className={styles.btn} type="submit">
+							<button className={classes.btn} type="submit">
 								Recover
 							</button>
 						</div>
