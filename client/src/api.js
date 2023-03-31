@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const http = axios.create({
-	baseURL: 'https://grabbit.up.railway.app',
+	baseURL: 'https://grab-bits-website.vercel.app/',
 });
 
 export default http;
