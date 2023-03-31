@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 // import styles from '../styles/Username.module.css';
 // import extend from '../styles/Profile.module.css';
 
-import classes from './Profile.module.css'
+import classes from './Profile.module.css';
 
 export default function Profile() {
 	const [file, setFile] = useState();
@@ -66,7 +66,7 @@ export default function Profile() {
 
 			<div className="flex justify-center items-center h-screen">
 				<div
-					className={`${styles.glass} ${extend.glass}`}
+					// className={`${styles.glass} ${extend.glass}`}
 					style={{ width: '45%', paddingTop: '3em' }}
 				>
 					<div className="title flex flex-col items-center">
@@ -81,7 +81,7 @@ export default function Profile() {
 							<label htmlFor="profile">
 								<img
 									src={apiData?.profile || file || avatar}
-									className={`${styles.profile_img} ${extend.profile_img}`}
+									// className={`${styles.profile_img} ${extend.profile_img}`}
 									alt="avatar"
 								/>
 							</label>
@@ -98,13 +98,13 @@ export default function Profile() {
 							<div className="name flex w-3/4 gap-10">
 								<input
 									{...formik.getFieldProps('firstName')}
-									className={`${styles.textbox} ${extend.textbox}`}
+									// className={`${styles.textbox} ${extend.textbox}`}
 									type="text"
 									placeholder="FirstName"
 								/>
 								<input
 									{...formik.getFieldProps('lastName')}
-									className={`${styles.textbox} ${extend.textbox}`}
+									// className={`${styles.textbox} ${extend.textbox}`}
 									type="text"
 									placeholder="LastName"
 								/>
@@ -113,13 +113,13 @@ export default function Profile() {
 							<div className="name flex w-3/4 gap-10">
 								<input
 									{...formik.getFieldProps('mobile')}
-									className={`${styles.textbox} ${extend.textbox}`}
+									// className={`${styles.textbox} ${extend.textbox}`}
 									type="text"
 									placeholder="Mobile No."
 								/>
 								<input
 									{...formik.getFieldProps('email')}
-									className={`${styles.textbox} ${extend.textbox}`}
+									// className={`${styles.textbox} ${extend.textbox}`}
 									type="text"
 									placeholder="Email*"
 								/>
@@ -127,11 +127,14 @@ export default function Profile() {
 
 							<input
 								{...formik.getFieldProps('address')}
-								className={`${styles.textbox} ${extend.textbox}`}
+								// className={`${styles.textbox} ${extend.textbox}`}
 								type="text"
 								placeholder="Address"
 							/>
-							<button className={styles.btn} type="submit">
+							<button
+								// className={styles.btn}
+								type="submit"
+							>
 								Update
 							</button>
 						</div>
