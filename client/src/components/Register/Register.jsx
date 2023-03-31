@@ -133,7 +133,7 @@ export default function Register() {
 						<div className={classes.registerSection}>
 							<span className={classes.registerHeading}>
 								Already Register?{' '}
-								<Link className={classes.registerLink} to="/register">
+								<Link className={classes.registerLink} to="/">
 									Login Now
 								</Link>
 							</span>
