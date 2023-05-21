@@ -1,35 +1,5 @@
 <h1 align="center"> Grabbit </h1>
 
-spider
-
-## Problem Statement 😖
-
-Many students miss out on the latest job and internship opportunities due to a lack of awareness about them. Often, they become aware of these opportunities when it's already too late to apply. 
-It can be challenging to find verified job and internship opportunities quickly and easily, especially those that are relevant to one's interests and qualifications. 
-This can lead to missed opportunities and a delay in career growth.
-
-
-## Proposed Solution 🤩
-
-#### Grabbit, a community-driven platform that provides the latest updates about verified job, internship, and hackathon opportunities. 
-#### With Grabbit, students can quickly and easily find opportunities that match their skills and interests. 
-#### Additionally, Grabbit offers a platform for experienced professionals to share their knowledge and insights through podcasts and motivational content, inspiring and guiding students as they pursue their careers.
-
-## Glimps ✨
-pages k ss
-spider
-### Check out the live demo of the platform  [GrabBit](https://grabbits.vercel.app)
-
-## Functionality & Concepts Used ⚒
-
-### UI/UX - 
-- Figma
-### Frontend: 
-- spider
-### Backend: 
-- spider
-### Programming languages and tools: 
-- spider
 
 ## 🔖Steps to Contribute 
 
@@ -68,6 +38,35 @@ Following are the steps to guide you:
     git push origin <branch-name>
     ```
 * Step 8: Create a PR on Github. (Don't just hit the create a pull request button, you must write a PR message to clarify why and what are you contributing)
+
+## Problem Statement 😖
+
+Many students miss out on the latest job and internship opportunities due to a lack of awareness about them. Often, they become aware of these opportunities when it's already too late to apply. 
+It can be challenging to find verified job and internship opportunities quickly and easily, especially those that are relevant to one's interests and qualifications. 
+This can lead to missed opportunities and a delay in career growth.
+
+
+## Proposed Solution 🤩
+
+#### Grabbit, a community-driven platform that provides the latest updates about verified job, internship, and hackathon opportunities. 
+#### With Grabbit, students can quickly and easily find opportunities that match their skills and interests. 
+#### Additionally, Grabbit offers a platform for experienced professionals to share their knowledge and insights through podcasts and motivational content, inspiring and guiding students as they pursue their careers.
+
+## Glimps ✨
+
+### Check out the live demo of the platform  [GrabBit](https://grabbits.vercel.app)
+
+## Functionality & Concepts Used ⚒
+
+### UI/UX - 
+- Figma
+### Frontend: 
+- spider
+### Backend: 
+- spider
+### Programming languages and tools: 
+- spider
+
 
 ## Our platform features several key concepts and functionalities, including:
 
