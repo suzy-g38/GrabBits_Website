@@ -18,7 +18,7 @@ This can lead to missed opportunities and a delay in career growth.
 ## Glimps ✨
 pages k ss
 spider
-### Check out the live demo of the platform (https://grabbits.vercel.app "GrabBit") 
+### Check out the live demo of the platform  [GrabBit](https://grabbits.vercel.app)
 
 ## Functionality & Concepts Used ⚒
 
