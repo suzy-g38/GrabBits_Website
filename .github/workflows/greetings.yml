@@ -11,7 +11,7 @@ jobs:
       - name: Greet on Issue Creation
         uses: actions/first-interaction@v1
         with:
-          repo-oken: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: |
             Greetings! 👋 
             Thank you for creating your first issue for GrabBits. 
