@@ -85,7 +85,7 @@ a {
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .nav {
