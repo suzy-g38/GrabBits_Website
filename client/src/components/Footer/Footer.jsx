@@ -9,6 +9,9 @@ import whatsapp from '../../assets/Socials/whatsapp.svg';
 import youtube from '../../assets/Socials/youtube.svg';
 
 const Footer = () => {
+	const getCurrentYear = () => {
+        return new Date().getFullYear();
+    };
 	return (
 		<>
 			<footer className={classes.outer_box}>
@@ -63,7 +66,7 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className={classes.separator}></div>
-				<div className={classes.row2}>Copyright © 2023 GrabBits</div>
+				<div className={classes.row2}>Copyright © {getCurrentYear()} GrabBits</div>
 			</footer>
 		</>
 	);
