@@ -1,6 +1,20 @@
 <h1 align="center"> Grabbit </h1>
 
-
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+  <br>
+    <img src="https://img.shields.io/github/contributors/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/last-commit/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/forks/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/stars/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/issues/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/issues-closed-raw/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/issues-pr/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/repo-size/GrabBits/GrabBits_Website?style=for-the-badge" />
+    </div>
+    
 ## 🔖Steps to Contribute 
 
 Following are the steps to guide you:
