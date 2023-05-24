@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { useState } from 'react';
+import http from '../../api';
+import Swal from 'sweetalert2';
 import './Faq.css';
 import { MdOutlineContactSupport } from 'react-icons/md';
 
@@ -14,15 +16,6 @@ const Faq = () => {
         phoneNo: '',
         message: '',
     });
-
-    const { name, email, phoneNo, message } = contact;
-
-    const onChangeHandler = (e) => {
-        setContact({
-            ...contact,
-            [e.target.name]: e.target.value,
-        });
-    };
 
     const [selectedId, setSelectedId] = useState(1);
 
@@ -49,6 +42,56 @@ const Faq = () => {
         },
     ]
 
+    const { name, email, phoneNo, message } = contact;
+
+    const onChangeHandler = (e) => {
+        setContact({
+            ...contact,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+
+    const submitHandler = async (e) => {
+		e.preventDefault();
+		if (name === '' || email === '' || phoneNo === '' || message === '') {
+			// AlertContext.setAlert("Please enter all fields", "danger"); add a state
+			alert('Please fill all  the fields');
+		}
+		try {
+			http.post('/contact/createContact', contact).then(
+				() => {
+					Swal.fire({
+						position: 'top-end',
+						icon: 'success',
+						title: 'Your query is sent to us.',
+						showConfirmButton: false,
+						timer: 1500,
+					});
+				},
+				(error) => {
+					Swal.fire({
+						icon: 'error',
+						title: 'Oops...',
+						text: error,
+					});
+				}
+			);
+		} catch (error) {
+			Swal.fire({
+				icon: 'error',
+				title: 'Oops...',
+				text: error,
+			});
+		}
+		setContact({
+			name: '',
+			email: '',
+			phoneNo: '',
+			message: '',
+		});
+	};
+
     const handleClick = (id) => {
         setSelectedId(id);
     }
@@ -68,7 +111,7 @@ const Faq = () => {
                     }
                 }>
                     <div className="Contact__container container grid">
-                        <form onSubmit="">
+                        <form onSubmit={submitHandler}>
                             <h1 className="doubt__title">
                                 Still have Questions ???</h1>
                             <h3 className="contact__title">
