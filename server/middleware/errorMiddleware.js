@@ -1,3 +1,5 @@
+import { Server } from "../utils/config.js";
+
 const notFound = (req, res, next) => {
   const notFoundErr = new Error(`Not Found - ${req.originalUrl}`);
   res.status(404);
@@ -10,7 +12,7 @@ const errorMiddleware = (err, req, res, next) => {
 
   res.status(statusCode).json({
     message: err.message,
-    stack: process.env.NODE_ENV === "production" ? null : err.stack,
+    stack: Server.NODE_ENV === "production" ? null : err.stack,
   });
 };
 
