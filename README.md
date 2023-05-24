@@ -1,43 +1,23 @@
 <h1 align="center"> Grabbit </h1>
 
-
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+  <br>
+    <img src="https://img.shields.io/github/contributors/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/last-commit/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/forks/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/stars/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/issues/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/issues-closed-raw/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/issues-pr/GrabBits/GrabBits_Website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/repo-size/GrabBits/GrabBits_Website?style=for-the-badge" />
+    </div>
+    
 ## 🔖Steps to Contribute 
 
-Following are the steps to guide you:
-
-* Step 1: Fork the repo and Go to your Git terminal and clone it on your machine.
-    ```
-    git clone https://github.com/<your_github_username>/GrabBits_Website.git
-    ```
-* Step 2: Add an upstream link to the main branch in your cloned repo
-    ```
-    git remote add upstream https://github.com/<your_github_username>/GrabBits_Website.git
-    ```
-* Step 3: Keep your cloned repo up to date by pulling from upstream (this will also avoid any merge conflicts while committing new changes)
-    ```
-    git pull upstream main
-    ```
-* Step 4: Create your feature branch (This is a necessary step, so don't skip it)
-    ```
-    git checkout -b <feature-name>
-    ```
-* Step 5: Track and stage your changes.
-    ```
-     # Track the changes
-     git status
-
-     # Add changes to Index
-     git add .
-     ```
-* Step 6: Commit all the changes (Write commit message as "Small Message")
-    ```
-    git commit -m "Write a meaningful but small commit message"
-    ```
-* Step 7: Push the changes for review
-    ```
-    git push origin <branch-name>
-    ```
-* Step 8: Create a PR on Github. (Don't just hit the create a pull request button, you must write a PR message to clarify why and what are you contributing)
+See [CONTRIBUTING.md](https://github.com/GrabBits/GrabBits_Website/blob/main/CONTRIBUTING.md) for more info on how to start contributing.
 
 ## Problem Statement 😖
 
