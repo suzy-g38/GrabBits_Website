@@ -5,6 +5,11 @@
 	transition: all 0.3s linear;
 	z-index: 1;
 }
+/* Below three lines use to centralize the submit button of contact us form */
+.button {
+    margin: auto;
+}
+
 .btn {
 	all: unset;
 	background-color: #000;
