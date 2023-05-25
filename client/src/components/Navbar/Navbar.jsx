@@ -1,72 +1,79 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import img from '../../assets/Logo.png'
-import './Navbar.css';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import img from '../../assets/Logo.png';
+import classes from './Navbar.module.css';
 
 const Navbar = () => {
 
-	const opneMenu = () => {
-		const navMenu = document.getElementById('nav-menu');
+	const [open, setOpen] = useState(false);
 
-		navMenu.classList.add('show-menu');
+	const changeOpen = () => {
+		if (open) {
+			setOpen(false);
+		} else {
+			setOpen(true);
+		}
 	}
-
-	const closeMenu = () => {
-		const navMenu = document.getElementById('nav-menu');
-
-		navMenu.classList.remove('show-menu');
-	}
-
 
 	return (
-		<header className="header" id="header">
-			<nav className="nav container">
-				<NavLink to="/" className="nav__logo">
-					<div className="brand">
-						<div className="brand__logo">
-							<img src={img} alt="logo" className="logo" />
-						</div>
-						<span className="brand__title">GrabBit</span>
+		<>
+			<header className={classes.header}>
+				<nav className={classes.nav}>
+					<NavLink to='/'>
+
+						{!open &&
+							<div className={classes.brand}>
+								<div className={classes.brand_logo}>
+									<img src={img} alt="logo" className={classes.logo} />
+								</div>
+								<span className={classes.brand__title}>GrabBit</span>
+							</div>
+						}
+
+					</NavLink>
+
+					<div className={!open ? `${classes.nav__menu} ${classes.menu__close}` : `${classes.nav__menu} ${classes.menu__open}`}>
+						<ul className={`${classes.nav__list} ${classes.grid}`}>
+							<NavLink to="/">
+								<li className={classes.nav__item}>
+									<i className="uil uil-estate" id={classes.nav__icon}></i> Home
+								</li>
+							</NavLink>
+							<NavLink to="/opportunities">
+								<li className={classes.nav__item}>
+									<i className="uil uil-bag" id={classes.nav__icon}></i> Opportunities
+								</li>
+							</NavLink>
+							<NavLink to="/podcasts">
+								<li className={classes.nav__item}>
+									<i className="uil uil-megaphone" id={classes.nav__icon}></i> Podcasts
+								</li>
+							</NavLink>
+							<NavLink to="/team">
+								<li className={classes.nav__item}>
+									<i className="uil uil-users-alt" id={classes.nav__icon}></i> About us
+								</li>
+							</NavLink>
+							<NavLink to="/contact">
+								<li className={classes.nav__item}>
+									<i className="uil uil-voicemail-rectangle" id={classes.nav__icon}></i> Contact
+								</li>
+							</NavLink>
+						</ul>
+						{open &&
+							<i className="uil uil-times" id={classes.nav__close} onClick={() => changeOpen()}></i>
+						}
 					</div>
-				</NavLink>
-				<div className="nav__menu" id="nav-menu">
-					<ul className="nav__list grid">
-						<li className="nav__item">
-							<NavLink to="/" className="nav__link">
-								<i className="uil uil-estate nav__icon"></i> Home
-							</NavLink>
-						</li>
-						<li className="nav__item">
-							<NavLink to="/opportunities" className="nav__link">
-								<i className="uil uil-bag nav__icon"></i> Opportunities
-							</NavLink>
-						</li>
-						<li className="nav__item">
-							<NavLink to="/podcasts" className="nav__link">
-								<i className="uil uil-megaphone nav__icon"></i> Podcast
-							</NavLink>
-						</li>
-						<li className="nav__item">
-							<NavLink to="/team" className="nav__link">
-								<i className="uil uil-user nav__icon"></i> About
-							</NavLink>
-						</li>
-						<li className="nav__item">
-							<NavLink to="/contact" className="nav__link">
-								<i className="uil uil-at nav__icon"></i> Contact
-							</NavLink>
-						</li>
-					</ul>
-					<i className="uil uil-times nav__close" id="nav-close" onClick={() => closeMenu()}></i>
-				</div>
-				<div className="nav__btns">
-					<div className="nav__toggle" id="nav-toggle" onClick={() => opneMenu()}>
-						<i className="uil uil-apps"></i>
-					</div>
-				</div>
-			</nav>
-		</header>
+
+					{!open &&
+						<i className="uil uil-apps" id={classes.nav__toggle__icon} onClick={() => changeOpen()}></i>
+					}
+
+
+				</nav>
+			</header>
+		</>
 	)
 }
 
-export default Navbar
+export default Navbar;
