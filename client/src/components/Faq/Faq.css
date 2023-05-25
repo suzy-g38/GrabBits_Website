@@ -176,6 +176,9 @@ form {
 }
 
 .contact__title {
-  margin: auto;
   color: var(--container-color);
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  display: flex;
 }
