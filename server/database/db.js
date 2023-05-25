@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
-import "dotenv/config.js";
+import { Server } from "../utils/config.js";
 
 const connectDB = async () => {
   try {
-    console.log(process.env.MONGO_URI);
-    const conn = await mongoose.connect(process.env.MONGO_URI, {
+    console.log(Server.MONGO_URI);
+    mongoose.set("strictQuery", true);
+    const conn = await mongoose.connect(Server.MONGO_URI, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });
