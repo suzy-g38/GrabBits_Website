@@ -1,3 +1,7 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
 export const Server = {
     PORT: process.env.PORT || 8000,
     NODE_ENV: process.env.NODE_ENV || "development",
