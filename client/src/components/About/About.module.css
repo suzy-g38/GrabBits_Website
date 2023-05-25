@@ -61,12 +61,12 @@
 }
 
 .colOne {
-	display: flex;
-	flex-direction: column;
-	padding: 60px 10px 60px 10px;
-	justify-content: space-between;
-	gap: 20px;
-	width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 60px 25px;
+    width: auto;
 }
 
 .head {
@@ -77,11 +77,12 @@
 }
 
 .subHead {
-	font-style: normal;
-	font-weight: 400;
 	font-size: 20px;
-	line-height: 27px;
-	letter-spacing: 0.02em;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .02em;
+    line-height: 27px;
+    text-align: justify;
 }
 
 /* .subHead p {
@@ -89,9 +90,10 @@
 } */
 
 .illustration {
-	width: auto;
 	height: auto;
-	margin-right: 40px;
+    margin-right: -10px;
+    margin-left: 50px;
+    width: auto;
 }
 
 .illustration svg {
