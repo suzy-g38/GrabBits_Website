@@ -29,6 +29,7 @@
 	position: relative;
 	background: #19212e;
 	z-index: 10;
+	padding: 30px;
 }
 
 .circle {
