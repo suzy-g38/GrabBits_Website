@@ -62,7 +62,7 @@ const Footer = () => {
 					</div>
 					<div className={classes.text_mail}>
 						<h2 className={classes.text}>We&apos;re Always Happy To Help</h2>
-						<h2 className={classes.mail}>grabbitofficial1@gmail.com</h2>
+						<h2 className={classes.mail}><a href="mailto:grabbitofficial1@gmail.com">grabbitofficial1@gmail.com</a></h2>
 					</div>
 				</div>
 				<div className={classes.separator}></div>
