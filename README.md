@@ -47,6 +47,11 @@ This can lead to missed opportunities and a delay in career growth.
 ### Programming languages and tools: 
 - spider
 
+### Tech Stack Used
+
+![javascript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS5](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
 ## Our platform features several key concepts and functionalities, including:
 
