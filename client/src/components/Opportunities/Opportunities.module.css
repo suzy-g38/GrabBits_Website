@@ -95,3 +95,14 @@
 		flex-direction: column-reverse;
 	}
 }
+
+  /* adding media query to handle dislocation of tags*/
+@media screen and (min-width: 800px) {
+	.base{
+		display:flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 30%;
+	}
+}
+
