@@ -15,7 +15,7 @@ const Faq = () => {
 		message: '',
 	});
 
-	const [selectedId, setSelectedId] = useState(1);
+	const [selectedId, setSelectedId] = useState(0);
 
 	const Faqs = [
 		{
@@ -91,7 +91,12 @@ const Faq = () => {
 	};
 
 	const handleClick = (id) => {
-		setSelectedId(id);
+		if(selectedId) {
+			setSelectedId(0);
+		}
+		else {
+			setSelectedId(id);
+		}
 	};
 
 	return (
