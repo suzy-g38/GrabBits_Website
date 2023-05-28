@@ -160,6 +160,7 @@
 }
 
 .name {
+	text-align: center;
 	font-family: 'Poppins', sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -312,6 +313,9 @@
 		margin: 0px;
 	}
 	.team_members {
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
 		gap: 0;
 		max-width: 90%;
 		width: 100vw;
@@ -346,6 +350,7 @@
 		padding-left: 4%;
 	}
 	.name {
+		text-align: center;
 		font-size: 14px;
 		margin: 0;
 	}
