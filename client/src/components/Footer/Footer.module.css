@@ -139,6 +139,7 @@
 		margin: 0 20px 20px 20px;
 		padding: 40px;
 		width: auto;
+		margin-bottom: 97px;
 	}
 	.row1 {
 		flex-direction: column;
@@ -147,15 +148,18 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1000px) {
 	.row1 {
-		flex-direction: row;
-
+		flex-direction: column;
 		gap: 20px;
 	}
+	.outer_box{
+		margin-bottom: 30px;
+	} 
 }
 @media screen and (min-width: 550px) and (max-width: 768px) {
 	.outer_box {
 		margin: 0 20px 20px 20px;
 		padding: 20px;
+		margin-bottom: 97px;
 	}
 	.row1 {
 		flex-direction: column;
