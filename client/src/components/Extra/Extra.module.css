@@ -44,6 +44,27 @@
 .col2 {
 	margin-top: 200px;
 }
+.hoverEffect:hover {
+	background-color: hsl(207, 56%, 88%);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	transform: scale(1.05);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+	transition: background-color 0.9s ease, box-shadow 0.4s ease, transform 0.4s ease;
+	cursor: pointer;
+  }
+  
+  @keyframes scaleAnimation {
+	0% {
+	  transform: scale(1);
+	}
+	100% {
+	  transform: scale(1.05);
+	}
+  }
+  
+  .hoverEffect {
+	animation: scaleAnimation 0.3s ease;
+  }
 .head1 {
 	font-size: 32px;
 	font-weight: 700;
