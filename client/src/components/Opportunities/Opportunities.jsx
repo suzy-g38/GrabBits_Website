@@ -78,6 +78,7 @@ const Opportunities = () => {
 						/>
 						{/* <ThemeButton onClick={()=>filterData('Others')} label="Others" /> */}
 					</div>
+                    <div className={classes.base}>
 					<div className={classes.searchbar_bg}>
 						<input
 							type="search"
@@ -87,6 +88,7 @@ const Opportunities = () => {
 						/>
 						<i className="fa fa-search"></i>
 					</div>
+                  </div>
 				</div>
 				<h1 className={classes.text}>Opportunities</h1>
 				{loading && (
