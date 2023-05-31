@@ -130,6 +130,9 @@
 .Faqs__title {
 	font-size: var(--h3-font-size);
 }
+.Faqs__title:hover{
+	color: #7541c8;
+}
 
 .Faqs__list {
 	row-gap: 1.5rem;
