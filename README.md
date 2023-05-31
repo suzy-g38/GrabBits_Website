@@ -92,8 +92,7 @@ spider
 ## Creators 👨🏻‍💻
 spider
 
-# ✨Our Contributors
-Thanks a lot for spending your time Grab Bits grow. Thanks a lot! Keep rocking
+# Our Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <table>
