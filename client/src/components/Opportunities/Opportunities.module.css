@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+	font-family: 'Poppins', sans-serif;
+}
+
 .cards {
 	display: flex;
 	justify-content: center;
@@ -5,6 +11,7 @@
 	flex-direction: column;
 	margin-top: 20px;
 	margin-bottom: 100px;
+	gap: 20px;
 }
 .loader {
 	display: flex;
