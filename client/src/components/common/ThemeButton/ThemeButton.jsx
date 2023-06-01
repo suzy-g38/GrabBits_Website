@@ -9,7 +9,7 @@ const ThemeButton = ({
 	disabled,
 	// filled,
 	padding = '8px 24px',
-	fontSize = '16px',
+	fontSize = '18px',
 	bgColor,
 	link,
 }) => {

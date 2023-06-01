@@ -10,7 +10,7 @@ const Button = ({
 	disabled,
 	filled,
 	color = '#fff',
-	padding = '15px 30px',
+	padding = '10px 25px',
 	fontSize = '20px',
 	bgColor,
 	link,
