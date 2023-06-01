@@ -187,14 +187,16 @@ const Faq = () => {
 											: 'Faqs__content Faqs__close'
 									}
 								>
-									<div className="Faqs__header">
+									<div 
+										className="Faqs__header"
+										onClick={() => handleClick(item.id)}
+									>
 										<div>
 											<h1 className="Faqs__title">{item.title}</h1>
 										</div>
 
 										<i
 											className="uil uil-angle-down Faqs__arrow"
-											onClick={() => handleClick(item.id)}
 										></i>
 									</div>
 
