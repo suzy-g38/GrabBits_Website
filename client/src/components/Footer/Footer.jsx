@@ -31,12 +31,21 @@ const Footer = () => {
 								<a
 									href="https://www.linkedin.com/company/grabbits/"
 									target="blank"
+									aria-label="Visit us on Linkedin"
+									title="Linkedin (External Link)"
+									rel="noopener noreferrer"
 								>
 									<img className={classes.li_link} src={linkedin}></img>
 								</a>
 							</li>
 							<li className={classes.socia_link}>
-								<a href="https://www.instagram.com/grabbits_/" target="blank">
+								<a 
+									href="https://www.instagram.com/grabbits_/" 
+									target="blank"
+									aria-label="Visit us on Instagram"
+									title="Instagram (External Link)"
+									rel="noopener noreferrer"
+								>
 									<img className={classes.ig_link} src={instagram}></img>
 								</a>
 							</li>
@@ -44,17 +53,32 @@ const Footer = () => {
 								<a
 									href="https://chat.whatsapp.com/KBxP1M7GT7mCh4PORsfN0H"
 									target="blank"
+									aria-label="Join us on WhatsApp"
+									title="WhatsApp (External Link)"
+									rel="noopener noreferrer"
 								>
 									<img className={classes.wp_link} src={whatsapp}></img>
 								</a>
 							</li>
 							<li className={classes.socia_link}>
-								<a href="https://twitter.com/grabbits_" target="blank">
+								<a 
+									href="https://twitter.com/grabbits_" 
+									target="blank"
+									aria-label="Visit us on Twitter"
+									title="Twitter (External Link)"
+									rel="noopener noreferrer"
+								>
 									<img className={classes.twi_link} src={twitter}></img>
 								</a>
 							</li>
 							<li className={classes.socia_link}>
-								<a href="https://www.youtube.com/channel/UCFnVnet_WPnN7VzkGORvzhg?sub_confirmation=1" target="blank">
+								<a 
+									href="https://www.youtube.com/channel/UCFnVnet_WPnN7VzkGORvzhg?sub_confirmation=1" 
+									target="blank"
+								 	aria-label="Visit us on Youtube"
+									title="Youtube (External Link)"
+									rel="noopener noreferrer"
+								>
 									<img className={classes.yt_link} src={youtube}></img>
 								</a>
 							</li>
