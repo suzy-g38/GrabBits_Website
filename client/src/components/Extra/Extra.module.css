@@ -30,6 +30,9 @@
 		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
 		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+.box2 {
+	padding: 10px 20px;
+}
 .box1,
 .box4 {
 	background-color: white;
@@ -49,22 +52,23 @@
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	transform: scale(1.05);
 	transition: box-shadow 0.3s ease, transform 0.3s ease;
-	transition: background-color 0.9s ease, box-shadow 0.4s ease, transform 0.4s ease;
+	transition: background-color 0.9s ease, box-shadow 0.4s ease,
+		transform 0.4s ease;
 	cursor: pointer;
-  }
-  
-  @keyframes scaleAnimation {
+}
+
+@keyframes scaleAnimation {
 	0% {
-	  transform: scale(1);
+		transform: scale(1);
 	}
 	100% {
-	  transform: scale(1.05);
+		transform: scale(1.05);
 	}
-  }
-  
-  .hoverEffect {
+}
+
+.hoverEffect {
 	animation: scaleAnimation 0.3s ease;
-  }
+}
 .head1 {
 	font-size: 32px;
 	font-weight: 700;
@@ -97,10 +101,21 @@
 	.box3,
 	.box4 {
 		width: 140px;
-		height: 175px;
+		height: 176px;
+	}
+	.box1 {
+		height: 190px;
+		padding: 10px 15px;
+	}
+	.box2 {
+		padding-top: 10px;
+		height: 190px;
 	}
 	.col2 {
-		margin-top: 80px;
+		margin-top: 60px;
+	}
+	.col1 {
+		margin-top: 0px;
 	}
 }
 @media screen and (max-width: 768px) {
