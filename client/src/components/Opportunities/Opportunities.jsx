@@ -36,23 +36,23 @@ const Opportunities = () => {
 	};
 
 	const debouncedSearch = debounce(async (key) => {
-			try {
-				if (key) {
-					let result = await http.get(`job/getJobs/${key}`);
-					if (result) {
-						setJobData(result.data.job);
-					}
-				} else {
-					getData();
+		try {
+			if (key) {
+				let result = await http.get(`job/getJobs/${key}`);
+				if (result) {
+					setJobData(result.data.job);
 				}
-			} catch (error) {
-				Swal.fire({
-					icon: 'error',
-					title: 'Unable to search the jobs',
-					text: error,
-				});
+			} else {
+				getData();
 			}
-		}, 2500);
+		} catch (error) {
+			Swal.fire({
+				icon: 'error',
+				title: 'Unable to search the jobs',
+				text: error,
+			});
+		}
+	}, 2500);
 
 	const search = async (e) => {
 		const key = e.target.value;
@@ -83,17 +83,17 @@ const Opportunities = () => {
 						/>
 						{/* <ThemeButton onClick={()=>filterData('Others')} label="Others" /> */}
 					</div>
-                    <div className={classes.base}>
-					<div className={classes.searchbar_bg}>
-						<input
-							type="search"
-							placeholder="Search here....."
-							className={classes.search_bar}
-							onChange={search}
-						/>
-						<i className="fa fa-search"></i>
+					<div className={classes.base}>
+						<div className={classes.searchbar_bg}>
+							<input
+								type="search"
+								placeholder="Search here....."
+								className={classes.search_bar}
+								onChange={search}
+							/>
+							<i className="fa fa-search"></i>
+						</div>
 					</div>
-                  </div>
 				</div>
 				<h1 className={classes.text}>Opportunities</h1>
 				{loading && (
