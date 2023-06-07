@@ -23,6 +23,7 @@ import Profile from './components/Profile/Profile';
 import Recovery from './components/Recovery/Recovery';
 import Reset from './components/Reset/Reset';
 import PageNotFound from './components/PageNotFound/PageNotFound';
+import GoToTop from './components/GoToTop';
 
 /** auth middleware */
 import { AuthorizeUser, ProtectRoute } from './middleware/auth';
@@ -42,6 +43,7 @@ const App = () => {
 					margin: '100px 0',
 				}}
 			> */}
+			<GoToTop />
 			<Popup />
 			<Navbar />
 			<Routes>
