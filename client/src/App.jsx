@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import {
 	Contact,
@@ -14,7 +14,7 @@ import Grabby from './components/common/Grabby/Grabby';
 import { FourOhFour } from './pages/FourOhFour/FourOhFour';
 import ReactGA from 'react-ga4';
 import { Homepage, Login, Signup } from './pages';
-
+import './App.css';
 /** import all components */
 import Username from './components/Username/Username';
 import Password from './components/Password/Password';
@@ -29,11 +29,28 @@ import GoToTop from './components/GoToTop';
 import { AuthorizeUser, ProtectRoute } from './middleware/auth';
 
 ReactGA.initialize('G-PG8HC34H6V');
-
+import HashLoader from 'react-spinners/HashLoader';
 const App = () => {
+	const [loading, setLoading] = useState(false);
+	useEffect(() => {
+		setLoading(true);
+		setTimeout(() => {
+			setLoading(false);
+		}, 2000);
+	}, []);
 	return (
-		<>
-			{/* <div
+		<div>
+			{loading ? (
+				<HashLoader
+					loading={loading}
+					aria-label="Loading Spinner"
+					data-testid="loader"
+					color={'#7541c8'}
+					className="loader"
+				/>
+			) : (
+				<>
+					{/* <div
 				style={{
 					display: 'flex',
 					justifyContent: 'center',
@@ -43,50 +60,52 @@ const App = () => {
 					margin: '100px 0',
 				}}
 			> */}
-			<GoToTop />
-			<Popup />
-			<Navbar />
-			<Routes>
-				<Route path="/" element={<Homepage />} />
-				<Route path="/team" element={<Team />} />
-				<Route path="/opportunities" element={<Opportunities />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="/podcasts" element={<Podcast />} />
-				<Route path="/hidden" element={<Hidden />} />
-				<Route path="/resources" element={<Hidden />} />
-				<Route path="/grabby" element={<Grabby />} />
-				{/* <Route path="/login" element={<Login />} />
+					<GoToTop />
+					<Popup />
+					<Navbar />
+					<Routes>
+						<Route path="/" element={<Homepage />} />
+						<Route path="/team" element={<Team />} />
+						<Route path="/opportunities" element={<Opportunities />} />
+						<Route path="/contact" element={<Contact />} />
+						<Route path="/podcasts" element={<Podcast />} />
+						<Route path="/hidden" element={<Hidden />} />
+						<Route path="/resources" element={<Hidden />} />
+						<Route path="/grabby" element={<Grabby />} />
+						{/* <Route path="/login" element={<Login />} />
 				<Route path="/signup" element={<Signup />} /> */}
-				{/* <Route path="*" element={<FourOhFour />} /> */}
-				{/* login trial */}
-				<Route path="/register" element={<Register />} />
-				<Route path="/getstarted" element={<Username />} />
-				<Route
-					path="/password"
-					element={
-						<ProtectRoute>
-							<Password />
-						</ProtectRoute>
-					}
-				/>
-				<Route
-					path="/profile"
-					element={
-						<AuthorizeUser>
-							<Profile />
-						</AuthorizeUser>
-					}
-				/>
-				<Route path="/recovery" element={<Recovery />} />
-				<Route path="/reset" element={<Reset />} />
-				<Route path="*" element={<PageNotFound />} />
-			</Routes>
-			<Footer />
-			{/* <Input />
+						{/* <Route path="*" element={<FourOhFour />} /> */}
+						{/* login trial */}
+						<Route path="/register" element={<Register />} />
+						<Route path="/getstarted" element={<Username />} />
+						<Route
+							path="/password"
+							element={
+								<ProtectRoute>
+									<Password />
+								</ProtectRoute>
+							}
+						/>
+						<Route
+							path="/profile"
+							element={
+								<AuthorizeUser>
+									<Profile />
+								</AuthorizeUser>
+							}
+						/>
+						<Route path="/recovery" element={<Recovery />} />
+						<Route path="/reset" element={<Reset />} />
+						<Route path="*" element={<PageNotFound />} />
+					</Routes>
+					<Footer />
+					{/* <Input />
 			<Button label="Search for Jobs" />*/}
-			{/* <Card /> */}
-			{/* </div> */}
-		</>
+					{/* <Card /> */}
+					{/* </div> */}
+				</>
+			)}
+		</div>
 	);
 };
 
