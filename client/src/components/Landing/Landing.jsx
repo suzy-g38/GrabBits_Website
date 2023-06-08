@@ -4,8 +4,14 @@ import cursor from '../../assets/cursor.png';
 import twocircles from '../../assets/twocircles.svg';
 import card from '../../assets/card.svg';
 import classes from './Landing.module.css';
+import { useEffect } from 'react'; 
 
 const Landing = () => {
+
+	// use scroll and useEffect when route it
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	 }, []);
 	return (
 		<>
 			<div className={classes.landing}>
