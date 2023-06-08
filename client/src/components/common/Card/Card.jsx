@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from './Card.module.css';
 import verified from '../../../assets/verified.png';
 import { Button } from '../../common/index';
+import {
+	BsFillBookmarkCheckFill,
+	BsFillBookmarkDashFill,
+} from 'react-icons/bs';
 
-const Card = ({ data, imgPreview, show }) => {
+const Card = ({
+	data,
+	imgPreview,
+	show,
+	handleAddBookMark,
+	handleDeleteBookMark,
+}) => {
 	const {
 		role,
 		location,
@@ -15,6 +25,30 @@ const Card = ({ data, imgPreview, show }) => {
 		image,
 		category,
 	} = data;
+
+	const [isSaved, setIsSaved] = useState(false);
+
+	useEffect(() => {
+		let bookmarkedData = JSON.parse(localStorage.getItem('grabbit-bookmarks'));
+		if (bookmarkedData !== null)
+			for (let index = 0; index < bookmarkedData.length; index++) {
+				if (bookmarkedData[index]._id === data._id) {
+					setIsSaved(true);
+				}
+			}
+	}, []);
+
+	const handleSave = () => {
+		if (isSaved === true) {
+			//to delete a certain bookmark
+			handleDeleteBookMark(data._id);
+			setIsSaved(false);
+		} else {
+			//to add a certain bookmark
+			handleAddBookMark(data);
+			setIsSaved(true);
+		}
+	};
 
 	return (
 		<>
@@ -51,6 +85,17 @@ const Card = ({ data, imgPreview, show }) => {
 							<span className={classes.tag}>{stipend}</span>
 							<span className={classes.tag}>{batch}</span>
 							<span className={classes.tag}>{location}</span>
+							<span style={{ marginTop: '8px' }} onClick={() => handleSave()}>
+								{isSaved ? (
+									<BsFillBookmarkCheckFill
+										style={{ color: 'white', fontSize: '1.7rem' }}
+									/>
+								) : (
+									<BsFillBookmarkDashFill
+										style={{ color: 'white', fontSize: '1.7rem' }}
+									/>
+								)}
+							</span>
 						</div>
 					</summary>
 					<div className={classes.description}>{description}</div>

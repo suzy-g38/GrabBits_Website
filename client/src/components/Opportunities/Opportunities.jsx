@@ -13,10 +13,46 @@ const Opportunities = () => {
 	const [test, setTest] = useState(null);
 	const [loading, setLoading] = useState(true);
 
+	const [bookmarks, setBookmarks] = useState([]);
+
 	useEffect(() => {
 		ReactGA.send('pageview');
 		getData();
+
+		//to get the localstorage data initially
+		const storedBookmarks = localStorage.getItem('grabbit-bookmarks');
+		if (storedBookmarks) {
+			setBookmarks(JSON.parse(storedBookmarks));
+		}
 	}, []);
+
+	const handleAddBookMark = (data) => {
+		bookmarks.push(data);
+		//set the item array to the localstorage
+		localStorage.setItem('grabbit-bookmarks', JSON.stringify(bookmarks));
+		setBookmarks([...bookmarks]);
+	};
+
+	const handleDeleteBookMark = (id) => {
+		// Retrieve the array from local storage
+		const savedBookMarks = localStorage.getItem('grabbit-bookmarks');
+
+		//initially localstorage is not created so, the savedbookmakrs value can be null
+		if (savedBookMarks) {
+			// parse the data from the JSON string
+			const parsedBookMarks = JSON.parse(savedBookMarks);
+
+			// delete the id that matched with the localstorage data id
+			const updatedBookMarks = parsedBookMarks.filter(
+				(item) => item._id !== id
+			);
+
+			localStorage.setItem(
+				'grabbit-bookmarks',
+				JSON.stringify(updatedBookMarks)
+			);
+		}
+	};
 
 	const getData = async () => {
 		try {
@@ -64,7 +100,6 @@ const Opportunities = () => {
 			return job.category === filterBy;
 		});
 		setJobData(() => filteredData);
-		console.log(filterBy, filteredData, jobData);
 	};
 
 	return (
@@ -104,7 +139,14 @@ const Opportunities = () => {
 				{!loading && jobData.length ? (
 					<div className={classes.cards}>
 						{jobData.map((opp, i) => {
-							return <Card data={opp} key={i} />;
+							return (
+								<Card
+									data={opp}
+									key={i}
+									handleAddBookMark={handleAddBookMark}
+									handleDeleteBookMark={handleDeleteBookMark}
+								/>
+							);
 						})}
 					</div>
 				) : (
