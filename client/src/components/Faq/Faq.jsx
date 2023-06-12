@@ -91,13 +91,9 @@ const Faq = () => {
 	};
 
 	const handleClick = (id) => {
-		if (selectedId) {
-			setSelectedId(0);
-		}
-		else {
-			setSelectedId(id);
-		}
-	};
+		setSelectedId((prevId) => (prevId === id ? 0 : id));
+	  };
+	
 
 	return (
 		<>
