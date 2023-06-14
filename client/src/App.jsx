@@ -29,25 +29,28 @@ import GoToTop from './components/GoToTop';
 import { AuthorizeUser, ProtectRoute } from './middleware/auth';
 
 ReactGA.initialize('G-PG8HC34H6V');
-import HashLoader from 'react-spinners/HashLoader';
+import PropagateLoader from 'react-spinners/PropagateLoader';
 const App = () => {
 	const [loading, setLoading] = useState(false);
 	useEffect(() => {
 		setLoading(true);
 		setTimeout(() => {
 			setLoading(false);
-		}, 2000);
+		}, 3000);
 	}, []);
 	return (
 		<div>
 			{loading ? (
-				<HashLoader
-					loading={loading}
-					aria-label="Loading Spinner"
-					data-testid="loader"
-					color={'#7541c8'}
-					className="loader"
-				/>
+				<div className="load">
+					<PropagateLoader
+						loading={loading}
+						aria-label="Loading Spinner"
+						data-testid="loader"
+						color={'#7541c8'}
+						className="loader"
+					/>{' '}
+					<h1 className="loader1">Welcome to Grab Bits</h1>
+				</div>
 			) : (
 				<>
 					{/* <div
