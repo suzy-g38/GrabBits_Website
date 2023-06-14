@@ -1,29 +1,14 @@
-import { React, useEffect } from 'react';
+import { React, useEffect, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import {
-	Contact,
-	Footer,
-	Navbar,
-	Team,
-	Opportunities,
-	Hidden,
-	Podcast,
+import {Contact,Footer,	Navbar,	Team, Opportunities, Hidden,
+	Podcast, GoToTop, Username, Register, Password, Profile, 
+	Recovery, Reset, PageNotFound, Grabby
 } from './components';
-import { Popup } from './components/common';
-import Grabby from './components/common/Grabby/Grabby';
+import { Loader, Popup } from './components/common';
 import { FourOhFour } from './pages/FourOhFour/FourOhFour';
 import ReactGA from 'react-ga4';
 import { Homepage, Login, Signup } from './pages';
-
-/** import all components */
-import Username from './components/Username/Username';
-import Password from './components/Password/Password';
-import Register from './components/Register/Register';
-import Profile from './components/Profile/Profile';
-import Recovery from './components/Recovery/Recovery';
-import Reset from './components/Reset/Reset';
-import PageNotFound from './components/PageNotFound/PageNotFound';
-import GoToTop from './components/GoToTop';
+import './App.css';
 
 /** auth middleware */
 import { AuthorizeUser, ProtectRoute } from './middleware/auth';
@@ -46,6 +31,7 @@ const App = () => {
 			<GoToTop />
 			<Popup />
 			<Navbar />
+			<Suspense fallback={<div className='loading'><Loader/></div>}>
 			<Routes>
 				<Route path="/" element={<Homepage />} />
 				<Route path="/team" element={<Team />} />
@@ -81,6 +67,7 @@ const App = () => {
 				<Route path="/reset" element={<Reset />} />
 				<Route path="*" element={<PageNotFound />} />
 			</Routes>
+			</Suspense>
 			<Footer />
 			{/* <Input />
 			<Button label="Search for Jobs" />*/}

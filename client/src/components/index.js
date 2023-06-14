@@ -1,10 +1,44 @@
-export { default as Contact } from './Contact/Contact';
-export { default as Footer } from './Footer/Footer';
-export { default as Landing } from './Landing/Landing';
-export { default as Navbar } from './Navbar/Navbar';
-export { default as Team } from './Team/Team';
-export { default as Opportunities } from './Opportunities/Opportunities';
-export { default as Podcast } from './Podcast/Podcast';
-export { default as Highlights } from './Highlights/Highlights';
-export { default as Hidden } from './Hidden/Hidden';
-export { default as Faq } from './Faq/Faq';
+import {lazy} from 'react'
+import Navbar from './Navbar/Navbar'
+import GoToTop from './GoToTop';
+
+/** import all components lazily*/
+const Contact=lazy(()=>import('./Contact/Contact'))
+const Footer=lazy(()=>import('./Footer/Footer'))
+const Landing=lazy(()=>import('./Landing/Landing'))
+const Team=lazy(()=>import('./Team/Team'))
+const Opportunities=lazy(()=>import('./Opportunities/Opportunities'))
+const Podcast=lazy(()=>import('./Podcast/Podcast'))
+const Highlights=lazy(()=>import('./Highlights/Highlights'))
+const Hidden=lazy(()=>import('./Hidden/Hidden'))
+const Faq=lazy(()=>import('./Faq/Faq'))
+const Username=lazy(()=>import('./Username/Username'))
+const Password=lazy(()=>import('./Password/Password'))
+const Register=lazy(()=>import('./Register/Register'))
+const Profile=lazy(()=>import('./Profile/Profile'))
+const Recovery=lazy(()=>import('./Recovery/Recovery'))
+const Reset=lazy(()=>import('./Reset/Reset'))
+const PageNotFound=lazy(()=>import('./PageNotFound/PageNotFound'))
+const Grabby=lazy(()=>import('./common/Grabby/Grabby'))
+
+export{
+    Username,
+    Password,
+    Recovery,
+    Register,
+    Profile,
+    Reset,
+    PageNotFound,
+    Contact,
+	Footer,
+	Team,
+	Opportunities,
+	Hidden,
+	Podcast,
+    Highlights,
+    Landing,
+    Faq,
+    Navbar,
+    GoToTop,
+    Grabby
+}
