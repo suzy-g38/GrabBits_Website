@@ -49,7 +49,7 @@ const App = () => {
 						color={'#7541c8'}
 						className="loader"
 					/>{' '}
-					<h1 className="loader1">Welcome to Grab Bits</h1>
+					<h1 className="loader1">Welcome to Grab Bit</h1>
 				</div>
 			) : (
 				<>
