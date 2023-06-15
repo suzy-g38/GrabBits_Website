@@ -32,7 +32,7 @@ const Landing = () => {
 				<div className={classes.column2}>
 					<a href="/opportunities">
 					<div className={classes.box1}>
-						<img className={classes.card1} src={card} alt="card" />
+						<img className={classes.card1} src={card} alt="opportunities card" />
 					</div>
 					</a>
 					<div className={classes.grabby_container}>
@@ -40,7 +40,7 @@ const Landing = () => {
 					</div>
 					<a href="/opportunities">
 					<div className={classes.box2}>
-						<img className={classes.card2} src={card} alt="card" />
+						<img className={classes.card2} src={card} alt="opportunities card" />
 					</div>
 					</a>
 					<div className={classes.element}></div>

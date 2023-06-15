@@ -13,7 +13,7 @@ const Testimonial = () => {
 			{testidata.map((item, i) => {
 				return (
 					<div key={i} className={classes.testi_wrapper}>
-						<img className={classes.testi_img} src={item.img} alt="" />
+						<img className={classes.testi_img} src={item.img} alt={item.name} />
 						<div className={classes.testi_content}>
 							<div className={classes.testi_heading}>
 								<h3>What our Customer Think of Us?</h3>
@@ -29,8 +29,8 @@ const Testimonial = () => {
 				);
 			})}
 			<div className={classes.arrows}>
-				<img className={classes.arrow_left} src={left} alt="" />
-				<img className={classes.arrow_right} src={right} alt="" />
+				<img className={classes.arrow_left} src={left} alt="left arrow" />
+				<img className={classes.arrow_right} src={right} alt="right arrow" />
 			</div>
 		</div>
 	);

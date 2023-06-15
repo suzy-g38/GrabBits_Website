@@ -30,6 +30,7 @@ const Extra = () => {
 						</a>
 					</div>
 					<div className={classes.col2}>
+
 					<a href="/podcasts">
 					<div className={`${classes.box2} ${classes.hoverEffect}`}>						
 							<img src={icon2} alt="" />
@@ -37,10 +38,12 @@ const Extra = () => {
 							<h4 className={classes.head}>Podcasts</h4>
 							<p className={classes.para}>Learn from them..</p>							
 						</div>
+
 						</a>
 						<a href="/podcasts">
 						<div className={`${classes.box4} ${classes.hoverEffect}`}>							
 							<img src={icon1} alt="" />
+
 							<h1 className={classes.number}>4.</h1>
 							<h4 className={classes.head}>Resources</h4>
 							<p className={classes.para}>Use them..</p>							
