@@ -12,7 +12,7 @@ const Ticket = ({ data }) => {
 				rel="noreferrer noopener"
 				style={{ background: bgColor }}
 			>
-				<img className={classes.image} src={image} alt="" />
+				<img className={classes.image} src={image} alt={name} />
 				<h2 className={classes.name}>{name}</h2>
 			</a>
 		</>

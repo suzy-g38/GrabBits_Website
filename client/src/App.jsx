@@ -1,20 +1,17 @@
+
 import { React, useEffect, useState } from 'react';
+
 import { Route, Routes } from 'react-router-dom';
-import {
-	Contact,
-	Footer,
-	Navbar,
-	Team,
-	Opportunities,
-	Hidden,
-	Podcast,
+import {Contact,Footer,	Navbar,	Team, Opportunities, Hidden,
+	Podcast, GoToTop, Username, Register, Password, Profile, 
+	Recovery, Reset, PageNotFound, Grabby
 } from './components';
-import { Popup } from './components/common';
-import Grabby from './components/common/Grabby/Grabby';
+import { Loader, Popup } from './components/common';
 import { FourOhFour } from './pages/FourOhFour/FourOhFour';
 import ReactGA from 'react-ga4';
 import { Homepage, Login, Signup } from './pages';
 import './App.css';
+
 /** import all components */
 import Username from './components/Username/Username';
 import Password from './components/Password/Password';
@@ -63,6 +60,7 @@ const App = () => {
 					margin: '100px 0',
 				}}
 			> */}
+
 					<GoToTop />
 					<Popup />
 					<Navbar />
@@ -103,6 +101,7 @@ const App = () => {
 					</Routes>
 					<Footer />
 					{/* <Input />
+
 			<Button label="Search for Jobs" />*/}
 					{/* <Card /> */}
 					{/* </div> */}
