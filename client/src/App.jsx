@@ -35,7 +35,7 @@ const App = () => {
 						color={'#7541c8'}
 						className="loader"
 					/>{' '}
-					<h1 className="loader1">Welcome to GrabBit</h1>
+					<h1 className="loader1" style={{position : 'relative' , top: '-10%', fontSize : '74px'}}>Welcome to GrabBit !!</h1>
 				</div>
 			) : (
 				<>
