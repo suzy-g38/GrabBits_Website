@@ -58,7 +58,7 @@ const Podcast = () => {
 							designed to help you take life decisions from a point of awareness.
 							And not ignorance.
 						</h3></div>
-				        <div className={classes.explore}><Button bgColor="#fff" color="#000" label="Explore" />
+				        <div className={classes.explore}><Button bgColor="#fff" color="#000" label="Explore" fontSize='13px' />
 				        </div>
 						</div>
 					    

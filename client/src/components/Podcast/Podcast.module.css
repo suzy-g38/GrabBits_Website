@@ -129,27 +129,49 @@
 	}
 
 	.explore {
-		/* display: flex; */
+		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		width: 100vw;
-		gap: 30px;
+		size: 20px;
+		/* gap: 30px; */
+		margin-left: 5vw;
+		margin-right: 10vw;
+	}
+	.sectionContent {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		gap: 65px;
 		margin-left: 5vw;
 		margin-right: 10vw;
 	}
 
+	.secondHeading{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: 2;
+		gap: 5px;
+		margin-top: 50px;
+	}
+
 	.heading {
-		font-size: 9vw;
+		padding: 0px 20px 0px 40px ;
+		font-size: 5vw;
 		font-weight: 600;
 		text-align: start;
-		margin-bottom: 10px;
+		margin-bottom: 22px;
 	}
 
 	.subheading {
-		font-size: 3.5vw;
+		font-size: 3vw;
 		font-weight: 400;
 		text-align: start;
-		padding: 0px 70px 0px 0px;
+		padding: 0px 40px 0px 60px;
 	}
 }
