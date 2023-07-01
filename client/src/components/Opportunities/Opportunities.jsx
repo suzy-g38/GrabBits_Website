@@ -22,7 +22,7 @@ const Opportunities = () => {
 		try {
 			http.get('/job/getJobs').then((response) => {
 				const data = response.data.jobs;
-				setLoading(false);
+				setTimeout(() => setLoading(false), 1500); 
 				setJobData(data);
 				setTest(data);
 			});

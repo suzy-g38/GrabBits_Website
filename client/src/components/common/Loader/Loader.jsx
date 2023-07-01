@@ -4,10 +4,12 @@ import classes from './Loader.module.css';
 const Loader = () => {
 	return (
 		<>
-			<div className={classes.three_body}>
-				<div className={classes.three_body__dot}></div>
-				<div className={classes.three_body__dot}></div>
-				<div className={classes.three_body__dot}></div>
+			<div className={classes.container}>
+				<div className={classes.box}></div>
+				<div className={classes.box}></div>
+				<div className={classes.box}></div>
+				<div className={classes.box}></div>
+				<div className={classes.box}></div>
 			</div>
 		</>
 	);
