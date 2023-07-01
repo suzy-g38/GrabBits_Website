@@ -51,15 +51,18 @@ const Podcast = () => {
 					Your browser does not support the video tag.
 				</video>
 				<div className={classes.sectionContent}>
-					<div>
-						<h1 className={classes.heading}>PODCASTS DESIGNED TO HELP YOU GROW</h1>
-						<h3 className={classes.subheading}>
+						<div className={classes.heading}><h2>PODCASTS DESIGNED TO HELP YOU GROW</h2></div>
+						<div className={classes.secondHeading}>
+						<div  className={classes.subheading}><h3>
 							Super practical courses, with a no-nonsense approach, that are
 							designed to help you take life decisions from a point of awareness.
 							And not ignorance.
-						</h3>
-					</div>
-					<Button bgColor="#fff" color="#000" label="Explore" />
+						</h3></div>
+				        <div className={classes.explore}><Button bgColor="#fff" color="#000" label="Explore" />
+				        </div>
+						</div>
+					    
+
 				</div>
 			</div>
 			<div>
