@@ -91,13 +91,9 @@ const Faq = () => {
 	};
 
 	const handleClick = (id) => {
-		if(selectedId) {
-			setSelectedId(0);
-		}
-		else {
-			setSelectedId(id);
-		}
-	};
+		setSelectedId((prevId) => (prevId === id ? 0 : id));
+	  };
+	
 
 	return (
 		<>
@@ -135,7 +131,7 @@ const Faq = () => {
 								<Input
 									className="inputText"
 									onChange={onChangeHandler}
-									type="text"
+									type="email"
 									value={email}
 									label="Email"
 									name="email"
@@ -145,7 +141,7 @@ const Faq = () => {
 							<div className="inputText">
 								<Input
 									onChange={onChangeHandler}
-									type="text"
+									type="tel"
 									value={phoneNo}
 									label="Mobile Number"
 									name="phoneNo"
@@ -187,7 +183,7 @@ const Faq = () => {
 											: 'Faqs__content Faqs__close'
 									}
 								>
-									<div 
+									<div
 										className="Faqs__header"
 										onClick={() => handleClick(item.id)}
 									>

@@ -35,7 +35,7 @@ const Footer = () => {
 									title="Linkedin (External Link)"
 									rel="noopener noreferrer"
 								>
-									<img className={classes.li_link} src={linkedin}></img>
+									<img className={classes.li_link} src={linkedin} alt="linkedin"></img>
 								</a>
 							</li>
 							<li className={classes.socia_link}>
@@ -46,7 +46,7 @@ const Footer = () => {
 									title="Instagram (External Link)"
 									rel="noopener noreferrer"
 								>
-									<img className={classes.ig_link} src={instagram}></img>
+									<img className={classes.ig_link} src={instagram} alt='instagram'></img>
 								</a>
 							</li>
 							<li className={classes.socia_link}>
@@ -57,7 +57,7 @@ const Footer = () => {
 									title="WhatsApp (External Link)"
 									rel="noopener noreferrer"
 								>
-									<img className={classes.wp_link} src={whatsapp}></img>
+									<img className={classes.wp_link} src={whatsapp} alt='whatsapp'></img>
 								</a>
 							</li>
 							<li className={classes.socia_link}>
@@ -68,7 +68,7 @@ const Footer = () => {
 									title="Twitter (External Link)"
 									rel="noopener noreferrer"
 								>
-									<img className={classes.twi_link} src={twitter}></img>
+									<img className={classes.twi_link} src={twitter} alt='twitter'></img>
 								</a>
 							</li>
 							<li className={classes.socia_link}>
@@ -79,7 +79,7 @@ const Footer = () => {
 									title="Youtube (External Link)"
 									rel="noopener noreferrer"
 								>
-									<img className={classes.yt_link} src={youtube}></img>
+									<img className={classes.yt_link} src={youtube} alt='youtube'></img>
 								</a>
 							</li>
 						</ul>

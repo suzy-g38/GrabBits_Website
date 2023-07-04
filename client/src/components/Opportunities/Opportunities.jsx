@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import classes from './Opportunities.module.css';
-import { Button, Card, Loader } from '../common';
+import {Card } from '../common';
+import PreLoader from './PreLoader/PreLoader'
 import http from '../../api';
 import Swal from 'sweetalert2';
 
@@ -58,7 +59,7 @@ const Opportunities = () => {
 		try {
 			http.get('/job/getJobs').then((response) => {
 				const data = response.data.jobs;
-				setLoading(false);
+				setTimeout(() => setLoading(false), 1500); 
 				setJobData(data);
 				setTest(data);
 			});
@@ -71,24 +72,22 @@ const Opportunities = () => {
 		}
 	};
 
-	const debouncedSearch = debounce(async (key) => {
-		try {
+
+	const debouncedSearch = useMemo(
+		() =>
+		  debounce((key) => {
+			let data=jobData;
 			if (key) {
-				let result = await http.get(`job/getJobs/${key}`);
-				if (result) {
-					setJobData(result.data.job);
-				}
+			  const filteredData = jobData.filter((job) => {
+				return job.companyName.toLowerCase().includes(key.toLowerCase());
+			  });
+			  setJobData(filteredData);
 			} else {
-				getData();
+			  setJobData(data);
 			}
-		} catch (error) {
-			Swal.fire({
-				icon: 'error',
-				title: 'Unable to search the jobs',
-				text: error,
-			});
-		}
-	}, 2500);
+		  }, 500),
+		[test]
+	  );
 
 	const search = async (e) => {
 		const key = e.target.value;
@@ -96,6 +95,7 @@ const Opportunities = () => {
 	};
 	const filterData = async (filterBy) => {
 		setJobData(test);
+		if (filterBy === 'all') return;
 		const filteredData = test.filter((job) => {
 			return job.category === filterBy;
 		});
@@ -107,6 +107,7 @@ const Opportunities = () => {
 			<div className={classes.wrapper}>
 				<div className={classes.search_filter}>
 					<div>
+						<ThemeButton onClick={() => filterData('all')} label="All" />
 						<ThemeButton onClick={() => filterData('jobs')} label="Jobs" />
 						<ThemeButton
 							onClick={() => filterData('hackathons')}
@@ -133,7 +134,7 @@ const Opportunities = () => {
 				<h1 className={classes.text}>Opportunities</h1>
 				{loading && (
 					<div className={classes.loader}>
-						<Loader />
+						<PreLoader />
 					</div>
 				)}
 				{!loading && jobData.length ? (
